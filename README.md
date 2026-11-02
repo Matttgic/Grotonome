@@ -71,7 +71,7 @@ Nom `BANKROLL_EUR`, valeur un nombre, par exemple `200`. Ce n'est pas un secret,
 
 Le palier gratuit est d'environ 500 crédits par mois. Deux passages par jour sur sept championnats restent en dessous. Si le quota est dépassé, cette source passe en échec et les autres continuent.
 
-Pinnacle en direct refuse les noms de matchs sans clé, et le format avec clé n'a pas été vérifié ici. Ne créez pas de compte Pinnacle pour ce dépôt.
+Pinnacle est déjà lu sans compte : les noms viennent de la liste publique, les prix des matchs appariés. Ne créez pas de compte Pinnacle pour ce dépôt.
 
 ### GitHub Pages
 

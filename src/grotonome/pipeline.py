@@ -36,16 +36,14 @@ def analyze(
 ) -> RunResult:
     soft = [event for report in reports for event in report.soft]
     sharp = [event for report in reports for event in report.sharp if event.probs or event.odds]
-    stubs = [
-        event
-        for report in reports
-        if report.source == "smarkets"
-        for event in report.sharp
-        if event.probs is None and event.odds is None and event.external_id
-    ]
-    if pricer is not None and stubs:
-        priced = _price_matches(soft, stubs, pricer, price_limit)
-        sharp.extend(priced)
+    stubs_by_source: dict[str, list] = {}
+    for report in reports:
+        for event in report.sharp:
+            if event.probs is None and event.odds is None and event.external_id:
+                stubs_by_source.setdefault(event.source, []).append(event)
+    if pricer is not None:
+        for group in stubs_by_source.values():
+            sharp.extend(_price_matches(soft, group, pricer, price_limit))
     result = RunResult(reports=list(reports), devig=method)
     seen_matches: set[tuple] = set()
     for event in soft:

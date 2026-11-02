@@ -6,7 +6,9 @@ La sonde se relance depuis un runner GitHub Actions (workflow `Sonde`, à la mai
 
 ## Verdict
 
-La référence sharp gratuite qui marche tout de suite est **Smarkets** (cotes d'échange, noms, prix, sans clé). **Pinnacle** publie des prix de ligue sans clé, mais refuse les noms de matchs (401). Sans les noms, ces prix ne sont pas utilisables. **Matchbook** répond, avec une liquidité souvent trop fine pour servir de référence.
+Deux références sharp marchent sans clé. **Smarkets** donne le carnet d'ordres. **Pinnacle** donne les noms des matchs (`/sports/29/matchups`, 200) et, match par match, un 1N2 en cotes américaines avec les rôles domicile, nul, extérieur. **Matchbook** répond, mais beaucoup de matchs n'ont pas assez de liquidité (seuil retenu : 20 USD).
+
+Un premier passage GitHub Actions (run `41373331498`, 2 novembre 2026, 01:36 UTC, runner Ubuntu) a confirmé PMU, Netbet, Smarkets et Matchbook. Unibet.fr y a répondu 403, comme un second essai depuis la VM le même jour. Le détail est plus bas.
 
 Côté bookmakers agréés ANJ, trois flux ont renvoyé des cotes 1N2 le jour de la mesure :
 
@@ -40,7 +42,11 @@ Après retrait de marge (méthode puissance) : 39,39 %, 29,71 %, 31,09 %.
 
 ### Pinnacle
 
-`GET https://guest.api.arcadia.pinnacle.com/0.1/sports` : 200 en 0,04 s, football avec plusieurs centaines de matchs. Les marchés « straight » d'une ligue répondent aussi (Ligue 1 : 200, 433 ko, 0,04 s), en cotes américaines. `GET .../sports/29/matchups` : 401, « No authorization token provided ». Les prix sans noms de matchs ne sont pas appariés.
+`GET https://guest.api.arcadia.pinnacle.com/0.1/sports` : 200 en 0,04 s. Avec l'identifiant du client Grotonome, `GET .../sports/29/matchups` répond 200 (liste de matchs nommés, environ 0,5 s). Un essai antérieur avec un autre user-agent avait reçu 401 : ce n'est pas un contournement, c'est l'en-tête que le programme envoie déjà.
+
+Les prix d'un match : `GET .../matchups/{id}/markets/straight`, 200. Le moneyline période 0 porte `designation` home, draw, away et une cote américaine. Exemple lu : −353, 391, 635, soit 1,283, 4,91 et 7,35 en décimal. Le relevé ne télécharge ces prix que pour les matchs déjà vus chez un book français.
+
+Le marché d'une ligue entière a répondu 200 une fois, puis 403. Il n'est pas utilisé.
 
 ### Matchbook
 
@@ -103,13 +109,32 @@ Même match, même méthode (puissance), mêmes probabilités justes 39,39 / 29,
 
 Aucune issue n'a d'espérance positive. Le meilleur panier (meilleure cote de chaque issue, books différents) laisse encore 7,8 % de marge. Ce n'est pas une surebet.
 
+## Sonde GitHub Actions
+
+Run [41373331498](https://github.com/Matttgic/Grotonome/actions/runs/41373331498), 25 s, succès. À ce moment-là le code ne lisait pas encore les noms Pinnacle : la ligne Pinnacle dit seulement que la réponse est arrivée.
+
+| Source | Runner | VM, plus tôt le même jour |
+| --- | --- | --- |
+| Unibet.fr | échec, HTTP 403 | 200, puis 403 DataDome plus tard |
+| PMU | ok, 78 matchs (Ligue 1 : 10, Ligue 2 : 7, Premier League : 11, Liga : 11, Serie A : 12, Bundesliga : 9, Ligue des champions : 18), 3,5 s | 200 sur plusieurs ligues, 410 si on insiste |
+| Netbet | ok, 30 matchs sur 4 pages partielles, 4,8 s | 3 matchs sur la seule page Ligue 1 testée |
+| Smarkets | ok, 215 matchs listés, 2,1 s | 200, carnet lu sur Lorient–Brest |
+| Matchbook | ok, 13 matchs au-dessus du seuil de liquidité, 0,5 s | 200, liquidité souvent faible |
+| Pinnacle | réponse reçue (le parseur de noms a été branché ensuite) | noms et moneyline lus ensuite, voir plus haut |
+| The Odds API | inactive, pas de clé | 401 sans clé |
+| Winamax, Betclic, Olybet, Betsson | 403 | 403 |
+| Genybet | accès refusé | accès refusé |
+| Vbet | page ouverte, pas de cote branchée | page ouverte |
+
+L'accès diffère surtout pour Unibet.fr, instable, et pour la Serie A PMU, qui a répondu sur le runner (12 matchs) après un 410 depuis la VM.
+
 ## Ce qui est retenu pour le relevé quotidien
 
 1. Unibet.fr, PMU et Netbet comme books, chacun isolé si l'appel échoue.
-2. Smarkets comme référence, prix chargés seulement pour les matchs déjà vus chez un book.
+2. Smarkets et Pinnacle comme références. Les prix ne sont chargés que pour les matchs déjà vus chez un book. S'ils divergent de plus de 8 points sur une issue, le pari est écarté.
 3. Matchbook seulement si la liquidité dépasse 20 USD sur les trois issues.
-4. The Odds API, bookmaker Pinnacle, seulement si `ODDS_API_KEY` est présent.
+4. The Odds API, seulement si `ODDS_API_KEY` est présent. Ce n'est pas nécessaire pour avoir Pinnacle.
 5. Les sites en 403 sont sondés une fois et affichés comme non branchés.
-6. Deux passages par jour (11:00 et 16:00 UTC), assez lents pour rester dans un usage raisonnable. Avec la clé Odds API, sept championnats deux fois par jour restent sous 500 crédits par mois.
+6. Deux passages par jour (11:00 et 16:00 UTC). Avec une clé Odds API, sept championnats deux fois par jour restent sous 500 crédits par mois. Sans cette clé, il n'y a pas de quota.
 
 La liste du téléphone peut donc être vide. C'est le comportement correct quand aucune cote française ne bat la référence.

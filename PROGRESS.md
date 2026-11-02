@@ -3,7 +3,8 @@
 ## Fait
 
 - Mesure des sources le 2 novembre 2026 depuis la VM, sans contournement. Détail dans `docs/FAISABILITE.md`.
-- Unibet.fr, PMU et Netbet (page partielle) renvoient des 1N2. Smarkets sert de référence sharp. Pinnacle donne des prix sans noms (401). Winamax, Betclic, Olybet, Betsson, Genybet : accès refusé. Un second appel Unibet le même jour a reçu un 403 DataDome : la source est instable depuis un centre de données, et le captcha n'est pas contourné.
+- Unibet.fr, PMU et Netbet (page partielle) renvoient des 1N2. Smarkets et Pinnacle servent de référence sharp. Winamax, Betclic, Olybet, Betsson, Genybet : accès refusé. Unibet.fr est instable (200 puis 403).
+- Sonde GitHub Actions `41373331498` : PMU 78 matchs, Netbet 30, Smarkets 215, Matchbook 13, Unibet 403. Pinnacle a répondu ; les noms et le moneyline ont été branchés ensuite.
 - Contrôle historique Bet365 contre Pinnacle, ouverture puis clôture, découpage au 1er juillet 2024. CLV de test négative. Détail dans `docs/RECHERCHE.md`.
 - Moteur : retrait de marge, EV, quart de Kelly plafonné, appariement, pipeline qui isole une source en panne, journal, CLV, ROI, intervalle à partir de 2 valeurs.
 - 33 tests, une commande : `python3 -m pytest`.
@@ -11,7 +12,7 @@
 
 ## En cours
 
-- Comparer la sonde VM à un runner GitHub Actions (workflow `Sonde`), puis noter l'écart dans `docs/FAISABILITE.md` si l'accès diffère.
+- Rien. La sonde Actions est lue et écrite dans `docs/FAISABILITE.md`.
 
 ## Prochaine étape
 
@@ -20,13 +21,13 @@
 
 ## Décisions
 
-- Référence par défaut : milieu Smarkets, marge retirée par la méthode puissance (légèrement meilleur Brier sur l'entraînement, écart minuscule).
+- Références : milieu Smarkets et cote Pinnacle, marge retirée par la méthode puissance (légèrement meilleur Brier sur l'entraînement, écart minuscule). Désaccord de plus de 8 points : pari écarté.
 - Books proposés : Unibet.fr, PMU, Netbet. Pas le flux Kambi `ub`, qui n'est pas Unibet.fr.
 - Pas de modèle de score, pas de totaux, pas de boosts inventés, pas de chasse aux lignes mortes.
 - Toute EV strictement positive est listée, avec l'avertissement historique. Aucun seuil « gagnant » n'est retenu.
 - Mise : quart de Kelly, plafond 1,5 %. ROI de suivi à mise unitaire.
 - Deux passages par jour pour rester dans le quota gratuit d'une éventuelle clé Odds API.
-- Pinnacle direct laissé inactif : prix sans noms. Pas de clé Pinnacle à créer.
+- Pas de clé Pinnacle à créer : la liste publique des matchs suffit. The Odds API reste facultative.
 
 ## Skills et outils externes
 

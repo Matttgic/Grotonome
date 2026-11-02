@@ -414,6 +414,70 @@ def _parse_iso(text: str) -> datetime:
     return parsed.astimezone(timezone.utc)
 
 
+def parse_pinnacle_matchups(payload: list, *, captured_at: datetime) -> list[SharpPrice]:
+    if not isinstance(payload, list):
+        return []
+    found: list[SharpPrice] = []
+    for item in payload:
+        if item.get("type") != "matchup" or item.get("parentId") or item.get("isLive"):
+            continue
+        names = {}
+        for participant in item.get("participants") or []:
+            alignment = participant.get("alignment")
+            if alignment in {"home", "away"} and participant.get("name"):
+                names[alignment] = str(participant["name"])
+        if set(names) != {"home", "away"}:
+            continue
+        try:
+            kickoff = _parse_iso(str(item["startTime"]))
+        except (KeyError, ValueError):
+            continue
+        league = item.get("league") or {}
+        competition = league.get("name") if isinstance(league, dict) else ""
+        found.append(
+            SharpPrice(
+                source="pinnacle",
+                competition=competition or "",
+                home=names["home"],
+                away=names["away"],
+                kickoff=kickoff,
+                captured_at=captured_at,
+                external_id=str(item.get("id")),
+            )
+        )
+    return found
+
+
+def parse_pinnacle_moneyline(markets: list) -> tuple[float, float, float] | None:
+    if not isinstance(markets, list):
+        return None
+    chosen = next(
+        (
+            market
+            for market in markets
+            if market.get("type") == "moneyline"
+            and market.get("period") == 0
+            and not market.get("isAlternate")
+            and market.get("status") in (None, "open")
+        ),
+        None,
+    )
+    if chosen is None:
+        return None
+    found = {}
+    for price in chosen.get("prices") or []:
+        side = price.get("designation")
+        if side not in {"home", "away", "draw"}:
+            continue
+        try:
+            found[side] = american_to_decimal(price["price"])
+        except (KeyError, TypeError, ValueError):
+            return None
+    if set(found) != {"home", "away", "draw"}:
+        return None
+    return (found["home"], found["draw"], found["away"])
+
+
 def american_to_decimal(price: int | float) -> float:
     value = float(price)
     if value >= 100:

@@ -13,6 +13,8 @@ from grotonome.sources.parse import (
     PMU_PATHS,
     parse_matchbook_events,
     parse_netbet_html,
+    parse_pinnacle_matchups,
+    parse_pinnacle_moneyline,
     parse_pmu_payload,
     parse_smarkets_quotes,
     parse_unibet_page,
@@ -245,34 +247,44 @@ def fetch_matchbook(*, captured_at: datetime) -> FetchReport:
 
 
 def fetch_pinnacle(*, captured_at: datetime) -> FetchReport:
-    """Les prix de ligue sont publics, les noms de matchs renvoient 401.
-
-    Sans les noms, apparier serait deviner. La source reste donc inactive.
-    Pinnacle peut arriver plus tard via The Odds API, dont le format est connu.
-    """
+    """Noms via la liste des matchs, prix seulement après appariement."""
     started = time.perf_counter()
     try:
-        get_json(
+        payload = get_json(
             "https://guest.api.arcadia.pinnacle.com/0.1/sports/29/matchups",
             headers={"Accept": "application/json"},
-            timeout=20,
+            timeout=30,
         )
     except HttpError as exc:
-        if exc.status == 401:
-            return FetchReport(
-                "pinnacle",
-                "sharp",
-                False,
-                "noms des matchs refusés (401). Les prix sans noms ne sont pas utilisés.",
-                time.perf_counter() - started,
-            )
         return FetchReport("pinnacle", "sharp", False, f"HTTP {exc.status}", time.perf_counter() - started)
+    stubs = parse_pinnacle_matchups(payload, captured_at=captured_at)
+    horizon = captured_at + timedelta(hours=72)
+    stubs = [item for item in stubs if captured_at <= item.kickoff <= horizon]
+    detail = f"{len(stubs)} matchs nommés sur 72 h, prix après appariement"
     return FetchReport(
-        "pinnacle",
-        "sharp",
-        False,
-        "réponse reçue mais le format des noms n'est pas vérifié : source laissée inactive",
-        time.perf_counter() - started,
+        "pinnacle", "sharp", bool(stubs), detail, time.perf_counter() - started, len(stubs), sharp=stubs
+    )
+
+
+def price_pinnacle(stub: SharpPrice) -> SharpPrice | None:
+    time.sleep(0.3)
+    payload = get_json(
+        f"https://guest.api.arcadia.pinnacle.com/0.1/matchups/{stub.external_id}/markets/straight",
+        headers={"Accept": "application/json"},
+        timeout=20,
+    )
+    odds = parse_pinnacle_moneyline(payload)
+    if odds is None:
+        return None
+    return SharpPrice(
+        source="pinnacle",
+        competition=stub.competition,
+        home=stub.home,
+        away=stub.away,
+        kickoff=stub.kickoff,
+        captured_at=stub.captured_at,
+        odds=odds,
+        external_id=stub.external_id,
     )
 
 

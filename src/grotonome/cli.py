@@ -12,7 +12,7 @@ from grotonome.journal import attach_closes, load_jsonl, performance, record, se
 from grotonome.pipeline import analyze
 from grotonome.render import dumps, payload, telegram_text
 from grotonome.results import fetch_results
-from grotonome.sources.fetch import fetch_all, price_smarkets
+from grotonome.sources.fetch import fetch_all, price_pinnacle, price_smarkets
 from grotonome.telegram import send_message
 
 
@@ -81,6 +81,8 @@ def cmd_run(args) -> int:
 
 
 def _price(stub):
+    if stub.source == "pinnacle":
+        return price_pinnacle(stub)
     return price_smarkets(
         stub.external_id,
         f"{stub.home} vs {stub.away}",

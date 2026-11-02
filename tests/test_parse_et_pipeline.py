@@ -12,6 +12,8 @@ from grotonome.sources.parse import (
     american_to_decimal,
     competition_key,
     parse_netbet_html,
+    parse_pinnacle_matchups,
+    parse_pinnacle_moneyline,
     parse_pmu_payload,
     parse_smarkets_quotes,
     parse_unibet_kickoff,
@@ -148,6 +150,47 @@ def test_smarkets_sans_un_cote_est_absent():
 def test_americain():
     assert american_to_decimal(118) == pytest.approx(2.18)
     assert american_to_decimal(-110) == 100 / 110 + 1
+    # −353 américain : 100/353 + 1.
+    assert american_to_decimal(-353) == pytest.approx(100 / 353 + 1)
+
+
+def test_pinnacle_noms_et_moneyline():
+    payload = [
+        {
+            "id": 5,
+            "type": "matchup",
+            "parentId": None,
+            "isLive": False,
+            "startTime": "2026-11-02T19:45:00Z",
+            "league": {"name": "France - Ligue 1"},
+            "participants": [
+                {"alignment": "home", "name": "Lorient"},
+                {"alignment": "away", "name": "Brest"},
+            ],
+        },
+        {"id": 6, "type": "matchup", "parentId": 5, "isLive": False, "participants": []},
+    ]
+    found = parse_pinnacle_matchups(payload, captured_at=NOW)
+    assert len(found) == 1
+    assert found[0].home == "Lorient" and found[0].external_id == "5"
+    odds = parse_pinnacle_moneyline(
+        [
+            {
+                "type": "moneyline",
+                "period": 0,
+                "isAlternate": False,
+                "status": "open",
+                "prices": [
+                    {"designation": "home", "price": -353},
+                    {"designation": "draw", "price": 391},
+                    {"designation": "away", "price": 635},
+                ],
+            }
+        ]
+    )
+    assert odds[0] == pytest.approx(100 / 353 + 1)
+    assert odds[1] == pytest.approx(391 / 100 + 1)
+    assert odds[2] == pytest.approx(635 / 100 + 1)
 
 
 def test_pipeline_une_source_morte_ne_bloque_pas():
