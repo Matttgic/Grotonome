@@ -3,7 +3,7 @@
 ## Fait
 
 - Mesure des sources le 2 novembre 2026 depuis la VM, sans contournement. Détail dans `docs/FAISABILITE.md`.
-- Unibet.fr, PMU et Netbet (page partielle) renvoient des 1N2. Smarkets sert de référence sharp. Pinnacle donne des prix sans noms (401). Winamax, Betclic, Olybet, Betsson, Genybet : accès refusé.
+- Unibet.fr, PMU et Netbet (page partielle) renvoient des 1N2. Smarkets sert de référence sharp. Pinnacle donne des prix sans noms (401). Winamax, Betclic, Olybet, Betsson, Genybet : accès refusé. Un second appel Unibet le même jour a reçu un 403 DataDome : la source est instable depuis un centre de données, et le captcha n'est pas contourné.
 - Contrôle historique Bet365 contre Pinnacle, ouverture puis clôture, découpage au 1er juillet 2024. CLV de test négative. Détail dans `docs/RECHERCHE.md`.
 - Moteur : retrait de marge, EV, quart de Kelly plafonné, appariement, pipeline qui isole une source en panne, journal, CLV, ROI, intervalle à partir de 2 valeurs.
 - 33 tests, une commande : `python3 -m pytest`.

@@ -63,6 +63,8 @@ Lorient–Brest : 2,30 / 3,00 / 3,00. Heure codée `2611021945`, lue comme 2 nov
 
 Le flux Kambi `ub` (Unibet international) répond aussi, avec d'autres cotes (2,35 / 3,25 / 2,95, horodatées du 30 octobre). Ce n'est pas Unibet.fr. Il n'est pas utilisé.
 
+Un appel plus tardif le même jour, toujours depuis la VM, a reçu un 403 DataDome (page captcha). Le premier relevé, lui, était bien un 200. Unibet.fr est donc joignable, mais pas stable depuis un centre de données. Le captcha n'est pas contourné : ce jour-là la source passe en échec, PMU, Netbet et Smarkets continuent, et l'échec est visible.
+
 ### PMU
 
 `https://eu-offering-api.kambicdn.com/offering/v2018/pmusportsfr/listView/...` a répondu 200 pour la Ligue 1 (20 ko, 0,14 s, 10 matchs), la Ligue 2 (7), la Premier League (11), la Liga (11), la Bundesliga (9) et la Ligue des champions (18). La Serie A en `football/italy/serie_a` a répondu 410 sur l'essai isolé : la ligue est demandée, et un 410 reste un échec visible.
