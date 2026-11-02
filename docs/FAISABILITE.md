@@ -2,7 +2,7 @@
 
 Mesures faites le 2 novembre 2026 depuis la VM (sortie Cloudflare `CMH`, États-Unis). Aucun contournement de géoblocage, de captcha ou de connexion. Une réponse refusée est notée comme refusée. Les chiffres ci-dessous sont ceux des réponses reçues, pas des cotes reconstituées.
 
-La sonde peut être relancée depuis un runner GitHub Actions avec le workflow `Sonde`. Le premier passage Actions est à comparer à ce document : l'accès peut différer.
+La sonde se relance depuis un runner GitHub Actions (workflow `Sonde`, à la main ou quand ce fichier de workflow change). Le résultat du premier passage Actions est ajouté en bas de ce document dès qu'il est lu.
 
 ## Verdict
 
