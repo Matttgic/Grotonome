@@ -6,7 +6,7 @@ import re
 from datetime import datetime, timezone
 
 from grotonome.models import SharpPrice, SoftPrice
-from grotonome.names import is_draw
+from grotonome.names import is_draw, same_team, strip_accents
 
 PMU_PATHS = {
     "ligue 1": "football/france/ligue_1",
@@ -42,14 +42,36 @@ def parse_unibet_kickoff(raw: str) -> datetime:
 
 
 def competition_key(desc: str) -> str | None:
-    name = desc.lower().replace("'", " ")
-    if any(tag in name for tag in ("women", "feminin", "féminin", "u19", "u21", "u23")):
+    name = strip_accents(desc).lower().replace("'", " ")
+    if any(
+        tag in name
+        for tag in (
+            "women",
+            "woman",
+            "feminin",
+            "femme",
+            "dames",
+            "frauen",
+            "ladies",
+            "femenin",
+            "femminile",
+            "u17",
+            "u18",
+            "u19",
+            "u20",
+            "u21",
+            "u23",
+            "youth",
+            "reserve",
+        )
+    ):
         return None
     if "conference" in name:
         return "conference league"
     if "europa" in name:
         return "europa league"
-    if "champion" in name:
+    # « champion » seul attrapait Championship, Championnat et European Championship.
+    if "champions league" in name or "ligue des champions" in name:
         return "champions league"
     if "ligue 2" in name:
         return "ligue 2"
@@ -62,6 +84,8 @@ def competition_key(desc: str) -> str | None:
             return None
         return "laliga"
     if "serie a" in name and "serie b" not in name:
+        if any(tag in name for tag in ("brasileir", "brazil", "brasil")):
+            return None
         return "serie a"
     if "bundesliga" in name and "2" not in name:
         return "bundesliga"
@@ -145,29 +169,33 @@ def parse_unibet_page(payload: dict, *, competition: str, captured_at: datetime)
 def parse_pmu_payload(payload: dict, *, competition: str, captured_at: datetime) -> list[SoftPrice]:
     prices: list[SoftPrice] = []
     for item in payload.get("events") or []:
-        event = item.get("event") or {}
-        home, away = event.get("homeName"), event.get("awayName")
-        if not home or not away:
-            continue
-        offer = next(
-            (
-                o
-                for o in item.get("betOffers") or []
-                if (o.get("criterion") or {}).get("englishLabel") == "Full Time"
-                and (o.get("betOfferType") or {}).get("englishName") == "Match"
-            ),
-            None,
-        )
-        if offer is None:
-            continue
-        outcomes = offer.get("outcomes") or []
         try:
-            ordered = _order_pmu(home, away, outcomes)
-        except ValueError:
+            event = item.get("event") or {}
+            state = str(event.get("state") or "")
+            if state in {"STARTED", "FINISHED", "CLOSED", "SETTLED"}:
+                continue
+            home, away = event.get("homeName"), event.get("awayName")
+            if not home or not away:
+                continue
+            offer = next(
+                (
+                    o
+                    for o in item.get("betOffers") or []
+                    if (o.get("criterion") or {}).get("englishLabel") == "Full Time"
+                    and (o.get("betOfferType") or {}).get("englishName") == "Match"
+                ),
+                None,
+            )
+            if offer is None:
+                continue
+            outcomes = offer.get("outcomes") or []
+            ordered = _order_pmu(str(home), str(away), outcomes)
+            changed = [_parse_iso(o["changedDate"]) for o in outcomes if o.get("changedDate")]
+            # Le dernier mouvement est le plus récent, pas le plus ancien.
+            movement = max(changed) if changed else None
+            kickoff = _parse_iso(str(event.get("start")))
+        except (TypeError, ValueError, KeyError, OverflowError):
             continue
-        changed = [_parse_iso(o["changedDate"]) for o in outcomes if o.get("changedDate")]
-        movement = min(changed) if changed else None
-        kickoff = _parse_iso(str(event.get("start")))
         prices.append(
             SoftPrice(
                 source="pmu",
@@ -198,7 +226,8 @@ def parse_netbet_html(html: str, *, competition: str, captured_at: datetime) -> 
             continue
         seen.add(key)
         window = text[match.start() : match.start() + 2500]
-        marker = window.find("Qui va gagner")
+        # « Qui va gagner » tout court attrape aussi la mi-temps ou un autre marché.
+        marker = window.find("Qui va gagner le match")
         chunk = window[marker : marker + 2200] if marker >= 0 else ""
         pairs = re.findall(r'actorLabel:"([^"]+)"\},oddsDisplay:"([0-9.]+)"', chunk)
         if len(pairs) < 3:
@@ -265,7 +294,11 @@ def parse_smarkets_quotes(
 
 def parse_matchbook_events(payload: dict, *, captured_at: datetime) -> list[SharpPrice]:
     prices: list[SharpPrice] = []
+    moment = _as_utc(captured_at)
     for event in payload.get("events") or []:
+        # Un match déjà en jeu n'est pas une référence d'avant-match.
+        if event.get("in-running-flag") or event.get("live"):
+            continue
         name = str(event.get("name") or "")
         if " vs " not in name:
             continue
@@ -275,6 +308,7 @@ def parse_matchbook_events(payload: dict, *, captured_at: datetime) -> list[Shar
                 m
                 for m in event.get("markets") or []
                 if str(m.get("name") or "").lower() in {"match odds", "1x2"}
+                and not m.get("live")
             ),
             None,
         )
@@ -307,6 +341,8 @@ def parse_matchbook_events(payload: dict, *, captured_at: datetime) -> list[Shar
         try:
             kickoff = _parse_iso(str(event.get("start")))
         except ValueError:
+            continue
+        if kickoff < moment:
             continue
         prices.append(
             SharpPrice(
@@ -374,13 +410,21 @@ def _order_1x2(home: str, away: str, outcomes: list, *, price_key: str, comma: b
 def _order_pmu(home: str, away: str, outcomes: list) -> tuple[float, float, float]:
     found: dict[str, float] = {}
     for outcome in outcomes:
+        status = outcome.get("status")
+        if status not in (None, "OPEN"):
+            continue
         label = str(outcome.get("label") or "")
+        participant = outcome.get("participant")
         odds = float(outcome["odds"]) / 1000
         if label == "1":
+            if participant and not same_team(str(participant), home):
+                raise ValueError("domicile PMU incohérent avec le libellé 1")
             found["H"] = odds
         elif label == "X":
             found["D"] = odds
         elif label == "2":
+            if participant and not same_team(str(participant), away):
+                raise ValueError("extérieur PMU incohérent avec le libellé 2")
             found["A"] = odds
     if set(found) != {"H", "D", "A"} or any(o <= 1 for o in found.values()):
         raise ValueError("1N2 PMU incomplet")
@@ -404,6 +448,12 @@ def _triples(home: str, away: str, pairs: list[tuple[str, str]]) -> tuple[float,
 
 def _unescape_js(text: str) -> str:
     return re.sub(r"\\u([0-9a-fA-F]{4})", lambda m: chr(int(m.group(1), 16)), text)
+
+
+def _as_utc(moment: datetime) -> datetime:
+    if moment.tzinfo is None:
+        return moment.replace(tzinfo=timezone.utc)
+    return moment.astimezone(timezone.utc)
 
 
 def _parse_iso(text: str) -> datetime:

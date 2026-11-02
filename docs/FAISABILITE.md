@@ -38,7 +38,7 @@ Exemple reçu vers 01:16 UTC, Lorient–Brest, coup d'envoi 19:45 UTC :
 | Nul | 3,30 | 29,85 % |
 | Brest | 3,15 | 31,03 % |
 
-Après retrait de marge (méthode puissance) : 39,39 %, 29,71 %, 31,09 %.
+Après retrait de marge (méthode puissance) : 39,39 %, 29,71 %, 30,89 %.
 
 ### Pinnacle
 

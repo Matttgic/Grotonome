@@ -48,11 +48,20 @@ def telegram_text(result: RunResult, *, now: datetime, bankroll: float | None, l
     lines.append("")
     lines.append(_source_line(result))
     broken = [r for r in result.reports if r.kind != "probe" and not r.ok]
+    partial = [r for r in result.reports if r.ok and "HTTP" in (r.detail or "")]
     probes = [r for r in result.reports if r.kind == "probe" and not r.ok]
     if broken:
         lines.append("Références ou books incomplets : " + ", ".join(f"{r.source} ({r.detail})" for r in broken))
+    if partial:
+        lines.append("Sources incomplètes : " + ", ".join(f"{r.source} ({r.detail})" for r in partial))
     if probes:
         lines.append("Non branchés : " + ", ".join(r.source for r in probes))
+    if result.skipped:
+        lines.append(f"Écartés : {len(result.skipped)}.")
+    if result.unpriced:
+        lines.append(f"Matchs sharp non tarifés (plafond) : {result.unpriced}.")
+    if result.unmatched:
+        lines.append(f"Sans référence sharp : {result.unmatched}.")
     sure = [row for row in result.shopping if row["surebet"]]
     if sure:
         lines.append(f"Surebet entre books français : {len(sure)} (détail sur la page).")
@@ -88,6 +97,7 @@ def payload(result: RunResult, *, now: datetime, performance: dict, bankroll: fl
         "bets": [bet(item) for item in result.proposals],
         "skipped": result.skipped[:30],
         "unmatched": result.unmatched,
+        "unpriced": result.unpriced,
         "shopping": result.shopping,
         "sources": [
             {

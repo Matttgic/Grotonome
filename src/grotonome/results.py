@@ -34,6 +34,14 @@ def parse_results_csv(text: str) -> list[dict]:
     return rows
 
 
+def _csv_header_ok(text: str) -> bool:
+    lines = text.lstrip("\ufeff").splitlines()
+    if not lines:
+        return False
+    header = [cell.strip() for cell in lines[0].split(",")]
+    return "FTR" in header
+
+
 def fetch_results(cache: Path, *, day: date) -> tuple[list[dict], str]:
     cache.mkdir(parents=True, exist_ok=True)
     seasons = {season_code(day)}
@@ -47,15 +55,32 @@ def fetch_results(cache: Path, *, day: date) -> tuple[list[dict], str]:
             target = cache / f"{division}_{code}.csv"
             url = f"https://www.football-data.co.uk/mmz4281/{code}/{division}.csv"
             try:
-                if not target.exists() or target.stat().st_size < 50:
-                    target.write_text(get_text(url, timeout=30), encoding="utf-8")
-                found.extend(parse_results_csv(target.read_text(encoding="utf-8")))
+                text = _cached_csv(target)
+                if text is None:
+                    downloaded = get_text(url, timeout=30)
+                    if not _csv_header_ok(downloaded):
+                        notes.append(f"{division} {code}: réponse non CSV")
+                        if target.exists():
+                            target.unlink()
+                        continue
+                    target.write_text(downloaded, encoding="utf-8")
+                    text = downloaded
+                found.extend(parse_results_csv(text))
                 notes.append(f"{division} {code}: ok")
             except HttpError as exc:
                 notes.append(f"{division} {code}: HTTP {exc.status}")
             except OSError:
                 notes.append(f"{division} {code}: illisible")
     return found, "; ".join(notes)
+
+
+def _cached_csv(target: Path) -> str | None:
+    if not target.exists() or target.stat().st_size < 50:
+        return None
+    text = target.read_text(encoding="utf-8")
+    if _csv_header_ok(text):
+        return text
+    return None
 
 
 def _date(text: str) -> date | None:

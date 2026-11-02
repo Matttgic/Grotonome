@@ -158,6 +158,7 @@ def fetch_smarkets(*, captured_at: datetime, sleep: float = 0.3, horizon_hours: 
     stubs = []
     url: str | None = SMARKETS_EVENTS
     pages = 0
+    error = ""
     try:
         while url and pages < 12:
             payload = get_json(url, timeout=20)
@@ -165,7 +166,10 @@ def fetch_smarkets(*, captured_at: datetime, sleep: float = 0.3, horizon_hours: 
             if not events:
                 break
             for event in events:
-                kickoff = datetime.fromisoformat(event["start_datetime"].replace("Z", "+00:00"))
+                try:
+                    kickoff = datetime.fromisoformat(str(event["start_datetime"]).replace("Z", "+00:00"))
+                except (KeyError, TypeError, ValueError):
+                    continue
                 if kickoff > horizon:
                     url = None
                     break
@@ -177,7 +181,17 @@ def fetch_smarkets(*, captured_at: datetime, sleep: float = 0.3, horizon_hours: 
             url = "https://api.smarkets.com/v3/events/" + nxt
             time.sleep(sleep)
     except HttpError as exc:
-        return FetchReport("smarkets", "sharp", False, f"liste HTTP {exc.status}", time.perf_counter() - started)
+        error = f"HTTP {exc.status}"
+        if not stubs:
+            return FetchReport(
+                "smarkets", "sharp", False, f"liste {error}", time.perf_counter() - started
+            )
+    except Exception as exc:
+        error = f"erreur {type(exc).__name__}"
+        if not stubs:
+            return FetchReport(
+                "smarkets", "sharp", False, f"liste {error}", time.perf_counter() - started
+            )
     # Les prix sont chargés plus tard, seulement pour les matchs déjà vus chez un book.
     # Ici on garde les noms. Les probabilités sont remplies par price_smarkets.
     sharp = []
@@ -202,6 +216,8 @@ def fetch_smarkets(*, captured_at: datetime, sleep: float = 0.3, horizon_hours: 
             )
         )
     detail = f"{len(sharp)} matchs listés sur {pages} page(s), prix chargés après appariement"
+    if error:
+        detail += f", pagination interrompue ({error})"
     return FetchReport(
         "smarkets", "sharp", bool(sharp), detail, time.perf_counter() - started, len(sharp), sharp=sharp
     )
@@ -362,6 +378,16 @@ def probe_blocked(*, sleep: float = 0.2) -> list[FetchReport]:
             if name == "genybet" and exc.status == 403:
                 detail = "accès refusé (géoblocage probable), pas de contournement"
             reports.append(FetchReport(name, "probe", False, detail, time.perf_counter() - started))
+        except Exception as exc:
+            reports.append(
+                FetchReport(
+                    name,
+                    "probe",
+                    False,
+                    f"erreur {type(exc).__name__}",
+                    time.perf_counter() - started,
+                )
+            )
         else:
             reports.append(
                 FetchReport(

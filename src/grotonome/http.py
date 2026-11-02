@@ -15,21 +15,29 @@ USER_AGENT = (
 )
 
 _SECRET = re.compile(
-    r"(apiKey|api_key|token|key|access_token)=([^&\s]+)",
+    r"(?<![A-Za-z0-9_])(api[_-]?key|token|access_token|key)=([^&\s\"']+)",
     re.IGNORECASE,
 )
+_JSON_SECRET = re.compile(
+    r'("(?:api[_-]?key|token|access_token|key)"\s*:\s*")[^"]+',
+    re.IGNORECASE,
+)
+_BOT = re.compile(r"bot\d+:[A-Za-z0-9_-]+")
 
 
 class HttpError(RuntimeError):
     def __init__(self, status: int, url: str, body: str = ""):
         self.status = status
         self.url = redact(url)
-        snippet = body[:180].replace("\n", " ")
+        snippet = redact(body[:180].replace("\n", " "))
         super().__init__(f"HTTP {status} {self.url} {snippet}")
 
 
 def redact(text: str) -> str:
-    return _SECRET.sub(r"\1=***", text)
+    text = _BOT.sub("bot***", text)
+    text = _SECRET.sub(r"\1=***", text)
+    text = _JSON_SECRET.sub(r"\1***", text)
+    return text
 
 
 def request(
