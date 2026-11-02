@@ -18,6 +18,7 @@ from grotonome.sources.parse import (
     parse_pmu_payload,
     parse_smarkets_quotes,
     parse_unibet_page,
+    parse_winamax_html,
     unibet_competitions,
 )
 
@@ -39,7 +40,6 @@ MATCHBOOK = (
     "&interval=next-72-hours"
 )
 PROBES = {
-    "winamax": "https://www.winamax.fr/",
     "betclic": "https://www.betclic.fr/",
     "olybet": "https://www.olybet.fr/",
     "betsson": "https://betsson.fr/",
@@ -51,6 +51,7 @@ PROBES = {
 def fetch_all(*, sleep: float = 0.35, now: datetime | None = None) -> list[FetchReport]:
     moment = now or datetime.now(timezone.utc)
     reports = [
+        _guard("winamax", "book", lambda: fetch_winamax(captured_at=moment)),
         _guard("unibet", "book", lambda: fetch_unibet(captured_at=moment, sleep=sleep)),
         _guard("pmu", "book", lambda: fetch_pmu(captured_at=moment, sleep=sleep)),
         _guard("netbet", "book", lambda: fetch_netbet(captured_at=moment, sleep=sleep)),
@@ -61,6 +62,23 @@ def fetch_all(*, sleep: float = 0.35, now: datetime | None = None) -> list[Fetch
     ]
     reports.extend(probe_blocked(sleep=sleep))
     return reports
+
+
+def fetch_winamax(*, captured_at: datetime) -> FetchReport:
+    started = time.perf_counter()
+    try:
+        html = get_text(
+            "https://www.winamax.fr/paris-sportifs",
+            headers={"Accept-Language": "fr-FR"},
+            timeout=25,
+        )
+    except HttpError as exc:
+        return FetchReport("winamax", "book", False, f"HTTP {exc.status}", time.perf_counter() - started)
+    events = parse_winamax_html(html, captured_at=captured_at)
+    detail = f"{len(events)} matchs de football avant-match dans la page publique"
+    return FetchReport(
+        "winamax", "book", bool(events), detail, time.perf_counter() - started, len(events), events
+    )
 
 
 def fetch_unibet(*, captured_at: datetime, sleep: float = 0.35) -> FetchReport:

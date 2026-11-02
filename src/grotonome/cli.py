@@ -8,6 +8,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+from grotonome.history import append_rows, french_clv, snapshot_rows
 from grotonome.journal import attach_closes, load_jsonl, performance, record, settle, write_jsonl
 from grotonome.pipeline import analyze
 from grotonome.render import dumps, payload, telegram_text
@@ -23,6 +24,7 @@ def main(argv: list[str] | None = None) -> int:
     run.add_argument("--out", default="site")
     run.add_argument("--journal", default="data/journal.jsonl")
     run.add_argument("--sharp", default="data/sharp.jsonl")
+    run.add_argument("--cotes", default="data/cotes.jsonl")
     run.add_argument("--no-results", action="store_true")
     run.add_argument("--no-telegram", action="store_true")
     sub.add_parser("sonde", help="mesurer les sources sans écrire de pari")
@@ -67,6 +69,15 @@ def cmd_run(args) -> int:
     (out / "latest.json").write_text(dumps(body) + "\n", encoding="utf-8")
     write_jsonl(journal_path, journal)
     write_jsonl(sharp_path, history)
+    tape_path = Path(args.cotes)
+    fresh = snapshot_rows(result.reports, result.sharp_prices)
+    append_rows(tape_path, fresh)
+    clv = french_clv(load_jsonl(tape_path))
+    print(
+        "historique cotes :"
+        f" {len(fresh)} lignes ajoutées, CLV FR n={clv['n']}"
+        + (f" moyenne={clv['clv_mean']:.4f}" if clv["clv_mean"] is not None else " (pas encore deux instants)")
+    )
     text = telegram_text(result, now=now, bankroll=bankroll)
     print(text)
     print(f"résultats : {note}")

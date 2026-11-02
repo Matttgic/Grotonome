@@ -83,6 +83,30 @@ Test : 2 247 paris, ROI −17,9 %, CLV −10,5 %, intervalle −25,6 % à −10,
 
 Décision : aucun modèle de score dans le produit. La probabilité juste est celle du marché sharp, marge retirée.
 
+## 7. Deuxième passe, 2 novembre 2026 au soir
+
+Livres français supplémentaires. ZEbet et Parions Sport en ligne redirigent vers Unibet.fr (réponse finale 200 sur `www.unibet.fr`). Les compter à part doublerait les mêmes cotes. Betclic, Olybet, Genybet et Betsson répondent 403. Feelingbet ne résout pas. Winamax, en revanche, publie son offre dans la page `https://www.winamax.fr/paris-sportifs` (`PRELOADED_STATE`) : 76 matchs sur la page d'accueil au moment de la lecture, dont des avant-match football avec un marché « Résultat ». Exemple lu : Portland Timbers – Houston Dynamo, 1,64 / 3,70 / 3,75, statut `PREMATCH`, coup d'envoi 02:45 UTC. C'est branché. Ce n'est pas une preuve d'avantage.
+
+Milieux d'échange. Sur (0,50 ; 0,29 ; 0,29), somme 1,08, la puissance donne 47,36 % au favori et la simple normalisation 46,30 %, soit 1,06 point. Cet écart n'est pas une marge de bookmaker, c'est le carnet. Les milieux sont donc normalisés. La puissance reste réservée aux cotes décimales (Pinnacle, et un book s'il sert de référence).
+
+Liquidité. Smarkets : quantité minimale 10 000, soit 1 de devise si l'unité publiée est le montant × 10 000. En dessous, ou si la quantité manque, le carnet ne fixe pas la probabilité. Un essai à 20 (200 000) a été écarté : sur Portland–Houston, la meilleure offre extérieure valait 22 027 et le match entier disparaissait. Matchbook reste à 20 USD, et 11 matchs passaient encore ce soir-là.
+
+Heure Unibet. Le code `2611021945` de Lorient–Brest, lu en UTC, vaut 19:45Z, qui est l'heure PMU, Smarkets et Netbet (20:45+01). Lu en heure de Paris, il vaudrait 18:45Z et ne collerait à aucune de ces sources. On garde UTC.
+
+Alias. `OM` et `OL` désignent Marseille et Lyon, uniquement quand c'est le nom entier. `OL` ne matche pas Lens.
+
+Suspendu. Une issue Unibet dont le statut ou le drapeau dit suspendu, fermé ou non coté retire tout le 1N2. Chez Netbet, le mot « suspend » dans le bloc de l'issue fait de même. Un code minifié (`status:b`) n'est pas interprété : ce serait deviner.
+
+Règlement. Un coup d'envoi après minuit UTC peut être daté la veille dans le CSV. On regarde la date UTC, la veille UTC et la date de Paris. On règle seulement si ces dates ne se contredisent pas.
+
+CLV française. Chaque relevé ajoute `data/cotes.jsonl` (cote du book et référence sharp, avec l'heure). La CLV n'est calculée que lorsqu'une cote française a une référence au moment du relevé et une référence plus tardive avant le coup d'envoi. L'issue mesurée est celle qui était la meilleure à l'ouverture, pas celle qui le devient à la clôture. Au moment d'écrire ces lignes, il n'y a pas encore deux instants : la moyenne n'existe pas, et ce n'est pas affiché comme un zéro.
+
+Marchés secondaires et boosts. Le référentiel promo Unibet (`Referentiel_offres_promos_markets_Unibet.json`) liste des types de marchés, pas des cotes boostées. Les totaux UK restent à 4 paris. Rien n'est ajouté à la liste de paris.
+
+Relevé lancé juste après, vers 02:20 UTC, avec le plancher Smarkets encore à 20 : Winamax 22 matchs avant-match, PMU 55 (Premier League et Serie A en HTTP 410), Netbet 34, Unibet.fr 403, Pinnacle 403, Smarkets listé (214) mais aucun prix retenu, Matchbook 11. 122 lignes dans `data/cotes.jsonl` (books et Matchbook). Aucune espérance positive. CLV française : n = 0. Ce n'est pas un ROI de zéro, c'est une mesure qui n'existe pas encore. Le plancher Smarkets a été baissé à 1 ensuite, pour le passage suivant.
+
+Décision : pas de stratégie déclarée rentable. Winamax entre dans le relevé. L'historique horaire commence pour pouvoir, plus tard, dire si les livres français ont une CLV.
+
 ## Ce qu'on ne sait pas
 
 Il n'y a pas d'historique public des cotes Winamax, Betclic, Unibet.fr ou PMU aligné sur une clôture Pinnacle. Le suivi CLV et ROI de Grotonome commence donc à zéro, avec les paris que le relevé proposera vraiment. Tant que moins de deux paris sont réglés, l'intervalle de confiance n'est pas affiché.

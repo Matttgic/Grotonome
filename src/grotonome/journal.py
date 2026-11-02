@@ -3,7 +3,8 @@
 from __future__ import annotations
 
 import json
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 from grotonome.metrics import clustered_mean_interval, unit_pnl
@@ -101,23 +102,45 @@ def attach_closes(journal: list[dict], snapshots: list[dict]) -> list[dict]:
 
 
 def settle(journal: list[dict], results: list[dict]) -> list[dict]:
-    """`results` contient home, away, date ISO et result H/D/A. Rien n'est deviné."""
-    index = {}
+    """`results` contient home, away, date ISO et result H/D/A. Rien n'est deviné.
+
+    Un coup d'envoi après minuit UTC peut être daté la veille dans le CSV
+    (soirée locale) ou le lendemain à Paris. On accepte une date voisine
+    seulement si tous les résultats trouvés disent la même chose.
+    """
+    index: dict[tuple, str] = {}
     for result in results:
         index.setdefault((normalize(result["home"]), normalize(result["away"]), result["date"]), result["result"])
     for row in journal:
         if row.get("result"):
             continue
-        kick = datetime.fromisoformat(row["kickoff"]).date().isoformat()
-        code = index.get((normalize(row["home"]), normalize(row["away"]), kick))
-        if code not in {"H", "D", "A"}:
+        codes = []
+        for day in _settlement_dates(str(row.get("kickoff") or "")):
+            code = index.get((normalize(row["home"]), normalize(row["away"]), day))
+            if code in {"H", "D", "A"}:
+                codes.append(code)
+        if not codes or len(set(codes)) != 1:
             continue
+        code = codes[0]
         row["result"] = code
         won = (code == "H" and row["side"] == 0) or (code == "D" and row["side"] == 1) or (
             code == "A" and row["side"] == 2
         )
         row["pnl"] = unit_pnl(float(row["odds"]), won)
     return journal
+
+
+def _settlement_dates(kickoff: str) -> list[str]:
+    try:
+        moment = datetime.fromisoformat(kickoff)
+    except ValueError:
+        return []
+    if moment.tzinfo is None:
+        moment = moment.replace(tzinfo=timezone.utc)
+    utc_day = moment.astimezone(timezone.utc).date()
+    paris_day = moment.astimezone(ZoneInfo("Europe/Paris")).date()
+    days = {utc_day.isoformat(), paris_day.isoformat(), (utc_day - timedelta(days=1)).isoformat()}
+    return sorted(days)
 
 
 def _match_key(row: dict) -> tuple:

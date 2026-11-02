@@ -4,6 +4,10 @@ Mesures faites le 2 novembre 2026 depuis la VM (sortie Cloudflare `CMH`, États-
 
 La sonde se relance depuis un runner GitHub Actions (workflow `Sonde`, à la main ou quand ce fichier de workflow change). Le résultat du premier passage Actions est ajouté en bas de ce document dès qu'il est lu.
 
+## Winamax, relu le 2 novembre au soir
+
+La page `https://www.winamax.fr/paris-sportifs` répond 200 (environ 370 ko) et contient `PRELOADED_STATE` : matchs, marché « Résultat », cotes. `wapi.winamax.fr` répond 200 avec « Invalid request » : ce n'est pas un flux de cotes sans le corps d'appel du site, et ce corps n'a pas été rejoué. Betclic, Olybet, Genybet et Betsson restent en 403. ZEbet et Parions Sport en ligne aboutissent sur Unibet.fr.
+
 ## Verdict
 
 Deux références sharp marchent sans clé. **Smarkets** donne le carnet d'ordres. **Pinnacle** donne les noms des matchs (`/sports/29/matchups`, 200) et, match par match, un 1N2 en cotes américaines avec les rôles domicile, nul, extérieur. **Matchbook** répond, mais beaucoup de matchs n'ont pas assez de liquidité (seuil retenu : 20 USD).
@@ -18,7 +22,7 @@ Côté bookmakers agréés ANJ, trois flux ont renvoyé des cotes 1N2 le jour de
 | PMU (Kambi `pmusportsfr`) | 200 puis 410 si on enchaîne trop vite | 0,13 s | 10 matchs de Ligue 1, cotes horodatées |
 | Netbet | 200, HTML de la page compétition | 0,9 s | 3 matchs seulement : la page ne contient pas tout le catalogue |
 
-Winamax, Betclic, Olybet, Betsson et Genybet ont répondu 403 ou « accès refusé » depuis cette VM. ZEbet et l'ancienne adresse Parions Sport en ligne redirigent vers Unibet.fr. Rien de cela n'est contourné.
+Le soir du 2 novembre, Winamax répond 200 et ses cotes sont dans la page (voir plus haut). Betclic, Olybet, Betsson et Genybet restent en 403. ZEbet et Parions Sport en ligne redirigent vers Unibet.fr. Rien de cela n'est contourné.
 
 The Odds API répond 401 sans clé. Avec une clé gratuite (500 crédits par mois), elle peut ajouter Pinnacle. Sans clé, le relevé continue.
 

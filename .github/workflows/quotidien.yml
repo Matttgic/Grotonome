@@ -37,7 +37,7 @@ jobs:
         run: |
           git config user.name "grotonome"
           git config user.email "grotonome@users.noreply.github.com"
-          git add site/latest.json data/journal.jsonl data/sharp.jsonl
+          git add site/latest.json data/journal.jsonl data/sharp.jsonl data/cotes.jsonl
           if git diff --cached --quiet; then
             echo "rien de nouveau"
             exit 0

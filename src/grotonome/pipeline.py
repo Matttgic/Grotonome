@@ -5,7 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 
-from grotonome.devig import devig, overround
+from grotonome.devig import devig, normalize_probs, overround
 from grotonome.models import FetchReport, Proposal, SharpPrice, SoftPrice
 from grotonome.names import normalize, same_team
 from grotonome.sources.parse import competition_key
@@ -24,6 +24,7 @@ class RunResult:
     unmatched: int = 0
     unpriced: int = 0
     shopping: list[dict] = field(default_factory=list)
+    sharp_prices: list[SharpPrice] = field(default_factory=list)
 
 
 def analyze(
@@ -43,7 +44,11 @@ def analyze(
         for event in report.sharp:
             if event.probs is None and event.odds is None and event.external_id:
                 stubs_by_source.setdefault(event.source, []).append(event)
-    result = RunResult(reports=list(reports), devig=method)
+    result = RunResult(
+        reports=list(reports),
+        devig=method,
+        sharp_prices=[item for item in sharp if item.probs or item.odds],
+    )
     if pricer is not None:
         for group in stubs_by_source.values():
             priced, left = _price_matches(soft, group, pricer, price_limit)
@@ -268,8 +273,8 @@ def _fair(ref: SharpPrice, method: str) -> list[float]:
         # Un carnet incohérent (trois milieux à 0,9) n'est pas une marge de book.
         if not 0.90 <= total <= 1.15:
             raise ValueError("probabilités sharp incohérentes")
-        odds = tuple(1.0 / p for p in ref.probs)
-        return devig(odds, method)
+        # Les milieux ne sont pas des cotes de book : on normalise, on n'applique pas la puissance.
+        return normalize_probs(ref.probs)
     if ref.odds is not None:
         return devig(ref.odds, method)
     raise ValueError("référence sans prix")

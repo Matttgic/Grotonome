@@ -96,6 +96,25 @@ def shin(odds: Sequence[float]) -> list[float]:
     return [p / scale for p in found]
 
 
+def normalize_probs(probs: Sequence[float]) -> list[float]:
+    """Remet des milieux d'échange à une somme de 1, sans supposer une marge de book.
+
+    L'écart entre trois milieux vient du carnet, pas d'un favori-longshot. La méthode
+    puissance, faite pour une cote de book, déplace le favori d'environ 1,5 point
+    quand la somme vaut 1,08.
+    """
+    if len(probs) < 2:
+        raise ValueError("au moins deux issues")
+    total = 0.0
+    for p in probs:
+        if p is None or not math.isfinite(p) or p <= 0:
+            raise ValueError("probabilité inutilisable")
+        total += p
+    if total <= 0:
+        raise ValueError("somme nulle")
+    return [p / total for p in probs]
+
+
 def devig(odds: Sequence[float], method: str = "power") -> list[float]:
     if method == "power":
         return power(odds)

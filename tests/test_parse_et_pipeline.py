@@ -108,9 +108,9 @@ def test_smarkets_milieu():
         {"id": "3", "contract_type": {"name": "AWAY"}},
     ]
     quotes = {
-        "1": {"bids": [{"price": 3900}], "offers": [{"price": 4100}]},
-        "2": {"bids": [{"price": 2900}], "offers": [{"price": 3100}]},
-        "3": {"bids": [{"price": 2900}], "offers": [{"price": 3100}]},
+        "1": {"bids": [{"price": 3900, "quantity": 500000}], "offers": [{"price": 4100, "quantity": 500000}]},
+        "2": {"bids": [{"price": 2900, "quantity": 500000}], "offers": [{"price": 3100, "quantity": 500000}]},
+        "3": {"bids": [{"price": 2900, "quantity": 500000}], "offers": [{"price": 3100, "quantity": 500000}]},
     }
     quote = parse_smarkets_quotes(
         event_name="Lorient vs Brest",

@@ -1,11 +1,31 @@
 {
-  "generated_at": "2026-11-02T02:47:54.309801+01:00",
+  "generated_at": "2026-11-02T03:20:15.671130+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
   "skipped": [],
-  "unmatched": 91,
+  "unmatched": 93,
+  "unpriced": 0,
   "shopping": [
+    {
+      "match": "Lorient – Brest",
+      "books": [
+        "winamax",
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.08166315049226425,
+      "surebet": false
+    },
+    {
+      "match": "Atletico Madrid – Bayern Munich",
+      "books": [
+        "winamax",
+        "pmu"
+      ],
+      "margin": 0.08795904790898534,
+      "surebet": false
+    },
     {
       "match": "Rennes – Lille",
       "books": [
@@ -16,12 +36,30 @@
       "surebet": false
     },
     {
-      "match": "Lorient – Brest",
+      "match": "Slavia Prague – Arsenal",
       "books": [
-        "pmu",
+        "winamax",
+        "pmu"
+      ],
+      "margin": 0.0902338188118641,
+      "surebet": false
+    },
+    {
+      "match": "Atalanta Bergame – Parme",
+      "books": [
+        "winamax",
         "netbet"
       ],
-      "margin": 0.09174379565355473,
+      "margin": 0.09077566269347082,
+      "surebet": false
+    },
+    {
+      "match": "Newcastle – Everton",
+      "books": [
+        "winamax",
+        "netbet"
+      ],
+      "margin": 0.09112885502893553,
       "surebet": false
     },
     {
@@ -34,6 +72,33 @@
       "surebet": false
     },
     {
+      "match": "Villarreal – Paris SG",
+      "books": [
+        "winamax",
+        "pmu"
+      ],
+      "margin": 0.09267734553775764,
+      "surebet": false
+    },
+    {
+      "match": "FC Barcelone – Aston Villa",
+      "books": [
+        "winamax",
+        "pmu"
+      ],
+      "margin": 0.09383753501400571,
+      "surebet": false
+    },
+    {
+      "match": "RB Leipzig – Manchester City",
+      "books": [
+        "winamax",
+        "pmu"
+      ],
+      "margin": 0.0972222222222221,
+      "surebet": false
+    },
+    {
       "match": "PSG – Troyes",
       "books": [
         "pmu",
@@ -43,57 +108,39 @@
       "surebet": false
     },
     {
-      "match": "Sunderland – Chelsea",
+      "match": "Fenerbahce – Liverpool",
       "books": [
-        "pmu",
-        "netbet"
+        "winamax",
+        "pmu"
       ],
-      "margin": 0.09796664779901598,
+      "margin": 0.09793342156164098,
       "surebet": false
     },
     {
-      "match": "Ipswich Town – Bournemouth",
+      "match": "Bodø/Glimt – Lille",
       "books": [
-        "pmu",
-        "netbet"
+        "winamax",
+        "pmu"
       ],
-      "margin": 0.09813963997891095,
+      "margin": 0.09987195902688861,
       "surebet": false
     },
     {
-      "match": "Arsenal – Hull City",
+      "match": "Galatasaray – VfB Stuttgart",
       "books": [
-        "pmu",
-        "netbet"
+        "winamax",
+        "pmu"
       ],
-      "margin": 0.09821428571428559,
+      "margin": 0.10207768744354118,
       "surebet": false
     },
     {
-      "match": "Manchester United – Aston Villa",
+      "match": "Deportivo La Corogne – Osasuna",
       "books": [
-        "pmu",
+        "winamax",
         "netbet"
       ],
-      "margin": 0.10175157106565047,
-      "surebet": false
-    },
-    {
-      "match": "Nottingham Forest – Manchester City",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10246532846047751,
-      "surebet": false
-    },
-    {
-      "match": "Sassuolo – Fiorentina",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10381179498826554,
+      "margin": 0.10417989528747107,
       "surebet": false
     },
     {
@@ -103,15 +150,6 @@
         "netbet"
       ],
       "margin": 0.10450317026889433,
-      "surebet": false
-    },
-    {
-      "match": "Brighton – Brentford",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10730593607305927,
       "surebet": false
     },
     {
@@ -133,30 +171,12 @@
       "surebet": false
     },
     {
-      "match": "Crystal Palace – Liverpool",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10868298368298368,
-      "surebet": false
-    },
-    {
       "match": "Lens – Marseille",
       "books": [
         "pmu",
         "netbet"
       ],
       "margin": 0.10945566839671184,
-      "surebet": false
-    },
-    {
-      "match": "Torino – Lecce",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.11024756723498652,
       "surebet": false
     },
     {
@@ -167,27 +187,17 @@
       ],
       "margin": 0.11030636030636032,
       "surebet": false
-    },
-    {
-      "match": "Real Sociedad – Rayo Vallecano",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.11082251082251071,
-      "surebet": false
-    },
-    {
-      "match": "Genoa – AC Milan",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.11131534445996616,
-      "surebet": false
     }
   ],
   "sources": [
+    {
+      "name": "winamax",
+      "kind": "book",
+      "ok": true,
+      "detail": "22 matchs de football avant-match dans la page publique",
+      "events": 22,
+      "elapsed_s": 0.822
+    },
     {
       "name": "unibet",
       "kind": "book",
@@ -200,9 +210,9 @@
       "name": "pmu",
       "kind": "book",
       "ok": true,
-      "detail": "ligue 1: 10, ligue 2: 7, premier league: 11, laliga: 11, serie a: 12, bundesliga: 9, champions league: 18",
-      "events": 78,
-      "elapsed_s": 3.714
+      "detail": "ligue 1: 10, ligue 2: 7, premier league: HTTP 410, laliga: 11, serie a: HTTP 410, bundesliga: 9, champions league: 18",
+      "events": 55,
+      "elapsed_s": 3.179
     },
     {
       "name": "netbet",
@@ -210,7 +220,7 @@
       "ok": true,
       "detail": "ligue 1: 8 (page partielle), premier league: 9 (page partielle), laliga: 9 (page partielle), serie a: 8 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 34,
-      "elapsed_s": 4.605
+      "elapsed_s": 5.062
     },
     {
       "name": "smarkets",
@@ -218,23 +228,23 @@
       "ok": true,
       "detail": "214 matchs listés sur 5 page(s), prix chargés après appariement",
       "events": 214,
-      "elapsed_s": 2.027
+      "elapsed_s": 2.359
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "14 matchs avec liquidité suffisante sur la page reçue",
-      "events": 14,
-      "elapsed_s": 0.441
+      "detail": "11 matchs avec liquidité suffisante sur la page reçue",
+      "events": 11,
+      "elapsed_s": 0.594
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
-      "ok": true,
-      "detail": "248 matchs nommés sur 72 h, prix après appariement",
-      "events": 248,
-      "elapsed_s": 0.428
+      "ok": false,
+      "detail": "HTTP 403",
+      "events": 0,
+      "elapsed_s": 0.03
     },
     {
       "name": "the-odds-api",
@@ -245,20 +255,12 @@
       "elapsed_s": 0.0
     },
     {
-      "name": "winamax",
-      "kind": "probe",
-      "ok": false,
-      "detail": "HTTP 403, pas de contournement",
-      "events": 0,
-      "elapsed_s": 0.173
-    },
-    {
       "name": "betclic",
       "kind": "probe",
       "ok": false,
       "detail": "HTTP 403, pas de contournement",
       "events": 0,
-      "elapsed_s": 0.131
+      "elapsed_s": 0.043
     },
     {
       "name": "olybet",
@@ -266,7 +268,7 @@
       "ok": false,
       "detail": "HTTP 403, pas de contournement",
       "events": 0,
-      "elapsed_s": 0.166
+      "elapsed_s": 0.065
     },
     {
       "name": "betsson",
@@ -274,7 +276,7 @@
       "ok": false,
       "detail": "HTTP 403, pas de contournement",
       "events": 0,
-      "elapsed_s": 0.132
+      "elapsed_s": 0.039
     },
     {
       "name": "genybet",
@@ -282,7 +284,7 @@
       "ok": false,
       "detail": "accès refusé (géoblocage probable), pas de contournement",
       "events": 0,
-      "elapsed_s": 0.286
+      "elapsed_s": 0.051
     },
     {
       "name": "vbet",
@@ -290,21 +292,25 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.169
+      "elapsed_s": 0.238
     }
   ],
   "performance": {
     "n_bets": 0,
     "n_settled": 0,
     "n_with_clv": 0,
+    "n_roi_matches": 0,
+    "n_clv_matches": 0,
     "roi": null,
     "roi_low": null,
     "roi_high": null,
+    "roi_note": null,
     "clv_mean": null,
     "clv_low": null,
     "clv_high": null,
+    "clv_note": null,
     "flat_stake": true,
-    "results_note": "E0 2526: ok; F1 2526: ok; SP1 2526: ok; I1 2526: ok; D1 2526: ok; E0 2627: ok; F1 2627: ok; SP1 2627: ok; I1 2627: ok; D1 2627: ok"
+    "results_note": "résultats non demandés"
   },
   "historical_notice": "Contrôle historique (Bet365 contre Pinnacle, ouverture puis clôture, saisons 2021-2026, cinq grands championnats, test à partir de juillet 2024) : au seuil 0 %, n=128, ROI +1,2 %, CLV moyenne −0,6 %, intervalle de confiance très large et qui contient zéro. Au seuil 2 %, n=27, CLV −4,0 %. Ce n'est pas un avantage démontré. Bet365 n'est pas un bookmaker ANJ : c'est un proxy de book « soft », faute d'historique public des cotes françaises.",
   "notice": "Grotonome ne place aucun pari. Les cotes absentes restent absentes."

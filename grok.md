@@ -31,3 +31,7 @@ python3 scripts/recherche_historique.py --download --cache data/cache
 - Ne pas apparier des prix Pinnacle tant que les noms de matchs sont refusés.
 - Ne pas fusionner dans `main` si `python3 -m pytest` est rouge.
 - Ne pas choisir le seuil d'EV sur la période de test.
+- Les milieux Smarkets et Matchbook se normalisent. La puissance est pour les cotes décimales.
+- Heure compacte Unibet : UTC. Lorient–Brest `2611021945` = 19:45Z, aligné sur PMU, Smarkets et Netbet.
+- `OM` = Marseille, `OL` = Lyon, et seulement comme nom entier.
+- Ne pas interpréter un `status:b` minifié chez Netbet.

@@ -18,6 +18,15 @@ PMU_PATHS = {
     "champions league": "football/champions_league",
 }
 
+# Montant Smarkets × 10 000. 10 000 = 1 de devise.
+# Un plancher à 20 (200 000) aurait jeté Portland–Houston le 2 novembre :
+# la meilleure offre extérieure valait 22 027, soit environ 2,2, et tout le 1N2 tombait.
+SMARKETS_MIN_QUANTITY = 10_000
+# Matchbook : plancher déjà appliqué dans _matchbook, 20 USD.
+MATCHBOOK_MIN_AMOUNT = 20
+
+_CLOSED = {"SUSPENDED", "CLOSED", "SETTLED", "RESULTED", "HIDDEN", "CANCELLED", "VOID", "UNPRICED"}
+
 NETBET_PAGES = {
     "ligue 1": "https://www.netbet.fr/football/france/ligue-1-mcdonald-s-r",
     "premier league": "https://www.netbet.fr/football/angleterre/premier-league",
@@ -27,6 +36,12 @@ NETBET_PAGES = {
 
 
 def parse_unibet_kickoff(raw: str) -> datetime:
+    """Heure compacte `aammjjHHMM` lue en UTC.
+
+    Preuve du 2 novembre 2026, Lorient–Brest : le code `2611021945` coïncide
+    avec 19:45Z chez PMU et Smarkets, et avec 20:45+01 chez Netbet. Lu comme
+    heure de Paris, il vaudrait 18:45Z et ne collerait à aucune de ces trois sources.
+    """
     text = str(raw)
     if len(text) == 10 and text.isdigit():
         year = 2000 + int(text[0:2])
@@ -148,8 +163,12 @@ def parse_unibet_page(payload: dict, *, competition: str, captured_at: datetime)
         if market is None:
             continue
         market_id = next(k for k, m in markets.items() if m is market)
+        raw_outcomes = by_market.get(market_id, [])
+        if any(_blocked_outcome(outcome) for outcome in raw_outcomes):
+            # Une issue suspendue : on ne publie pas les deux autres comme un 1N2.
+            continue
         try:
-            odds = _order_1x2(home, away, by_market.get(market_id, []), price_key="price", comma=True)
+            odds = _order_1x2(home, away, raw_outcomes, price_key="price", comma=True)
         except ValueError:
             continue
         prices.append(
@@ -229,7 +248,14 @@ def parse_netbet_html(html: str, *, competition: str, captured_at: datetime) -> 
         # « Qui va gagner » tout court attrape aussi la mi-temps ou un autre marché.
         marker = window.find("Qui va gagner le match")
         chunk = window[marker : marker + 2200] if marker >= 0 else ""
-        pairs = re.findall(r'actorLabel:"([^"]+)"\},oddsDisplay:"([0-9.]+)"', chunk)
+        pairs = []
+        for found in re.finditer(r'actorLabel:"([^"]+)"\},oddsDisplay:"([0-9.]*)"', chunk):
+            context = chunk[max(0, found.start() - 400) : found.end()]
+            if re.search(r"suspend", context, re.I):
+                continue
+            if not found.group(2):
+                continue
+            pairs.append((found.group(1), found.group(2)))
         if len(pairs) < 3:
             continue
         try:
@@ -245,6 +271,80 @@ def parse_netbet_html(html: str, *, competition: str, captured_at: datetime) -> 
                 away=away,
                 kickoff=kickoff,
                 odds=odds,
+                captured_at=captured_at,
+            )
+        )
+    return prices
+
+
+def parse_winamax_html(html: str, *, captured_at: datetime) -> list[SoftPrice]:
+    """État préchargé de la page publique paris-sportifs. Pas d'appel de plus."""
+    marker = html.find("PRELOADED_STATE")
+    if marker < 0:
+        return []
+    start = html.find("{", marker)
+    if start < 0:
+        return []
+    try:
+        import json
+
+        data, _end = json.JSONDecoder().raw_decode(html[start:])
+    except json.JSONDecodeError:
+        return []
+    matches = data.get("matches") or {}
+    bets = data.get("bets") or {}
+    outcomes = data.get("outcomes") or {}
+    odds_map = data.get("odds") or {}
+    tournaments = data.get("tournaments") or {}
+    prices: list[SoftPrice] = []
+    for match in matches.values():
+        if match.get("sportId") != 1 or match.get("status") != "PREMATCH":
+            continue
+        home, away = match.get("competitor1Name"), match.get("competitor2Name")
+        if not home or not away:
+            continue
+        bet = bets.get(str(match.get("mainBetId"))) or bets.get(match.get("mainBetId"))
+        if not bet or not bet.get("available", True):
+            continue
+        title = str(bet.get("betTitle") or bet.get("betTypeName") or "")
+        if title not in {"Résultat", "1X2", "Résultat du match"}:
+            continue
+        found: dict[str, float] = {}
+        suspended = False
+        for outcome_id in bet.get("outcomes") or []:
+            outcome = outcomes.get(str(outcome_id)) or outcomes.get(outcome_id) or {}
+            if outcome.get("available") is False:
+                suspended = True
+                break
+            raw = odds_map.get(str(outcome_id), odds_map.get(outcome_id))
+            try:
+                odds = float(raw)
+            except (TypeError, ValueError):
+                suspended = True
+                break
+            code = str(outcome.get("code") or "").lower()
+            label = str(outcome.get("label") or "")
+            if code == "1" or label == home:
+                found["H"] = odds
+            elif code in {"x", "n"} or is_draw(label):
+                found["D"] = odds
+            elif code == "2" or label == away:
+                found["A"] = odds
+        if suspended or set(found) != {"H", "D", "A"} or any(o <= 1 for o in found.values()):
+            continue
+        try:
+            kickoff = datetime.fromtimestamp(int(match["matchStart"]), tz=timezone.utc)
+        except (KeyError, TypeError, ValueError, OSError, OverflowError):
+            continue
+        tour = tournaments.get(str(match.get("tournamentId"))) or tournaments.get(match.get("tournamentId")) or {}
+        prices.append(
+            SoftPrice(
+                source="winamax",
+                competition=str(tour.get("tournamentName") or ""),
+                home=str(home),
+                away=str(away),
+                kickoff=kickoff,
+                odds=(found["H"], found["D"], found["A"]),
                 captured_at=captured_at,
             )
         )
@@ -277,6 +377,14 @@ def parse_smarkets_quotes(
         if offer < bid or not 0 < bid < 1 or not 0 < offer < 1:
             return None
         if offer - bid > 0.10:
+            return None
+        # quantity est le montant disponible × 10 000 (doc Smarkets). 200 000 = 20.
+        # Un carnet minuscule ne fixe pas la probabilité juste. Quantité absente : on refuse.
+        bid_qty = bids[0].get("quantity")
+        offer_qty = offers[0].get("quantity")
+        if bid_qty is None or offer_qty is None:
+            return None
+        if float(bid_qty) < SMARKETS_MIN_QUANTITY or float(offer_qty) < SMARKETS_MIN_QUANTITY:
             return None
         by_role[role] = (bid + offer) / 2
     if set(by_role) != {"HOME", "DRAW", "AWAY"}:
@@ -321,7 +429,7 @@ def parse_matchbook_events(payload: dict, *, captured_at: datetime) -> list[Shar
             lose = _matchbook_side(runner, "lose")
             if win is None or lose is None:
                 continue
-            if win[1] < 20:
+            if win[1] < MATCHBOOK_MIN_AMOUNT:
                 continue
             p_back = 1 / win[0]
             p_lay = 1 - (1 / lose[0])
@@ -380,6 +488,16 @@ def _matchbook_side(runner: dict, side: str) -> tuple[float, float] | None:
             return None
         return odds_f, amount_f
     return None
+
+
+def _blocked_outcome(outcome: dict) -> bool:
+    status = str(outcome.get("status") or outcome.get("state") or "").upper()
+    if status in _CLOSED:
+        return True
+    flags = outcome.get("flags") or []
+    if isinstance(flags, str):
+        flags = [flags]
+    return any(str(flag).lower() in {"suspended", "unpriced", "hidden", "closed"} for flag in flags)
 
 
 def _order_1x2(home: str, away: str, outcomes: list, *, price_key: str, comma: bool) -> tuple[float, float, float]:
