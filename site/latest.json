@@ -1,28 +1,20 @@
 {
-  "generated_at": "2026-11-02T22:40:52.534084+01:00",
+  "generated_at": "2026-11-02T22:46:52.769454+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
   "skipped": [],
-  "unmatched": 118,
+  "unmatched": 122,
   "unpriced": 0,
   "shopping": [
     {
       "match": "Brest – Lyon",
       "books": [
         "pmu",
+        "netbet",
         "betclic"
       ],
       "margin": 0.08521857381130027,
-      "surebet": false
-    },
-    {
-      "match": "Villarreal – Getafe",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.0890407330896763,
       "surebet": false
     },
     {
@@ -32,6 +24,15 @@
         "netbet"
       ],
       "margin": 0.09014346467717838,
+      "surebet": false
+    },
+    {
+      "match": "Villarreal – Getafe",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.09228777016834222,
       "surebet": false
     },
     {
@@ -215,15 +216,15 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 9, premier league: 20, laliga: 10, serie a: 10, bundesliga: 9, champions league: 18",
       "events": 93,
-      "elapsed_s": 4.026
+      "elapsed_s": 3.909
     },
     {
       "name": "netbet",
       "kind": "book",
       "ok": true,
-      "detail": "ligue 1: 7 (page partielle), premier league: 8 (page partielle), laliga: 8 (page partielle), serie a: 8 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
-      "events": 31,
-      "elapsed_s": 5.459
+      "detail": "ligue 1: 9 (page partielle), premier league: 8 (page partielle), laliga: 8 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
+      "events": 35,
+      "elapsed_s": 5.18
     },
     {
       "name": "smarkets",
@@ -231,15 +232,15 @@
       "ok": true,
       "detail": "236 matchs listés sur 5 page(s), prix chargés après appariement",
       "events": 236,
-      "elapsed_s": 2.503
+      "elapsed_s": 2.496
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "5 matchs avec liquidité suffisante sur la page reçue",
-      "events": 5,
-      "elapsed_s": 0.731
+      "detail": "7 matchs avec liquidité suffisante sur la page reçue",
+      "events": 7,
+      "elapsed_s": 0.74
     },
     {
       "name": "pinnacle",
@@ -263,7 +264,7 @@
       "ok": true,
       "detail": "5 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 5,
-      "elapsed_s": 4.03
+      "elapsed_s": 4.025
     },
     {
       "name": "olybet",
@@ -295,7 +296,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.307
+      "elapsed_s": 0.271
     }
   ],
   "performance": {
