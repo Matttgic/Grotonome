@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T15:33:45.278539+01:00",
+  "generated_at": "2026-11-02T15:39:45.087385+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -214,7 +214,7 @@
       "ok": true,
       "detail": "ligue 1: 18, ligue 2: 9, premier league: 21, laliga: 11, serie a: 12, bundesliga: 9, champions league: 18",
       "events": 98,
-      "elapsed_s": 3.816
+      "elapsed_s": 4.038
     },
     {
       "name": "netbet",
@@ -222,7 +222,7 @@
       "ok": true,
       "detail": "ligue 1: 8 (page partielle), premier league: 9 (page partielle), laliga: 9 (page partielle), serie a: 8 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 34,
-      "elapsed_s": 4.842
+      "elapsed_s": 4.202
     },
     {
       "name": "smarkets",
@@ -230,23 +230,23 @@
       "ok": true,
       "detail": "259 matchs listés sur 6 page(s), prix chargés après appariement",
       "events": 259,
-      "elapsed_s": 2.488
+      "elapsed_s": 2.926
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "3 matchs avec liquidité suffisante sur la page reçue",
-      "events": 3,
-      "elapsed_s": 0.423
+      "detail": "2 matchs avec liquidité suffisante sur la page reçue",
+      "events": 2,
+      "elapsed_s": 0.418
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "332 matchs nommés sur 72 h, prix après appariement",
-      "events": 332,
-      "elapsed_s": 0.455
+      "detail": "331 matchs nommés sur 72 h, prix après appariement",
+      "events": 331,
+      "elapsed_s": 0.444
     },
     {
       "name": "the-odds-api",
@@ -262,7 +262,7 @@
       "ok": true,
       "detail": "3 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
       "events": 3,
-      "elapsed_s": 4.048
+      "elapsed_s": 4.483
     },
     {
       "name": "olybet",
@@ -294,7 +294,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.189
+      "elapsed_s": 0.323
     }
   ],
   "performance": {
