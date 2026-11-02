@@ -220,9 +220,9 @@ def price_smarkets(event_id: str, event_name: str, kickoff: datetime, captured_a
     if winner is None:
         return None
     market_id = winner["id"]
-    time.sleep(0.2)
+    time.sleep(1.0)
     contracts = get_json(f"https://api.smarkets.com/v3/markets/{market_id}/contracts/", timeout=20)
-    time.sleep(0.2)
+    time.sleep(1.0)
     quotes = get_json(f"https://api.smarkets.com/v3/markets/{market_id}/quotes/", timeout=20)
     return parse_smarkets_quotes(
         event_name=event_name,

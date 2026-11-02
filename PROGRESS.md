@@ -12,11 +12,11 @@
 
 ## En cours
 
-- Rien. La sonde Actions est lue et écrite dans `docs/FAISABILITE.md`.
+- Rien côté code. GitHub Pages n'est pas activé : le déploiement [41373704098](https://github.com/Matttgic/Grotonome/actions/runs/41373704098) a répondu 404. Le propriétaire doit choisir « GitHub Actions » dans Settings → Pages.
 
 ## Prochaine étape
 
-- Premier relevé réel sur `main` (workflow Quotidien) une fois Pages et, si voulu, Telegram configurés par le propriétaire.
+- Activer Pages, puis lancer le workflow Quotidien (ou attendre 11:00 UTC).
 - Laisser le journal accumuler des CLV avant de reparler d'un avantage sur les books français. L'historique disponible ne le montre pas.
 
 ## Décisions

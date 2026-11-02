@@ -27,6 +27,7 @@ python3 scripts/recherche_historique.py --download --cache data/cache
 - Chez Netbet, ne pas lire `odd:` : les valeurs répétées sont des variables. Lire `oddsDisplay`.
 - Ne pas committer le HTML Unibet : il contient le jeton anonyme.
 - Un HTTP 410 Kambi peut suivre une rafale. Espacer les ligues. Ne pas enchaîner des dizaines d'essais.
+- Smarkets annonce 60 requêtes par minute. Espacer d'environ une seconde les appels de prix.
 - Ne pas apparier des prix Pinnacle tant que les noms de matchs sont refusés.
 - Ne pas fusionner dans `main` si `python3 -m pytest` est rouge.
 - Ne pas choisir le seuil d'EV sur la période de test.

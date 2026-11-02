@@ -32,7 +32,7 @@ def analyze(
     cap: float = 0.015,
     min_ev: float = 0.0,
     pricer=None,
-    price_limit: int = 40,
+    price_limit: int = 25,
 ) -> RunResult:
     soft = [event for report in reports for event in report.soft]
     sharp = [event for report in reports for event in report.sharp if event.probs or event.odds]
