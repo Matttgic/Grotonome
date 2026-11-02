@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T09:50:48.030610+01:00",
+  "generated_at": "2026-11-02T09:56:47.776898+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -215,7 +215,7 @@
       "ok": true,
       "detail": "ligue 1: 10, ligue 2: 8, premier league: 11, laliga: 11, serie a: 12, bundesliga: 9, champions league: 18",
       "events": 79,
-      "elapsed_s": 3.715
+      "elapsed_s": 3.637
     },
     {
       "name": "netbet",
@@ -223,23 +223,23 @@
       "ok": true,
       "detail": "ligue 1: 8 (page partielle), premier league: 9 (page partielle), laliga: 9 (page partielle), serie a: 8 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 34,
-      "elapsed_s": 4.071
+      "elapsed_s": 4.612
     },
     {
       "name": "smarkets",
       "kind": "sharp",
       "ok": true,
-      "detail": "229 matchs listés sur 5 page(s), prix chargés après appariement",
-      "events": 229,
-      "elapsed_s": 2.371
+      "detail": "230 matchs listés sur 5 page(s), prix chargés après appariement",
+      "events": 230,
+      "elapsed_s": 2.122
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "7 matchs avec liquidité suffisante sur la page reçue",
-      "events": 7,
-      "elapsed_s": 0.419
+      "detail": "5 matchs avec liquidité suffisante sur la page reçue",
+      "events": 5,
+      "elapsed_s": 0.434
     },
     {
       "name": "pinnacle",
@@ -247,7 +247,7 @@
       "ok": true,
       "detail": "324 matchs nommés sur 72 h, prix après appariement",
       "events": 324,
-      "elapsed_s": 0.424
+      "elapsed_s": 0.455
     },
     {
       "name": "the-odds-api",
@@ -263,7 +263,7 @@
       "ok": true,
       "detail": "4 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
       "events": 4,
-      "elapsed_s": 4.376
+      "elapsed_s": 3.936
     },
     {
       "name": "olybet",
@@ -295,7 +295,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.218
+      "elapsed_s": 0.196
     }
   ],
   "performance": {
