@@ -87,4 +87,4 @@ En bref, le 2 novembre 2026 : Unibet.fr, PMU et une page partielle Netbet répon
 
 La probabilité juste est la cote sharp dont on a retiré la marge par la méthode puissance. L'espérance est `probabilité × cote − 1`. La mise est un quart de Kelly, plafonné à 1,5 % de la bankroll.
 
-Le ROI suivi est celui d'une mise de 1. La CLV compare la cote prise à la probabilité juste du dernier relevé sharp avant le coup d'envoi. Moins de deux paris réglés : pas d'intervalle.
+Le ROI suivi est celui d'une mise de 1. La CLV compare la cote prise à la probabilité juste du dernier relevé sharp avant le coup d'envoi. L'intervalle est regroupé par match : moins de deux matchs, ou une variance nulle, et il n'est pas affiché.

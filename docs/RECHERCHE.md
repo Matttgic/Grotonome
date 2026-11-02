@@ -12,12 +12,12 @@ Les CSV viennent de football-data.co.uk (saisons 2122 à 2526, championnats E0, 
 
 ## Protocole
 
-- Décision : cotes d'ouverture seulement (Pinnacle `PSH/PSD/PSA`, Bet365 `B365H/D/A`).
-- Mesure : clôture Pinnacle `PSCH/PSCD/PSCA`, deviguée par la même méthode, et résultat `FTR`.
+- Décision : cotes d'ouverture seulement (Pinnacle `PSH/PSD/PSA`, Bet365 `B365H/D/A`). Un match sans clôture reste dans le ROI ; sa CLV est absente.
+- Mesure : clôture Pinnacle `PSCH/PSCD/PSCA`, deviguée par la même méthode, et résultat `FTR`. La clôture ne sert pas à choisir le pari.
 - Un seul pari par match : l'issue dont l'EV d'ouverture est la plus haute, si elle passe le seuil.
 - Mise de test : 1 unité. Le ROI n'est pas un Kelly.
 - CLV : `cote prise × probabilité juste de clôture − 1`.
-- Intervalle : normal à 95 % sur le profit unitaire. Il n'est pas calculé sous 2 paris.
+- Intervalle : normal à 95 % sur le profit unitaire. Il n'est pas calculé sous 2 paris, ni quand tous les profits sont identiques (la variance nulle ne doit pas dessiner un intervalle de largeur zéro).
 - Découpage fixé avant de lire le test : entraînement jusqu'au 30 juin 2024 (5 402 matchs, du 6 août 2021 au 2 juin 2024), test à partir du 1er juillet 2024 (2 654 matchs, du 15 août 2024 au 15 janvier 2026). Les seuils 0 %, 2 % et 5 % sont fixés d'avance. Le seuil qui « marche » n'est pas choisi sur le test.
 - 8 056 matchs ont une ouverture Pinnacle et un résultat. Bet365 n'est pas un book ANJ. C'est le seul historique public soft contre sharp trouvé sans clé. L'extrapolation aux books français n'est pas faite.
 
@@ -33,11 +33,11 @@ Résultat sur le test :
 | --- | --- | --- | --- | --- | --- |
 | 0 % | 128 | +1,23 % | −0,58 % | +1,28 % | −27,9 % à +30,4 % |
 | 2 % | 27 | −17,5 % | −4,0 % | +3,6 % | −77 % à +42 % |
-| 5 % | 3 | −100 % | −6,3 % | +6,3 % | trois pertes |
+| 5 % | 3 | −100 % | −6,3 % | +6,3 % | non calculé (trois pertes, variance nulle) |
 
 L'entraînement, montré pour mémoire et non pour choisir, affichait un ROI de +10,6 % au seuil 0 % (n = 305) avec une CLV de +0,07 %. L'intervalle contient zéro. La CLV de test est négative à tous les seuils. L'EV annoncée à l'ouverture ne s'est pas retrouvée à la clôture.
 
-Contrôle de bon sens : parier systématiquement le domicile chez Bet365 sur le test donne un ROI de −11,7 % et une CLV de −5,8 % (n = 2 650, intervalle entièrement négatif). Le calcul voit bien la marge.
+Contrôle de bon sens : parier systématiquement le domicile chez Bet365 sur le test donne un ROI de −11,8 % et une CLV de −5,8 % (n = 2 654, CLV sur les 2 650 matchs qui ont une clôture, intervalle −16,3 % à −7,3 %, entièrement négatif). Le calcul voit bien la marge.
 
 Décision : le produit affiche les écarts du jour, il ne les présente pas comme une stratégie gagnante. Aucun seuil historique n'est assez solide pour filtrer « ce qui gagne ». La liste retient toute EV strictement positive, plafonne la mise, et répète ce résultat.
 
@@ -77,9 +77,9 @@ Décision : afficher la marge de shopping quand deux books couvrent le même mat
 
 ## 6. Modèle maison
 
-Hypothèse : les fréquences passées domicile / nul / extérieur d'un championnat, calculées seulement avec les matchs déjà joués, battent Pinnacle quand elles s'en écartent d'au moins 5 points.
+Hypothèse : les fréquences passées domicile / nul / extérieur d'un championnat, calculées seulement avec les matchs des jours déjà terminés, battent Pinnacle quand elles s'en écartent d'au moins 5 points. Les autres matchs du même jour ne comptent pas encore : leur résultat n'est pas connu au coup d'envoi.
 
-Test : 2 242 paris, ROI −17,8 %, CLV −10,5 %, intervalle −25,6 % à −10,1 %. L'EV « annoncée » par le modèle était de +90 %, ce qui mesure surtout son décalage avec le marché, pas un avantage.
+Test : 2 247 paris, ROI −17,9 %, CLV −10,5 %, intervalle −25,6 % à −10,2 %. L'EV « annoncée » par le modèle était de +90 %, ce qui mesure surtout son décalage avec le marché, pas un avantage.
 
 Décision : aucun modèle de score dans le produit. La probabilité juste est celle du marché sharp, marge retirée.
 

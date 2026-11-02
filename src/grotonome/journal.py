@@ -6,7 +6,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-from grotonome.metrics import mean_interval, unit_pnl
+from grotonome.metrics import clustered_mean_interval, unit_pnl
 from grotonome.models import Proposal
 from grotonome.names import normalize
 
@@ -120,24 +120,60 @@ def settle(journal: list[dict], results: list[dict]) -> list[dict]:
     return journal
 
 
-def performance(journal: list[dict]) -> dict:
-    settled = [row["pnl"] for row in journal if row.get("pnl") is not None]
-    clv = []
+def _match_key(row: dict) -> tuple:
+    kick = str(row.get("kickoff") or "")
+    return (normalize(str(row.get("home") or "")), normalize(str(row.get("away") or "")), kick[:10])
+
+
+def _groups(journal: list[dict], value_of) -> list[list[float]]:
+    buckets: dict[tuple, list[float]] = {}
+    order: list[tuple] = []
     for row in journal:
-        if row.get("closing_fair_p") is None:
+        value = value_of(row)
+        if value is None:
             continue
-        clv.append(float(row["odds"]) * float(row["closing_fair_p"]) - 1)
-    roi = mean_interval(settled)
-    closing = mean_interval(clv)
+        key = _match_key(row)
+        if key not in buckets:
+            order.append(key)
+            buckets[key] = []
+        buckets[key].append(float(value))
+    return [buckets[key] for key in order]
+
+
+def _missing_interval(interval, groups: list[list[float]]) -> str | None:
+    if interval.mean is None or interval.low is not None:
+        return None
+    if interval.n < 2:
+        return "moins de 2 paris"
+    if len(groups) < 2:
+        return "moins de 2 matchs"
+    return "variance nulle"
+
+
+def performance(journal: list[dict]) -> dict:
+    settled = _groups(journal, lambda row: row.get("pnl"))
+
+    def _clv(row: dict):
+        if row.get("closing_fair_p") is None:
+            return None
+        return float(row["odds"]) * float(row["closing_fair_p"]) - 1
+
+    clv = _groups(journal, _clv)
+    roi = clustered_mean_interval(settled)
+    closing = clustered_mean_interval(clv)
     return {
         "n_bets": len(journal),
         "n_settled": roi.n,
         "n_with_clv": closing.n,
+        "n_roi_matches": len(settled),
+        "n_clv_matches": len(clv),
         "roi": roi.mean,
         "roi_low": roi.low,
         "roi_high": roi.high,
+        "roi_note": _missing_interval(roi, settled),
         "clv_mean": closing.mean,
         "clv_low": closing.low,
         "clv_high": closing.high,
+        "clv_note": _missing_interval(closing, clv),
         "flat_stake": True,
     }

@@ -100,21 +100,22 @@ def load(cache: Path) -> list[dict]:
 def run(sample: list[dict], threshold: float) -> list[dict]:
     bets = []
     for row in sample:
-        if row["soft"] is None or row["closing"] is None:
+        # La clôture ne décide pas. Un match sans clôture reste dans le ROI, sans CLV.
+        if row["soft"] is None:
             continue
         fair = power(row["opening"])
-        close = power(row["closing"])
+        close = power(row["closing"]) if row["closing"] is not None else None
         candidates = []
         for index, side in enumerate("HDA"):
             odds = row["soft"][index]
             ev = expected_value(fair[index], odds)
-            if ev < threshold:
+            if ev <= 0 or ev < threshold:
                 continue
             won = row["result"] == side
             candidates.append(
                 {
                     "ev": ev,
-                    "clv": odds * close[index] - 1,
+                    "clv": None if close is None else odds * close[index] - 1,
                     "pnl": (odds - 1) if won else -1,
                 }
             )
@@ -126,39 +127,63 @@ def run(sample: list[dict], threshold: float) -> list[dict]:
 def always_home(sample: list[dict]) -> list[dict]:
     bets = []
     for row in sample:
-        if row["soft"] is None or row["closing"] is None:
+        if row["soft"] is None:
             continue
         odds = row["soft"][0]
-        close = power(row["closing"])
         won = row["result"] == "H"
-        bets.append({"ev": 0, "clv": odds * close[0] - 1, "pnl": (odds - 1) if won else -1})
+        clv = None
+        if row["closing"] is not None:
+            close = power(row["closing"])
+            clv = odds * close[0] - 1
+        bets.append({"ev": 0, "clv": clv, "pnl": (odds - 1) if won else -1})
     return bets
 
 
 def frequency_model(rows: list[dict]) -> list[dict]:
+    """Fréquences de la division, sans les résultats du jour en cours."""
+    rows = sorted(rows, key=lambda row: (row["date"], row["div"]))
     counts: dict[str, list[int]] = {}
     bets = []
+    pending_date = None
+    pending: list[dict] = []
+
+    def flush() -> None:
+        for previous in pending:
+            bucket = counts.setdefault(previous["div"], [0, 0, 0])
+            bucket[{"H": 0, "D": 1, "A": 2}[previous["result"]]] += 1
+        pending.clear()
+
     for row in rows:
+        if pending_date is not None and row["date"] != pending_date:
+            flush()
+        pending_date = row["date"]
         bucket = counts.setdefault(row["div"], [0, 0, 0])
         total = sum(bucket)
-        if row["date"] >= SPLIT and total >= 80 and row["soft"] and row["closing"]:
+        if row["date"] >= SPLIT and total >= 80 and row["soft"]:
             probs = [count / total for count in bucket]
             fair = power(row["opening"])
-            close = power(row["closing"])
+            close = power(row["closing"]) if row["closing"] is not None else None
             candidates = []
             for index, side in enumerate("HDA"):
-                if probs[index] - fair[index] < 0.05:
+                prob = probs[index]
+                if not 0 < prob < 1 or prob - fair[index] < 0.05:
                     continue
                 odds = row["soft"][index]
-                if expected_value(probs[index], odds) <= 0:
+                ev = expected_value(prob, odds)
+                if ev <= 0:
                     continue
                 won = row["result"] == side
                 candidates.append(
-                    {"ev": expected_value(probs[index], odds), "clv": odds * close[index] - 1, "pnl": (odds - 1) if won else -1}
+                    {
+                        "ev": ev,
+                        "clv": None if close is None else odds * close[index] - 1,
+                        "pnl": (odds - 1) if won else -1,
+                    }
                 )
             if candidates:
                 bets.append(max(candidates, key=lambda bet: bet["ev"]))
-        bucket[{"H": 0, "D": 1, "A": 2}[row["result"]]] += 1
+        pending.append(row)
+    flush()
     return bets
 
 
@@ -185,13 +210,17 @@ def summarize(bets: list[dict], label: str) -> None:
     n = len(bets)
     profit = sum(bet["pnl"] for bet in bets)
     mean = profit / n
-    clv = sum(bet["clv"] for bet in bets) / n
+    clvs = [bet["clv"] for bet in bets if bet["clv"] is not None]
+    clv = sum(clvs) / len(clvs) if clvs else math.nan
     ev = sum(bet["ev"] for bet in bets) / n
     if n >= 2:
         var = sum((bet["pnl"] - mean) ** 2 for bet in bets) / (n - 1)
-        se = math.sqrt(var / n)
-        low, high = mean - 1.96 * se, mean + 1.96 * se
-        interval = f"[{low * 100:.2f} % ; {high * 100:.2f} %]"
+        if var == 0:
+            interval = "non calculé (variance nulle)"
+        else:
+            se = math.sqrt(var / n)
+            low, high = mean - 1.96 * se, mean + 1.96 * se
+            interval = f"[{low * 100:.2f} % ; {high * 100:.2f} %]"
     else:
         interval = "non calculé"
     print(

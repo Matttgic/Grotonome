@@ -51,7 +51,19 @@ ALIASES = {
     "troyes": "troyes",
 }
 
-_DROP = {
+_STOP = {"de", "du", "des", "the", "club"}
+
+DRAW_LABELS = {"n", "nul", "x", "draw", "match nul", "egalite", "égalité"}
+
+
+def strip_accents(text: str) -> str:
+    decomposed = unicodedata.normalize("NFKD", text)
+    return "".join(ch for ch in decomposed if not unicodedata.combining(ch))
+
+
+# Préfixes de club. Un suffixe n'est retiré que s'il reste au moins deux mots :
+# « Paris FC » et « Barcelona SC » ne doivent pas devenir « paris » et « barcelona ».
+_ORG = {
     "fc",
     "sc",
     "ac",
@@ -64,34 +76,69 @@ _DROP = {
     "us",
     "sd",
     "cd",
-    "de",
-    "du",
-    "des",
-    "the",
-    "club",
+    "osc",
+    "hsc",
+    "sco",
 }
 
-DRAW_LABELS = {"n", "nul", "x", "draw", "match nul", "egalite", "égalité"}
+# Réserve, jeunes ou équipe féminine : un seul des deux noms marqué, pas d'appariement.
+_MARKERS = {
+    "ii",
+    "iii",
+    "iv",
+    "u17",
+    "u18",
+    "u19",
+    "u20",
+    "u21",
+    "u23",
+    "reserve",
+    "reserves",
+    "women",
+    "woman",
+    "ladies",
+    "frauen",
+    "dames",
+    "femme",
+    "feminin",
+    "feminine",
+    "w",
+}
 
 
-def strip_accents(text: str) -> str:
-    decomposed = unicodedata.normalize("NFKD", text)
-    return "".join(ch for ch in decomposed if not unicodedata.combining(ch))
-
-
-def normalize(name: str) -> str:
+def tokens(name: str) -> list[str]:
     raw = strip_accents(name).lower().replace("&", " ")
     cleaned = []
     for ch in raw:
         cleaned.append(ch if ch.isalnum() else " ")
-    tokens = [tok for tok in "".join(cleaned).split() if tok not in _DROP]
-    if not tokens:
-        tokens = [tok for tok in "".join(cleaned).split()]
-    key = " ".join(tokens)
+    return "".join(cleaned).split()
+
+
+def _marked(name: str) -> bool:
+    return any(tok in _MARKERS for tok in tokens(name))
+
+
+def normalize(name: str) -> str:
+    parts = tokens(name)
+    full = " ".join(parts)
+    # L'alias est lu avant de jeter « fc » ou « de », sinon « paris fc » devient « paris »
+    # et « stade de reims » ne trouve plus sa ligne.
+    if full in ALIASES:
+        return ALIASES[full]
+    kept = [tok for tok in parts if tok not in _STOP]
+    while kept and kept[0] in _ORG:
+        kept = kept[1:]
+    while len(kept) >= 3 and kept[-1] in _ORG:
+        kept = kept[:-1]
+    if not kept:
+        kept = parts
+    key = " ".join(kept)
     return ALIASES.get(key, key)
 
 
 def same_team(left: str, right: str, *, threshold: float = 0.92) -> bool:
+    if _marked(left) != _marked(right):
+        return False
     a, b = normalize(left), normalize(right)
     if not a or not b:
         return False
