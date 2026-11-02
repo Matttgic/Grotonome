@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-02T13:20:47.809078+01:00",
+  "generated_at": "2026-11-02T13:26:47.504416+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
   "skipped": [],
-  "unmatched": 104,
+  "unmatched": 105,
   "unpriced": 0,
   "shopping": [
     {
@@ -25,15 +25,6 @@
         "betclic"
       ],
       "margin": 0.0930842986680549,
-      "surebet": false
-    },
-    {
-      "match": "Sassuolo – Fiorentina",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.09379509379509376,
       "surebet": false
     },
     {
@@ -65,12 +56,30 @@
       "surebet": false
     },
     {
+      "match": "Sassuolo – Fiorentina",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.10052910052910047,
+      "surebet": false
+    },
+    {
       "match": "Ipswich Town – Bournemouth",
       "books": [
         "pmu",
         "netbet"
       ],
       "margin": 0.10216378484812605,
+      "surebet": false
+    },
+    {
+      "match": "Nottingham Forest – Manchester City",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.10357926449880472,
       "surebet": false
     },
     {
@@ -101,30 +110,12 @@
       "surebet": false
     },
     {
-      "match": "Nottingham Forest – Manchester City",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.1062523465624241,
-      "surebet": false
-    },
-    {
       "match": "Auxerre – Paris FC",
       "books": [
         "pmu",
         "netbet"
       ],
       "margin": 0.10628221543714522,
-      "surebet": false
-    },
-    {
-      "match": "Brighton – Brentford",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10730593607305927,
       "surebet": false
     },
     {
@@ -182,6 +173,15 @@
       "surebet": false
     },
     {
+      "match": "Brighton – Brentford",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.11027576263518801,
+      "surebet": false
+    },
+    {
       "match": "Cagliari – Frosinone",
       "books": [
         "pmu",
@@ -196,15 +196,15 @@
       "name": "winamax",
       "kind": "book",
       "ok": false,
-      "detail": "HTTP 403",
+      "detail": "recul jusqu'à 2026-11-02T14:20:47.809078+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.174
+      "elapsed_s": 0.0
     },
     {
       "name": "unibet",
       "kind": "book",
       "ok": false,
-      "detail": "HTTP 403",
+      "detail": "recul jusqu'à 2026-11-02T14:20:47.809078+00:00 après HTTP 403",
       "events": 0,
       "elapsed_s": 0.0
     },
@@ -212,9 +212,9 @@
       "name": "pmu",
       "kind": "book",
       "ok": true,
-      "detail": "ligue 1: 10, ligue 2: 8, premier league: 20, laliga: 11, serie a: 12, bundesliga: 9, champions league: 18",
-      "events": 88,
-      "elapsed_s": 3.57
+      "detail": "ligue 1: 10, ligue 2: 8, premier league: 21, laliga: 11, serie a: 12, bundesliga: 9, champions league: 18",
+      "events": 89,
+      "elapsed_s": 3.55
     },
     {
       "name": "netbet",
@@ -222,15 +222,15 @@
       "ok": true,
       "detail": "ligue 1: 8 (page partielle), premier league: 9 (page partielle), laliga: 9 (page partielle), serie a: 8 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 34,
-      "elapsed_s": 4.325
+      "elapsed_s": 4.684
     },
     {
       "name": "smarkets",
       "kind": "sharp",
       "ok": true,
-      "detail": "247 matchs listés sur 5 page(s), prix chargés après appariement",
-      "events": 247,
-      "elapsed_s": 2.244
+      "detail": "248 matchs listés sur 5 page(s), prix chargés après appariement",
+      "events": 248,
+      "elapsed_s": 2.402
     },
     {
       "name": "matchbook",
@@ -238,15 +238,15 @@
       "ok": true,
       "detail": "4 matchs avec liquidité suffisante sur la page reçue",
       "events": 4,
-      "elapsed_s": 0.42
+      "elapsed_s": 0.426
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "328 matchs nommés sur 72 h, prix après appariement",
-      "events": 328,
-      "elapsed_s": 0.493
+      "detail": "332 matchs nommés sur 72 h, prix après appariement",
+      "events": 332,
+      "elapsed_s": 0.44
     },
     {
       "name": "the-odds-api",
@@ -262,31 +262,31 @@
       "ok": true,
       "detail": "4 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
       "events": 4,
-      "elapsed_s": 4.054
+      "elapsed_s": 4.365
     },
     {
       "name": "olybet",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, pas de contournement",
+      "detail": "recul jusqu'à 2026-11-02T14:20:47.809078+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.075
+      "elapsed_s": 0.0
     },
     {
       "name": "betsson",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, pas de contournement",
+      "detail": "recul jusqu'à 2026-11-02T14:20:47.809078+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.134
+      "elapsed_s": 0.0
     },
     {
       "name": "genybet",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, accès refusé (géoblocage probable), pas de contournement",
+      "detail": "recul jusqu'à 2026-11-02T14:20:47.809078+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.181
+      "elapsed_s": 0.0
     },
     {
       "name": "vbet",
@@ -294,7 +294,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.3
+      "elapsed_s": 0.268
     }
   ],
   "performance": {
