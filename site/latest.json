@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T04:44:03.647205+01:00",
+  "generated_at": "2026-11-02T04:50:03.930806+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -211,7 +211,7 @@
       "ok": true,
       "detail": "ligue 1: 10, ligue 2: 8, premier league: 11, laliga: 11, serie a: 12, bundesliga: 9, champions league: 18",
       "events": 79,
-      "elapsed_s": 4.218
+      "elapsed_s": 4.13
     },
     {
       "name": "netbet",
@@ -219,7 +219,7 @@
       "ok": true,
       "detail": "ligue 1: 8 (page partielle), premier league: 9 (page partielle), laliga: 9 (page partielle), serie a: 8 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 34,
-      "elapsed_s": 5.108
+      "elapsed_s": 5.13
     },
     {
       "name": "smarkets",
@@ -227,7 +227,7 @@
       "ok": true,
       "detail": "221 matchs listés sur 5 page(s), prix chargés après appariement",
       "events": 221,
-      "elapsed_s": 2.608
+      "elapsed_s": 2.678
     },
     {
       "name": "matchbook",
@@ -235,7 +235,7 @@
       "ok": true,
       "detail": "12 matchs avec liquidité suffisante sur la page reçue",
       "events": 12,
-      "elapsed_s": 0.833
+      "elapsed_s": 0.787
     },
     {
       "name": "pinnacle",
@@ -243,7 +243,7 @@
       "ok": true,
       "detail": "261 matchs nommés sur 72 h, prix après appariement",
       "events": 261,
-      "elapsed_s": 0.379
+      "elapsed_s": 0.419
     },
     {
       "name": "the-odds-api",
@@ -291,7 +291,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.298
+      "elapsed_s": 0.283
     }
   ],
   "performance": {
