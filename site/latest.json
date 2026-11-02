@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T14:57:45.543284+01:00",
+  "generated_at": "2026-11-02T15:03:45.429774+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -64,21 +64,21 @@
       "surebet": false
     },
     {
-      "match": "Ipswich Town – Bournemouth",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10052910052910047,
-      "surebet": false
-    },
-    {
       "match": "Lorient – Brest",
       "books": [
         "pmu",
         "netbet"
       ],
       "margin": 0.10136908864229466,
+      "surebet": false
+    },
+    {
+      "match": "Ipswich Town – Bournemouth",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.10334346504559266,
       "surebet": false
     },
     {
@@ -137,21 +137,21 @@
       "surebet": false
     },
     {
+      "match": "Brighton – Brentford",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.10817339078208632,
+      "surebet": false
+    },
+    {
       "match": "Auxerre – Paris FC",
       "books": [
         "pmu",
         "netbet"
       ],
       "margin": 0.10952896868389828,
-      "surebet": false
-    },
-    {
-      "match": "Brighton – Brentford",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.11027576263518801,
       "surebet": false
     },
     {
@@ -214,7 +214,7 @@
       "ok": true,
       "detail": "ligue 1: 18, ligue 2: 9, premier league: 21, laliga: 11, serie a: 12, bundesliga: 9, champions league: 18",
       "events": 98,
-      "elapsed_s": 3.996
+      "elapsed_s": 3.866
     },
     {
       "name": "netbet",
@@ -222,7 +222,7 @@
       "ok": true,
       "detail": "ligue 1: 8 (page partielle), premier league: 9 (page partielle), laliga: 9 (page partielle), serie a: 8 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 34,
-      "elapsed_s": 4.774
+      "elapsed_s": 4.657
     },
     {
       "name": "smarkets",
@@ -230,23 +230,23 @@
       "ok": true,
       "detail": "258 matchs listés sur 6 page(s), prix chargés après appariement",
       "events": 258,
-      "elapsed_s": 2.877
+      "elapsed_s": 2.491
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "2 matchs avec liquidité suffisante sur la page reçue",
-      "events": 2,
-      "elapsed_s": 0.587
+      "detail": "5 matchs avec liquidité suffisante sur la page reçue",
+      "events": 5,
+      "elapsed_s": 0.499
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "332 matchs nommés sur 72 h, prix après appariement",
-      "events": 332,
-      "elapsed_s": 0.496
+      "detail": "326 matchs nommés sur 72 h, prix après appariement",
+      "events": 326,
+      "elapsed_s": 0.505
     },
     {
       "name": "the-odds-api",
@@ -262,7 +262,7 @@
       "ok": true,
       "detail": "3 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
       "events": 3,
-      "elapsed_s": 3.877
+      "elapsed_s": 4.6
     },
     {
       "name": "olybet",
@@ -294,7 +294,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.417
+      "elapsed_s": 0.322
     }
   ],
   "performance": {
