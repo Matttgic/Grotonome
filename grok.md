@@ -20,6 +20,7 @@ python3 -m grotonome sonde
 python3 -m grotonome passage --no-telegram
 python3 -m grotonome veille --minutes 12 --interval 360
 python3 scripts/recherche_historique.py --download --cache data/cache
+python3 scripts/retard_betclic.py data/cotes.jsonl
 ```
 
 ## Erreurs à ne plus refaire
@@ -36,3 +37,4 @@ python3 scripts/recherche_historique.py --download --cache data/cache
 - Heure compacte Unibet : UTC. Lorient–Brest `2611021945` = 19:45Z, aligné sur PMU, Smarkets et Netbet.
 - `OM` = Marseille, `OL` = Lyon, et seulement comme nom entier.
 - Ne pas interpréter un `status:b` minifié chez Netbet.
+- Toute cote Betclic vient de SportyTrader. Elle porte l'avertissement « cote relayée, à vérifier dans l'appli Betclic ». Si elle est inchangée et que le sharp a bougé d'au moins 2 points depuis le dernier changement de cette cote, elle sort de la liste. Le médian du 2 novembre 2026 n'existe pas : 0 suivi dans `data/cotes.jsonl`.

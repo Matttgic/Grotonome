@@ -12,6 +12,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from grotonome.alertes import remember_alerts, select_alerts
+from grotonome.fraicheur import remember_betclic_fair
 from grotonome.history import append_rows, changed_rows, french_clv, snapshot_rows
 from grotonome.journal import attach_closes, load_jsonl, performance, record, settle, write_jsonl
 from grotonome.pipeline import analyze
@@ -98,7 +99,7 @@ def cmd_passage(args) -> int:
     del ring[:-24]
     print(f"RYTHME {now.isoformat()}", flush=True)
     reports = fetch_all(now=now, backoff=backoff)
-    result = analyze(reports, pricer=_price)
+    result = analyze(reports, pricer=_price, prior=state.get("etat"))
     _persist_passage(args, result, state, now)
     return 0
 
@@ -125,6 +126,7 @@ def _persist_passage(args, result, state: dict, now: datetime) -> None:
             note = "résultats indisponibles"
     fresh = snapshot_rows(result.reports, result.sharp_prices)
     deltas, state["etat"] = changed_rows(state.setdefault("etat", {}), fresh)
+    remember_betclic_fair(state["etat"], result.betclic_anchors, deltas)
     append_rows(Path(args.cotes), deltas)
     bankroll = _bankroll()
     alerts = []

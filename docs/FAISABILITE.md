@@ -12,6 +12,25 @@ Le site `www.betclic.fr` (accueil, football, robots.txt, sitemap) répond **403*
 
 La page publique SportyTrader, elle, affiche le 1N2 Betclic. Le 2 novembre, Lorient–Brest y est coté **2,35 / 3,10 / 2,83**. L'heure affichée « 02 nov. - 14:45 » correspond à 19:45 UTC une fois calée sur le coup d'envoi déjà connu (écart +5 h depuis cette IP américaine). Sans ce calage, les cotes ne sont pas utilisées. C'est ce relais qui alimente la liste, pas une API Betclic.
 
+## Fraîcheur du relais SportyTrader, 2 novembre 2026
+
+Verdict : **retard médian non calculable**. L'échantillon est trop petit (0 suivi).
+
+`data/cotes.jsonl` au commit `6eff1f0` compte 252 lignes, de `2026-11-02T02:20:15Z` à `2026-11-02T03:50:03Z`. Répartition : PMU 135, Netbet 69, Matchbook 26, Winamax 22. Aucune ligne Betclic, Pinnacle, Smarkets ou Unibet. Le script `python3 scripts/retard_betclic.py data/cotes.jsonl` trouve 3 mouvements sharp (tous Matchbook) et 1 mouvement PMU. Unibet : 0. Winamax : 0. Aucun de ces mouvements n'a de cote Betclic antérieure sur le même match, donc aucun délai. Suivis : 0. Censurés : 0. Médian sharp → Betclic : non calculable. Médian Unibet / Winamax / PMU → Betclic : non calculable. Le seuil pour publier un médian est 8 suivis sharp.
+
+Pourquoi zéro ligne Betclic : le job de veille `41384155415` a démarré à 03:37 UTC, avant le commit `96cca3a` (03:52 UTC) qui lit SportyTrader. Ce job garde l'ancien code jusqu'à sa fin. Les relevés toutes les ~6 minutes de cette fenêtre ne peuvent pas mesurer le relais.
+
+En-têtes lus à 03:59 UTC depuis cette VM (une page ligue, une page match, sans enchaîner) :
+
+| Page | Code | Cache-Control | Age | Last-Modified | Cloudflare |
+| --- | --- | --- | --- | --- | --- |
+| `https://www.sportytrader.com/cotes/football/france/ligue-1-123/` | 200, 405 ko | `max-age=0, public, s-maxage=600` | absent | absent | `cf-cache-status: HIT` |
+| `https://www.sportytrader.com/cotes/lorient-brest-8532705/` | 200, 1,6 Mo | `max-age=0, public, s-maxage=600` | absent | absent | `cf-cache-status: EXPIRED` |
+
+`s-maxage=600` veut dire que le CDN peut servir la page pendant 10 minutes. Ce n'est pas le retard face à Betclic. La page ligue contient des heures ISO de coup d'envoi (`2026-11-02T19:45`), pas une heure de cotation. Aucun texte « mise à jour » ou `datetime`. Sur la page match, à 03:59 UTC, la pastille domicile Betclic est encore 2,35. Les deux autres issues n'ont pas été relues à cet instant.
+
+Limite d'âge retenue en attendant la mesure : **2 points de probabilité juste**. Une cote Betclic identique à la précédente (écart inférieur à 0,01) sort de la liste et de l'alerte si le sharp a bougé d'au moins 0,02 depuis l'ancre posée au dernier changement de cette cote. Deux points, c'est quatre fois le seuil qui enregistre une probabilité (0,005). Chaque pari Betclic qui reste porte l'avertissement « cote relayée, à vérifier dans l'appli Betclic », dans la liste et dans l'alerte. Le script ci-dessus refait la mesure quand la veille aura accumulé des lignes Betclic.
+
 ## Unibet et Parions Sport
 
 Parions Sport en ligne (FDJ) et Unibet servent la même offre. Des cotes identiques sont le fonctionnement normal, pas un doublon à arbitrer. Le relevé ne les interroge qu'une fois, sous le nom affiché « Unibet / Parions Sport ». ZEbet redirige aussi vers Unibet.fr.

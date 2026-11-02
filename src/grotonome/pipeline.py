@@ -6,6 +6,7 @@ from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 
 from grotonome.devig import devig, normalize_probs, overround
+from grotonome.fraicheur import RELAY_WARNING, STALE_REASON, betclic_frozen, prior_betclic
 from grotonome.models import FetchReport, Proposal, SharpPrice, SoftPrice
 from grotonome.names import normalize, same_team
 from grotonome.sources.parse import competition_key
@@ -25,6 +26,7 @@ class RunResult:
     unpriced: int = 0
     shopping: list[dict] = field(default_factory=list)
     sharp_prices: list[SharpPrice] = field(default_factory=list)
+    betclic_anchors: list[dict] = field(default_factory=list)
 
 
 def analyze(
@@ -36,6 +38,7 @@ def analyze(
     min_ev: float = 0.0,
     pricer=None,
     price_limit: int = 25,
+    prior: dict | None = None,
 ) -> RunResult:
     soft = [event for report in reports for event in report.soft]
     sharp = [event for report in reports for event in report.sharp if event.probs or event.odds]
@@ -117,6 +120,25 @@ def analyze(
                 }
             )
             continue
+        if event.source == "betclic":
+            warnings.append(RELAY_WARNING)
+            result.betclic_anchors.append(
+                {
+                    "home": event.home,
+                    "away": event.away,
+                    "kickoff": event.kickoff.astimezone(timezone.utc).isoformat(),
+                    "fair": list(fair),
+                }
+            )
+            if betclic_frozen(event.odds, fair, prior_betclic(prior, event)):
+                result.skipped.append(
+                    {
+                        "match": f"{event.home} – {event.away}",
+                        "bookmaker": event.source,
+                        "reason": STALE_REASON,
+                    }
+                )
+                continue
         names = (event.home, "Nul", event.away)
         positive = select_side(event.odds, tuple(fair), min_ev=min_ev)
         if len(positive) > 1:
