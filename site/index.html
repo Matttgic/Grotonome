@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10231c">
+  <title>Grotonome</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Paris sportifs · books agréés ANJ</p>
+      <h1>Grotonome</h1>
+      <p id="when" class="muted">Chargement du dernier relevé…</p>
+    </header>
+    <section id="notice" class="card warn" hidden></section>
+    <section>
+      <h2>À jouer, ou pas</h2>
+      <div id="bets"></div>
+    </section>
+    <section>
+      <h2>Suivi</h2>
+      <div id="perf" class="card"></div>
+    </section>
+    <section>
+      <h2>Sources</h2>
+      <div id="sources"></div>
+    </section>
+    <section>
+      <h2>Shopping</h2>
+      <div id="shopping" class="card"></div>
+    </section>
+    <section>
+      <h2>Comment c'est calculé</h2>
+      <div id="method" class="card"></div>
+    </section>
+  </main>
+  <script>
+    const fmt = new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 2, minimumFractionDigits: 2 });
+    const pct = (value) => fmt.format(value * 100) + " %";
+    const money = (value) => value == null ? null : fmt.format(value) + " €";
+    const when = (iso) => iso ? new Date(iso).toLocaleString("fr-FR", { timeZone: "Europe/Paris", weekday: "short", day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" }) : "date inconnue";
+
+    function card(html) {
+      const node = document.createElement("article");
+      node.className = "card";
+      node.innerHTML = html;
+      return node;
+    }
+
+    function render(data) {
+      document.getElementById("when").textContent = data.generated_at
+        ? "Relevé du " + when(data.generated_at) + " (heure de Paris)"
+        : "Pas encore de relevé.";
+      const notice = document.getElementById("notice");
+      notice.hidden = false;
+      notice.textContent = data.notice || data.historical_notice || "";
+
+      const bets = document.getElementById("bets");
+      bets.replaceChildren();
+      if (!data.bets || data.bets.length === 0) {
+        bets.append(card("<p class='empty'>Aucun pari à espérance positive sur ce relevé.</p>"));
+      } else {
+        data.bets.forEach((bet) => {
+          const euros = money(bet.stake_eur);
+          const warnings = (bet.warnings || []).map((item) => `<li>${item}</li>`).join("");
+          bets.append(card(`
+            <p class="match">${bet.match}</p>
+            <p class="line"><strong>${bet.bookmaker}</strong> · ${bet.selection}</p>
+            <dl>
+              <div><dt>Cote</dt><dd>${fmt.format(bet.odds)}</dd></div>
+              <div><dt>EV</dt><dd>${pct(bet.ev)}</dd></div>
+              <div><dt>Mise</dt><dd>${pct(bet.stake_fraction)}${euros ? " · " + euros : ""}</dd></div>
+              <div><dt>Limite</dt><dd>${when(bet.kickoff)}</dd></div>
+            </dl>
+            <p class="fine">Proba juste ${pct(bet.fair_p)} · marge retirée par ${bet.devig} · référence ${(bet.sharp_sources || []).join(", ") || "manquante"} · marge du book ${pct(bet.overround)}</p>
+            ${warnings ? `<ul class="fine">${warnings}</ul>` : ""}
+          `));
+        });
+      }
+
+      const perf = data.performance || {};
+      const interval = (mean, low, high, n) => {
+        if (mean == null) return "pas encore de mesure";
+        if (low == null) return pct(mean) + ` (n=${n}, intervalle non calculé : moins de 2 valeurs)`;
+        return pct(mean) + ` (n=${n}, 95 % : ${pct(low)} à ${pct(high)})`;
+      };
+      document.getElementById("perf").innerHTML = `
+        <p>ROI à mise unitaire : ${interval(perf.roi, perf.roi_low, perf.roi_high, perf.n_settled || 0)}</p>
+        <p>CLV moyenne contre la clôture sharp : ${interval(perf.clv_mean, perf.clv_low, perf.clv_high, perf.n_with_clv || 0)}</p>
+        <p class="fine">Paris proposés : ${perf.n_bets ?? 0}. Un résultat absent reste absent. ${perf.results_note || ""}</p>
+        <p class="fine">${data.historical_notice || ""}</p>
+      `;
+
+      const sources = document.getElementById("sources");
+      sources.replaceChildren();
+      (data.sources || []).forEach((source) => {
+        const node = card(`
+          <p class="line"><span class="dot ${source.ok ? "ok" : "bad"}"></span> ${source.name}</p>
+          <p class="fine">${source.detail || ""} · ${source.events ?? 0} ligne(s) · ${source.elapsed_s ?? "?"} s</p>
+        `);
+        sources.append(node);
+      });
+      if (!data.sources || data.sources.length === 0) {
+        sources.append(card("<p class='empty'>Les sources s'afficheront après le premier relevé.</p>"));
+      }
+
+      const shop = data.shopping || [];
+      const shopNode = document.getElementById("shopping");
+      if (shop.length === 0) {
+        shopNode.textContent = data.generated_at ? "Pas de match couvert par deux books sur ce relevé, ou pas de surebet." : "En attente du premier relevé.";
+      } else {
+        shopNode.innerHTML = shop.map((row) => {
+          const label = row.surebet ? "surebet " + pct(-row.margin) : "marge restante " + pct(row.margin);
+          return `<p>${row.match} · ${row.books.join(" + ")} · ${label}</p>`;
+        }).join("");
+      }
+
+      document.getElementById("method").innerHTML = `
+        <p>La probabilité juste vient des milieux de cote Smarkets (et de Pinnacle si The Odds API est configurée). La marge est retirée par la méthode puissance : on cherche l'exposant qui ramène la somme des probabilités à 1.</p>
+        <p>EV = probabilité juste × cote − 1. La mise est un quart de Kelly, plafonné à 1,5 % de la bankroll. Sans bankroll renseignée, seule la fraction est affichée.</p>
+        <p>La CLV est l'EV de la cote prise face à la probabilité juste du dernier relevé sharp avant le coup d'envoi. Le ROI est celui d'une mise de 1 sur chaque pari réglé.</p>
+        <p>Aucun pari n'est envoyé à un bookmaker.</p>
+      `;
+    }
+
+    fetch("latest.json", { cache: "no-store" })
+      .then((response) => {
+        if (!response.ok) throw new Error("HTTP " + response.status);
+        return response.json();
+      })
+      .then(render)
+      .catch(() => {
+        document.getElementById("when").textContent = "Le fichier de relevé est illisible.";
+      });
+  </script>
+</body>
+</html>

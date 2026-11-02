@@ -1,0 +1,25 @@
+{
+  "generated_at": null,
+  "devig": "power",
+  "bankroll_eur": null,
+  "bets": [],
+  "skipped": [],
+  "unmatched": null,
+  "shopping": [],
+  "sources": [],
+  "performance": {
+    "n_bets": 0,
+    "n_settled": 0,
+    "n_with_clv": 0,
+    "roi": null,
+    "roi_low": null,
+    "roi_high": null,
+    "clv_mean": null,
+    "clv_low": null,
+    "clv_high": null,
+    "flat_stake": true,
+    "results_note": "aucun relevé pour l'instant"
+  },
+  "historical_notice": "Contrôle historique (Bet365 contre Pinnacle, ouverture puis clôture, saisons 2021-2026, cinq grands championnats, test à partir de juillet 2024) : au seuil 0 %, n=128, ROI +1,2 %, CLV moyenne −0,6 %, intervalle de confiance très large et qui contient zéro. Au seuil 2 %, n=27, CLV −4,0 %. Ce n'est pas un avantage démontré. Bet365 n'est pas un bookmaker ANJ : c'est un proxy de book « soft », faute d'historique public des cotes françaises.",
+  "notice": "Aucun relevé pour l'instant. Le passage quotidien remplira cette page. Grotonome ne place aucun pari."
+}

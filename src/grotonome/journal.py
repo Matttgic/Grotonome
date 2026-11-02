@@ -1,0 +1,143 @@
+"""Journal des paris proposés. La première cote reste celle du suivi."""
+
+from __future__ import annotations
+
+import json
+from datetime import datetime, timezone
+from pathlib import Path
+
+from grotonome.metrics import mean_interval, unit_pnl
+from grotonome.models import Proposal
+from grotonome.names import normalize
+
+
+def proposal_id(item: Proposal) -> str:
+    day = item.kickoff.astimezone(timezone.utc).date().isoformat()
+    return "|".join(
+        [
+            day,
+            normalize(item.home),
+            normalize(item.away),
+            item.bookmaker,
+            str(item.side),
+        ]
+    )
+
+
+def load_jsonl(path: Path) -> list[dict]:
+    if not path.exists():
+        return []
+    rows = []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if line.strip():
+            rows.append(json.loads(line))
+    return rows
+
+
+def write_jsonl(path: Path, rows: list[dict]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    body = "".join(json.dumps(row, ensure_ascii=False) + "\n" for row in rows)
+    path.write_text(body, encoding="utf-8")
+
+
+def record(journal: list[dict], proposals: list[Proposal], *, now: datetime) -> list[dict]:
+    known = {row["id"] for row in journal}
+    for item in proposals:
+        ident = proposal_id(item)
+        if ident in known:
+            continue
+        journal.append(
+            {
+                "id": ident,
+                "proposed_at": now.astimezone(timezone.utc).isoformat(),
+                "kickoff": item.kickoff.astimezone(timezone.utc).isoformat(),
+                "competition": item.competition,
+                "home": item.home,
+                "away": item.away,
+                "side": item.side,
+                "selection": item.selection,
+                "bookmaker": item.bookmaker,
+                "odds": item.odds,
+                "fair_p": item.fair_p,
+                "devig": item.devig,
+                "ev": item.ev,
+                "stake_fraction": item.stake_fraction,
+                "overround": item.overround,
+                "sharp_sources": list(item.sharp_sources),
+                "warnings": list(item.warnings),
+                "closing_fair_p": None,
+                "closing_observed_at": None,
+                "result": None,
+                "pnl": None,
+            }
+        )
+        known.add(ident)
+    return journal
+
+
+def attach_closes(journal: list[dict], snapshots: list[dict]) -> list[dict]:
+    """La clôture est le dernier relevé sharp strictement après la proposition et avant le coup d'envoi."""
+    for row in journal:
+        kickoff = datetime.fromisoformat(row["kickoff"])
+        proposed = datetime.fromisoformat(row["proposed_at"])
+        candidates = []
+        for snap in snapshots:
+            if normalize(snap["home"]) != normalize(row["home"]):
+                continue
+            if normalize(snap["away"]) != normalize(row["away"]):
+                continue
+            observed = datetime.fromisoformat(snap["observed_at"])
+            snap_kick = datetime.fromisoformat(snap["kickoff"])
+            if abs((snap_kick - kickoff).total_seconds()) > 3 * 3600:
+                continue
+            if proposed < observed < kickoff:
+                candidates.append((observed, snap["fair_p"][row["side"]]))
+        if not candidates:
+            continue
+        observed, prob = max(candidates, key=lambda item: item[0])
+        row["closing_fair_p"] = prob
+        row["closing_observed_at"] = observed.isoformat()
+    return journal
+
+
+def settle(journal: list[dict], results: list[dict]) -> list[dict]:
+    """`results` contient home, away, date ISO et result H/D/A. Rien n'est deviné."""
+    index = {}
+    for result in results:
+        index.setdefault((normalize(result["home"]), normalize(result["away"]), result["date"]), result["result"])
+    for row in journal:
+        if row.get("result"):
+            continue
+        kick = datetime.fromisoformat(row["kickoff"]).date().isoformat()
+        code = index.get((normalize(row["home"]), normalize(row["away"]), kick))
+        if code not in {"H", "D", "A"}:
+            continue
+        row["result"] = code
+        won = (code == "H" and row["side"] == 0) or (code == "D" and row["side"] == 1) or (
+            code == "A" and row["side"] == 2
+        )
+        row["pnl"] = unit_pnl(float(row["odds"]), won)
+    return journal
+
+
+def performance(journal: list[dict]) -> dict:
+    settled = [row["pnl"] for row in journal if row.get("pnl") is not None]
+    clv = []
+    for row in journal:
+        if row.get("closing_fair_p") is None:
+            continue
+        clv.append(float(row["odds"]) * float(row["closing_fair_p"]) - 1)
+    roi = mean_interval(settled)
+    closing = mean_interval(clv)
+    return {
+        "n_bets": len(journal),
+        "n_settled": roi.n,
+        "n_with_clv": closing.n,
+        "roi": roi.mean,
+        "roi_low": roi.low,
+        "roi_high": roi.high,
+        "clv_mean": closing.mean,
+        "clv_low": closing.low,
+        "clv_high": closing.high,
+        "flat_stake": True,
+    }
