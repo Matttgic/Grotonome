@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T14:51:45.660403+01:00",
+  "generated_at": "2026-11-02T14:57:45.543284+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -15,6 +15,15 @@
         "betclic"
       ],
       "margin": 0.0930842986680549,
+      "surebet": false
+    },
+    {
+      "match": "Sassuolo – Fiorentina",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.09502872961593045,
       "surebet": false
     },
     {
@@ -55,7 +64,7 @@
       "surebet": false
     },
     {
-      "match": "Sassuolo – Fiorentina",
+      "match": "Ipswich Town – Bournemouth",
       "books": [
         "pmu",
         "netbet"
@@ -82,15 +91,6 @@
       "surebet": false
     },
     {
-      "match": "Ipswich Town – Bournemouth",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10503883516150658,
-      "surebet": false
-    },
-    {
       "match": "Crystal Palace – Liverpool",
       "books": [
         "pmu",
@@ -100,30 +100,12 @@
       "surebet": false
     },
     {
-      "match": "Nottingham Forest – Manchester City",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10579533179048095,
-      "surebet": false
-    },
-    {
       "match": "Manchester United – Aston Villa",
       "books": [
         "pmu",
         "netbet"
       ],
       "margin": 0.10582010582010581,
-      "surebet": false
-    },
-    {
-      "match": "Sunderland – Chelsea",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10637000914355399,
       "surebet": false
     },
     {
@@ -173,12 +155,30 @@
       "surebet": false
     },
     {
+      "match": "Sunderland – Chelsea",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.11075982477129753,
+      "surebet": false
+    },
+    {
       "match": "Cagliari – Frosinone",
       "books": [
         "pmu",
         "netbet"
       ],
       "margin": 0.11165800747425036,
+      "surebet": false
+    },
+    {
+      "match": "Nottingham Forest – Manchester City",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.11178944512277855,
       "surebet": false
     },
     {
@@ -214,7 +214,7 @@
       "ok": true,
       "detail": "ligue 1: 18, ligue 2: 9, premier league: 21, laliga: 11, serie a: 12, bundesliga: 9, champions league: 18",
       "events": 98,
-      "elapsed_s": 3.608
+      "elapsed_s": 3.996
     },
     {
       "name": "netbet",
@@ -222,7 +222,7 @@
       "ok": true,
       "detail": "ligue 1: 8 (page partielle), premier league: 9 (page partielle), laliga: 9 (page partielle), serie a: 8 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 34,
-      "elapsed_s": 4.205
+      "elapsed_s": 4.774
     },
     {
       "name": "smarkets",
@@ -230,23 +230,23 @@
       "ok": true,
       "detail": "258 matchs listés sur 6 page(s), prix chargés après appariement",
       "events": 258,
-      "elapsed_s": 3.072
+      "elapsed_s": 2.877
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "1 matchs avec liquidité suffisante sur la page reçue",
-      "events": 1,
-      "elapsed_s": 0.495
+      "detail": "2 matchs avec liquidité suffisante sur la page reçue",
+      "events": 2,
+      "elapsed_s": 0.587
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "330 matchs nommés sur 72 h, prix après appariement",
-      "events": 330,
-      "elapsed_s": 0.472
+      "detail": "332 matchs nommés sur 72 h, prix après appariement",
+      "events": 332,
+      "elapsed_s": 0.496
     },
     {
       "name": "the-odds-api",
@@ -262,7 +262,7 @@
       "ok": true,
       "detail": "3 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
       "events": 3,
-      "elapsed_s": 4.034
+      "elapsed_s": 3.877
     },
     {
       "name": "olybet",
@@ -294,7 +294,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.275
+      "elapsed_s": 0.417
     }
   ],
   "performance": {
