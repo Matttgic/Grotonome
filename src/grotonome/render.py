@@ -153,7 +153,13 @@ def _source_line(result: RunResult) -> str:
 
 
 def _book(name: str) -> str:
-    return {"unibet": "Unibet", "pmu": "PMU", "netbet": "Netbet"}.get(name, name)
+    return {
+        "unibet": "Unibet / Parions Sport",
+        "pmu": "PMU",
+        "netbet": "Netbet",
+        "betclic": "Betclic",
+        "winamax": "Winamax",
+    }.get(name, name)
 
 
 def _num(value: float) -> str:

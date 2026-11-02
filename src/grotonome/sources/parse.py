@@ -3,7 +3,8 @@
 from __future__ import annotations
 
 import re
-from datetime import datetime, timezone
+from dataclasses import dataclass
+from datetime import datetime, timedelta, timezone
 
 from grotonome.models import SharpPrice, SoftPrice
 from grotonome.names import is_draw, same_team, strip_accents
@@ -26,6 +27,30 @@ SMARKETS_MIN_QUANTITY = 10_000
 MATCHBOOK_MIN_AMOUNT = 20
 
 _CLOSED = {"SUSPENDED", "CLOSED", "SETTLED", "RESULTED", "HIDDEN", "CANCELLED", "VOID", "UNPRICED"}
+
+# Pages publiques de SportyTrader qui affichent le 1N2 Betclic.
+# Le site betclic.fr lui-même répond 403 depuis les IP de centre de données.
+SPORTY_LEAGUES = {
+    "ligue 1": "https://www.sportytrader.com/cotes/football/france/ligue-1-123/",
+}
+
+_MONTHS = {
+    "janv": 1,
+    "jan": 1,
+    "fevr": 2,
+    "fev": 2,
+    "mars": 3,
+    "avr": 4,
+    "mai": 5,
+    "juin": 6,
+    "juil": 7,
+    "aout": 8,
+    "sept": 9,
+    "sep": 9,
+    "oct": 10,
+    "nov": 11,
+    "dec": 12,
+}
 
 NETBET_PAGES = {
     "ligue 1": "https://www.netbet.fr/football/france/ligue-1-mcdonald-s-r",
@@ -653,3 +678,93 @@ def american_to_decimal(price: int | float) -> float:
     if value <= -100:
         return 100 / abs(value) + 1
     raise ValueError(f"cote américaine invalide : {price}")
+
+
+@dataclass(frozen=True)
+class ComparatorCard:
+    home: str
+    away: str
+    naive: datetime
+    slug: str
+    competition: str = ""
+
+
+def parse_sporty_league(html: str, *, today: datetime, competition: str = "") -> list[ComparatorCard]:
+    cards: list[ComparatorCard] = []
+    parts = html.split('data-navigation-url-value="/cotes/')
+    for part in parts[1:]:
+        slug = part.split('"', 1)[0]
+        if "/" not in slug:
+            continue
+        head = part[:2500]
+        name = None
+        for candidate in re.finditer(r">\s*([^<]{2,40}?)\s+-\s+([^<]{2,40}?)\s*<", head):
+            pair = f"{candidate.group(1)} {candidate.group(2)}"
+            if re.search(r"\d:\d", pair) or not re.search(r"[A-Za-z]", pair):
+                continue
+            name = candidate
+            break
+        when = re.search(
+            r"(\d{1,2})\s+([A-Za-zéèêûô\.]+)\s+-\s+(\d{2}):(\d{2})",
+            head,
+        )
+        if not name or not when:
+            continue
+        month = _MONTHS.get(strip_accents(when.group(2)).lower().strip("."))
+        if month is None:
+            continue
+        naive = datetime(today.year, month, int(when.group(1)), int(when.group(3)), int(when.group(4)))
+        if naive.date() < today.date() - timedelta(days=2):
+            naive = naive.replace(year=today.year + 1)
+        cards.append(
+            ComparatorCard(
+                home=name.group(1).strip(),
+                away=name.group(2).strip(),
+                naive=naive,
+                slug=slug,
+                competition=competition,
+            )
+        )
+    return cards
+
+
+def parse_sporty_betclic_odds(html: str) -> tuple[float, float, float] | None:
+    marker = html.find('alt="Betclic"')
+    if marker < 0:
+        return None
+    chunk = html[marker : marker + 1800]
+    numbers = re.findall(r"pastille--cotes[^>]*>\s*([0-9]+(?:\.[0-9]+)?)\s*<", chunk)
+    if len(numbers) < 3:
+        return None
+    odds = tuple(float(value) for value in numbers[:3])
+    if any(value <= 1 for value in odds):
+        return None
+    return odds  # type: ignore[return-value]
+
+
+def clock_offset(
+    cards: list[ComparatorCard],
+    anchors: list[tuple[str, str, datetime]],
+) -> timedelta | None:
+    """Écart entre l'horloge affichée et l'heure UTC déjà connue d'un autre flux.
+
+    Sans au moins un match en commun, on ne devine pas le fuseau.
+    """
+    found: list[timedelta] = []
+    for card in cards:
+        assumed = card.naive.replace(tzinfo=timezone.utc)
+        for home, away, kickoff in anchors:
+            if not same_team(card.home, home) or not same_team(card.away, away):
+                continue
+            moment = kickoff if kickoff.tzinfo else kickoff.replace(tzinfo=timezone.utc)
+            moment = moment.astimezone(timezone.utc)
+            if abs((moment - assumed).total_seconds()) > 36 * 3600:
+                continue
+            found.append(moment - assumed)
+            break
+    if not found:
+        return None
+    found.sort()
+    if found[-1] - found[0] > timedelta(minutes=45):
+        return None
+    return found[len(found) // 2]

@@ -7,7 +7,7 @@ description: Règles du relevé Grotonome — cotes ANJ, référence sharp, aucu
 
 Outil personnel de comparaison de cotes. Il ne place aucun pari.
 
-- Books proposés : Winamax (page `paris-sportifs`), Unibet.fr, PMU, Netbet. ZEbet et Parions Sport en ligne redirigent vers Unibet.fr : ne pas les compter deux fois. Pas le flux Kambi `ub`.
+- Books proposés : Winamax, Unibet / Parions Sport (une seule offre FDJ), PMU, Netbet, Betclic via la page publique SportyTrader. betclic.fr répond 403 : ne pas contourner CloudFront. Pas le flux Kambi `ub`.
 - Références : Pinnacle (cotes décimales, marge retirée par la méthode puissance) et milieux Smarkets / Matchbook (normalisés, pas de puissance). Désaccord de plus de 8 points : pas de pari.
 - Smarkets : quantité minimale 10 000 (montant × 10 000, soit 1 de devise). Matchbook : 20 USD. Une quantité absente n'est pas une cote.
 - Heure compacte Unibet `aammjjHHMM` : UTC, vérifié sur Lorient–Brest le 2 novembre 2026.

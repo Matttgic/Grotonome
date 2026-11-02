@@ -8,7 +8,7 @@ from datetime import datetime, timedelta, timezone
 
 from grotonome.http import HttpError, get_json, get_text
 from grotonome.recul import blocked_until, observe
-from grotonome.models import FetchReport, SharpPrice
+from grotonome.models import FetchReport, SharpPrice, SoftPrice
 from grotonome.sources.parse import (
     NETBET_PAGES,
     PMU_PATHS,
@@ -17,7 +17,11 @@ from grotonome.sources.parse import (
     parse_pinnacle_matchups,
     parse_pinnacle_moneyline,
     parse_pmu_payload,
+    SPORTY_LEAGUES,
+    clock_offset,
     parse_smarkets_quotes,
+    parse_sporty_betclic_odds,
+    parse_sporty_league,
     parse_unibet_page,
     parse_winamax_html,
     unibet_competitions,
@@ -41,7 +45,6 @@ MATCHBOOK = (
     "&interval=next-72-hours"
 )
 PROBES = {
-    "betclic": "https://www.betclic.fr/",
     "olybet": "https://www.olybet.fr/",
     "betsson": "https://betsson.fr/",
     "genybet": "https://sport.genybet.fr/",
@@ -68,6 +71,16 @@ def fetch_all(
         ("the-odds-api", "sharp", lambda: fetch_odds_api(captured_at=moment)),
     ]
     reports = [_with_backoff(name, kind, fn, store, moment) for name, kind, fn in calls]
+    anchors = _kickoff_anchors(reports)
+    reports.append(
+        _with_backoff(
+            "betclic",
+            "book",
+            lambda: fetch_betclic(captured_at=moment, anchors=anchors),
+            store,
+            moment,
+        )
+    )
     for name, url in PROBES.items():
         reports.append(
             _with_backoff(name, "probe", lambda url=url, name=name: _probe_one(name, url), store, moment)
@@ -126,6 +139,81 @@ def fetch_winamax(*, captured_at: datetime) -> FetchReport:
     )
 
 
+def _kickoff_anchors(reports: list[FetchReport]) -> list[tuple[str, str, datetime]]:
+    anchors = []
+    for report in reports:
+        for event in [*report.soft, *report.sharp]:
+            anchors.append((event.home, event.away, event.kickoff))
+    return anchors
+
+
+def fetch_betclic(
+    *,
+    captured_at: datetime,
+    anchors: list[tuple[str, str, datetime]],
+) -> FetchReport:
+    """Cotes Betclic relayées par une page publique. Le site Betclic reste en 403."""
+    started = time.perf_counter()
+    cards = []
+    notes = []
+    for key, url in SPORTY_LEAGUES.items():
+        try:
+            html = get_text(url, headers={"Accept-Language": "fr-FR"}, timeout=25)
+        except HttpError as exc:
+            notes.append(f"{key}: HTTP {exc.status}")
+            time.sleep(0.4)
+            continue
+        cards.extend(parse_sporty_league(html, today=captured_at, competition=key))
+        notes.append(f"{key}: {len(cards)} fiches")
+        time.sleep(0.4)
+    offset = clock_offset(cards, anchors)
+    if offset is None:
+        detail = (
+            "betclic.fr répond 403 (CloudFront). "
+            "La page SportyTrader est lue, mais son horloge n'est pas calée sur une heure UTC connue : "
+            "cotes non utilisées."
+        )
+        if notes:
+            detail = "; ".join(notes) + ". " + detail
+        return FetchReport("betclic", "book", False, detail, time.perf_counter() - started)
+    events: list[SoftPrice] = []
+    for card in sorted(cards, key=lambda item: item.naive)[:6]:
+        time.sleep(0.5)
+        page_url = "https://www.sportytrader.com/cotes/" + card.slug
+        try:
+            html = get_text(page_url, headers={"Accept-Language": "fr-FR"}, timeout=25)
+        except HttpError as exc:
+            notes.append(f"{card.home}: HTTP {exc.status}")
+            continue
+        odds = parse_sporty_betclic_odds(html)
+        if odds is None:
+            continue
+        events.append(
+            SoftPrice(
+                source="betclic",
+                competition=card.competition,
+                home=card.home,
+                away=card.away,
+                kickoff=card.naive.replace(tzinfo=timezone.utc) + offset,
+                odds=odds,
+                captured_at=captured_at,
+            )
+        )
+    detail = (
+        f"{len(events)} matchs via SportyTrader, horloge {offset}. "
+        "betclic.fr lui-même reste en 403."
+    )
+    return FetchReport(
+        "betclic",
+        "book",
+        bool(events),
+        detail,
+        time.perf_counter() - started,
+        len(events),
+        events,
+    )
+
+
 def fetch_unibet(*, captured_at: datetime, sleep: float = 0.35) -> FetchReport:
     started = time.perf_counter()
     home = get_text(UNIBET_HOME, timeout=20)
@@ -171,6 +259,7 @@ def fetch_unibet(*, captured_at: datetime, sleep: float = 0.35) -> FetchReport:
         notes.append(f"{key}: {len(found)}")
     ok = bool(events)
     detail = ", ".join(notes) if notes else "aucune compétition"
+    detail += ". Unibet et Parions Sport (FDJ) partagent cette offre."
     return FetchReport("unibet", "book", ok, detail, time.perf_counter() - started, len(events), events)
 
 

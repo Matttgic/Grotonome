@@ -4,6 +4,18 @@ Mesures faites le 2 novembre 2026 depuis la VM (sortie Cloudflare `CMH`, États-
 
 La sonde se relance depuis un runner GitHub Actions (workflow `Sonde`, à la main ou quand ce fichier de workflow change). Le résultat du premier passage Actions est ajouté en bas de ce document dès qu'il est lu.
 
+## Betclic, 2 novembre au matin
+
+Le site `www.betclic.fr` (accueil, football, robots.txt, sitemap) répond **403** depuis cette VM. L'en-tête `X-Amz-Cf-Pop: CMH68-P3` et `X-Cache: Error from cloudfront` montrent un blocage CloudFront, page HTML « Betclic - Error 403 Forbidden », pas un captcha. Le même 403 avait été vu sur un runner GitHub Actions. Un navigateur mobile normal (Chrome Android, `Accept-Language: fr-FR`) ne change pas le code. `m.betclic.fr` et `www.betclic.com` font de même. On n'a pas cherché à imiter une empreinte TLS ni à passer par un proxy : ce serait contourner le blocage.
+
+`apip.begmedia.com` et `offering.begmedia.com` répondent, mais les chemins publics essayés (`/api/pub/v2` à `v4` `/sports`, `/web/offering/v5/sports`) renvoient **404** « Route not found » ou « Not found », pas des cotes. Sans le JavaScript du site, bloqué avec lui, le chemin courant n'est pas lisible. The Odds API documente un bookmaker `betclic_fr` (régions `eu` et `fr`) : il faut une clé, que ce dépôt n'a pas.
+
+La page publique SportyTrader, elle, affiche le 1N2 Betclic. Le 2 novembre, Lorient–Brest y est coté **2,35 / 3,10 / 2,83**. L'heure affichée « 02 nov. - 14:45 » correspond à 19:45 UTC une fois calée sur le coup d'envoi déjà connu (écart +5 h depuis cette IP américaine). Sans ce calage, les cotes ne sont pas utilisées. C'est ce relais qui alimente la liste, pas une API Betclic.
+
+## Unibet et Parions Sport
+
+Parions Sport en ligne (FDJ) et Unibet servent la même offre. Des cotes identiques sont le fonctionnement normal, pas un doublon à arbitrer. Le relevé ne les interroge qu'une fois, sous le nom affiché « Unibet / Parions Sport ». ZEbet redirige aussi vers Unibet.fr.
+
 ## Winamax, relu le 2 novembre au soir
 
 La page `https://www.winamax.fr/paris-sportifs` répond 200 (environ 370 ko) et contient `PRELOADED_STATE` : matchs, marché « Résultat », cotes. `wapi.winamax.fr` répond 200 avec « Invalid request » : ce n'est pas un flux de cotes sans le corps d'appel du site, et ce corps n'a pas été rejoué. Betclic, Olybet, Genybet et Betsson restent en 403. ZEbet et Parions Sport en ligne aboutissent sur Unibet.fr.

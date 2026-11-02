@@ -26,7 +26,8 @@
 - `OM` = Marseille, `OL` = Lyon, seulement comme nom entier. `OL` ne matche pas Lens.
 - Statut suspendu : Unibet (statut ou drapeau) et Netbet (mot « suspend » dans le bloc) retirent le 1N2. Un `status:b` minifié n'est pas interprété.
 - Règlement CSV : date UTC, veille UTC et date de Paris. On ne règle que s'il n'y a pas deux résultats différents.
-- Winamax est lu dans la page publique `paris-sportifs`. ZEbet et Parions Sport en ligne redirigent vers Unibet.fr : pas de source en double. Betclic, Olybet, Genybet, Betsson : toujours 403. Le catalogue promo Unibet n'a pas de cote boostée.
+- Unibet et Parions Sport (FDJ) sont une seule source. Des cotes identiques sont normales. Nom affiché : « Unibet / Parions Sport ».
+- Betclic.fr est en 403 CloudFront (POP CMH, page Betclic, pas un captcha), depuis la VM et depuis GitHub Actions. Les hôtes `apip.begmedia.com` et `offering.begmedia.com` répondent 404 sur les chemins essayés. Les cotes utilisées viennent de la page publique SportyTrader, horloge calée sur un coup d'envoi UTC déjà connu (Lorient–Brest : 14:45 affiché = 19:45Z, écart +5 h). Sans calage, aucune cote Betclic n'est émise. The Odds API a une clé `betclic_fr`, inutilisée faute de `ODDS_API_KEY`.
 - Aucune piste française n'est déclarée rentable. L'historique horaire est là pour le mesurer plus tard.
 - Books proposés : Unibet.fr, PMU, Netbet. Pas le flux Kambi `ub`, qui n'est pas Unibet.fr.
 - Pas de modèle de score, pas de totaux, pas de boosts inventés, pas de chasse aux lignes mortes.
