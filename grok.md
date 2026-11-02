@@ -17,7 +17,8 @@
 python3 -m pip install -e ".[dev]"
 python3 -m pytest
 python3 -m grotonome sonde
-python3 -m grotonome run --no-telegram
+python3 -m grotonome passage --no-telegram
+python3 -m grotonome veille --minutes 12 --interval 360
 python3 scripts/recherche_historique.py --download --cache data/cache
 ```
 

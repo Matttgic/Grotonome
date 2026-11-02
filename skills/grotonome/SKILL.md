@@ -15,4 +15,5 @@ Outil personnel de comparaison de cotes. Il ne place aucun pari.
 - Une issue suspendue retire le 1N2. Ne pas deviner un statut minifié.
 - Historique : `data/cotes.jsonl`, une ligne par cote et par passage. La CLV française exige deux instants. Sinon elle est absente.
 - Ne jamais inventer une cote, un résultat ou une performance. Ne jamais committer de jeton.
+- Veille : `python -m grotonome passage`, boucle 6 minutes. Recul 15/30/60/120 min sur HTTP 403 et 429. Alerte Telegram seulement si l'offre est nouvelle ou si la cote monte d'au moins 0,05 et 3 %. Clôture sharp dans les 15 minutes avant le coup d'envoi. `data/cotes.jsonl` ne garde que les changements.
 - Tests : `python3 -m pytest`. Pas de fusion si c'est rouge.

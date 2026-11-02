@@ -1,10 +1,7 @@
 name: Quotidien
 
 on:
-  schedule:
-    # 11:00 UTC, avant la plupart des matchs du soir. 16:00 UTC, seconde photo.
-    - cron: "0 11 * * *"
-    - cron: "0 16 * * *"
+  # Le rythme continu est dans veille.yml. Ce workflow reste un relevé manuel.
   workflow_dispatch:
 
 permissions:

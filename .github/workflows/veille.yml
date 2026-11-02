@@ -1,0 +1,77 @@
+name: Veille
+
+on:
+  schedule:
+    # Filet. GitHub décale souvent ce cron : la régularité vient de la boucle.
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: grotonome-veille
+  cancel-in-progress: false
+
+jobs:
+  boucle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Installer
+        run: python -m pip install -e .
+      - name: Relevés toutes les 6 minutes
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          BANKROLL_EUR: ${{ vars.BANKROLL_EUR }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: |
+          set -u
+          git config user.name "grotonome"
+          git config user.email "grotonome@users.noreply.github.com"
+          commit_data() {
+            local files=()
+            local path
+            for path in data/veille.json data/cotes.jsonl data/journal.jsonl data/sharp.jsonl site/latest.json; do
+              if [ -f "$path" ]; then
+                files+=("$path")
+              fi
+            done
+            if [ "${#files[@]}" -eq 0 ]; then
+              return 0
+            fi
+            git add -- "${files[@]}"
+            if git diff --cached --quiet; then
+              return 0
+            fi
+            git commit -m "données : veille $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          }
+          END=$((SECONDS + 300 * 60))
+          LAST=$SECONDS
+          while [ "$SECONDS" -lt "$END" ]; do
+            T0=$SECONDS
+            python -m grotonome passage | tee /tmp/grotonome-passage.txt
+            ALERT=$(grep -o 'alertes=[0-9]*' /tmp/grotonome-passage.txt | tail -1 | cut -d= -f2 || true)
+            if [ "${ALERT:-0}" != "0" ] || [ $((SECONDS - LAST)) -ge 1800 ]; then
+              commit_data || echo "commit non fait"
+              LAST=$SECONDS
+            fi
+            ELAPSED=$((SECONDS - T0))
+            SLEEP=$((360 - ELAPSED))
+            if [ "$SLEEP" -gt 0 ] && [ $((SECONDS + SLEEP)) -lt "$END" ]; then
+              sleep "$SLEEP"
+            fi
+          done
+          commit_data || echo "commit final non fait"
+      - name: Enchaîner
+        if: always()
+        run: gh workflow run veille.yml --ref main || echo "enchainement refusé, le cron reprend"
+        env:
+          GH_TOKEN: ${{ github.token }}

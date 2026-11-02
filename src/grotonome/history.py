@@ -28,6 +28,45 @@ def snapshot_rows(reports: list[FetchReport], sharp: list[SharpPrice]) -> list[d
     return rows
 
 
+def quote_key(row: dict) -> str:
+    return "|".join(
+        [
+            str(row.get("kind") or ""),
+            str(row.get("source") or ""),
+            normalize(str(row.get("home") or "")),
+            normalize(str(row.get("away") or "")),
+            str(row.get("kickoff") or ""),
+        ]
+    )
+
+
+def changed_rows(previous: dict, rows: list[dict]) -> tuple[list[dict], dict]:
+    """Ne garde que les cotes qui bougent. `previous` est l'état compact, mis à jour."""
+    kept = []
+    for row in rows:
+        key = quote_key(row)
+        prior = previous.get(key)
+        if prior is not None and not _moved(prior, row):
+            continue
+        kept.append(row)
+        previous[key] = {"odds": row.get("odds"), "probs": row.get("probs"), "at": row.get("at")}
+    return kept, previous
+
+
+def _moved(prior: dict, row: dict) -> bool:
+    if _series_moved(prior.get("odds"), row.get("odds"), 0.01):
+        return True
+    if _series_moved(prior.get("probs"), row.get("probs"), 0.005):
+        return True
+    return prior.get("odds") != row.get("odds") and row.get("odds") is not None and prior.get("odds") is None
+
+
+def _series_moved(old, new, tolerance: float) -> bool:
+    if not old or not new or len(old) != len(new):
+        return bool(new) and old != new
+    return any(abs(float(a) - float(b)) >= tolerance for a, b in zip(old, new))
+
+
 def append_rows(path: Path, rows: list[dict]) -> None:
     if not rows:
         return

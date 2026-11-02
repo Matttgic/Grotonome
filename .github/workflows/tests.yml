@@ -2,6 +2,9 @@ name: Tests
 
 on:
   push:
+    paths-ignore:
+      - data/**
+      - site/latest.json
   pull_request:
 
 jobs:

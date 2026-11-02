@@ -76,8 +76,16 @@ def record(journal: list[dict], proposals: list[Proposal], *, now: datetime) -> 
     return journal
 
 
-def attach_closes(journal: list[dict], snapshots: list[dict]) -> list[dict]:
-    """La clôture est le dernier relevé sharp strictement après la proposition et avant le coup d'envoi."""
+def attach_closes(
+    journal: list[dict],
+    snapshots: list[dict],
+    *,
+    window: timedelta = timedelta(minutes=15),
+) -> list[dict]:
+    """La clôture est le relevé sharp le plus proche du coup d'envoi, dans les 15 minutes.
+
+    Un relevé plus ancien reste dans l'historique, il ne sert pas de clôture.
+    """
     for row in journal:
         kickoff = datetime.fromisoformat(row["kickoff"])
         proposed = datetime.fromisoformat(row["proposed_at"])
@@ -91,8 +99,11 @@ def attach_closes(journal: list[dict], snapshots: list[dict]) -> list[dict]:
             snap_kick = datetime.fromisoformat(snap["kickoff"])
             if abs((snap_kick - kickoff).total_seconds()) > 3 * 3600:
                 continue
-            if proposed < observed < kickoff:
-                candidates.append((observed, snap["fair_p"][row["side"]]))
+            if not (kickoff - window <= observed < kickoff):
+                continue
+            if observed <= proposed:
+                continue
+            candidates.append((observed, snap["fair_p"][row["side"]]))
         if not candidates:
             continue
         observed, prob = max(candidates, key=lambda item: item[0])

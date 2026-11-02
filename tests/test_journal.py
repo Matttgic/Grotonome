@@ -50,7 +50,7 @@ def test_cloture_apres_la_proposition_seulement():
         "home": "Lorient",
         "away": "Brest",
         "kickoff": KICK.isoformat(),
-        "observed_at": (NOW + timedelta(hours=4)).isoformat(),
+        "observed_at": (KICK - timedelta(minutes=10)).isoformat(),
         "fair_p": [0.42, 0.30, 0.28],
     }
     after_kick = {

@@ -21,6 +21,28 @@ HISTORICAL = (
 )
 
 
+def alert_text(bet: Proposal, *, bankroll: float | None) -> str:
+    stake = f"mise {_num(bet.stake_fraction * 100)} % de la bankroll"
+    if bankroll:
+        stake += f" ({_num(bet.stake_fraction * bankroll)} €)"
+    lines = [
+        f"Grotonome — {_book(bet.bookmaker)} {bet.home} – {bet.away}",
+        f"{bet.selection} · cote {_num(bet.odds)} · EV {_signed(bet.ev)}",
+        stake,
+        f"limite {bet.kickoff.astimezone(PARIS).strftime('%d/%m %H:%M')}",
+        (
+            f"calcul : proba juste {_num(bet.fair_p * 100)} % ({bet.devig}, "
+            f"{', '.join(bet.sharp_sources) or 'référence manquante'}) "
+            f"× cote {_num(bet.odds)} − 1 = {_signed(bet.ev)}"
+        ),
+        f"marge du book {_num(bet.overround * 100)} %",
+    ]
+    if bet.warnings:
+        lines.append("note : " + " ; ".join(bet.warnings))
+    lines.append("Pas de pari automatique.")
+    return "\n".join(lines)
+
+
 def telegram_text(result: RunResult, *, now: datetime, bankroll: float | None, limit: int = 5) -> str:
     stamp = now.astimezone(PARIS).strftime("%d/%m %H:%M")
     lines = [f"Grotonome — {stamp} (Paris)"]

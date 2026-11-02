@@ -7,6 +7,7 @@ import time
 from datetime import datetime, timedelta, timezone
 
 from grotonome.http import HttpError, get_json, get_text
+from grotonome.recul import blocked_until, observe
 from grotonome.models import FetchReport, SharpPrice
 from grotonome.sources.parse import (
     NETBET_PAGES,
@@ -48,20 +49,64 @@ PROBES = {
 }
 
 
-def fetch_all(*, sleep: float = 0.35, now: datetime | None = None) -> list[FetchReport]:
+def fetch_all(
+    *,
+    sleep: float = 0.35,
+    now: datetime | None = None,
+    backoff: dict | None = None,
+) -> list[FetchReport]:
     moment = now or datetime.now(timezone.utc)
-    reports = [
-        _guard("winamax", "book", lambda: fetch_winamax(captured_at=moment)),
-        _guard("unibet", "book", lambda: fetch_unibet(captured_at=moment, sleep=sleep)),
-        _guard("pmu", "book", lambda: fetch_pmu(captured_at=moment, sleep=sleep)),
-        _guard("netbet", "book", lambda: fetch_netbet(captured_at=moment, sleep=sleep)),
-        _guard("smarkets", "sharp", lambda: fetch_smarkets(captured_at=moment, sleep=sleep)),
-        _guard("matchbook", "sharp", lambda: fetch_matchbook(captured_at=moment)),
-        _guard("pinnacle", "sharp", lambda: fetch_pinnacle(captured_at=moment)),
-        _guard("the-odds-api", "sharp", lambda: fetch_odds_api(captured_at=moment)),
+    store = backoff if backoff is not None else {}
+    calls = [
+        ("winamax", "book", lambda: fetch_winamax(captured_at=moment)),
+        ("unibet", "book", lambda: fetch_unibet(captured_at=moment, sleep=sleep)),
+        ("pmu", "book", lambda: fetch_pmu(captured_at=moment, sleep=sleep)),
+        ("netbet", "book", lambda: fetch_netbet(captured_at=moment, sleep=sleep)),
+        ("smarkets", "sharp", lambda: fetch_smarkets(captured_at=moment, sleep=sleep)),
+        ("matchbook", "sharp", lambda: fetch_matchbook(captured_at=moment)),
+        ("pinnacle", "sharp", lambda: fetch_pinnacle(captured_at=moment)),
+        ("the-odds-api", "sharp", lambda: fetch_odds_api(captured_at=moment)),
     ]
-    reports.extend(probe_blocked(sleep=sleep))
+    reports = [_with_backoff(name, kind, fn, store, moment) for name, kind, fn in calls]
+    for name, url in PROBES.items():
+        reports.append(
+            _with_backoff(name, "probe", lambda url=url, name=name: _probe_one(name, url), store, moment)
+        )
     return reports
+
+
+def _with_backoff(name: str, kind: str, fn, store: dict, moment: datetime) -> FetchReport:
+    until = blocked_until(store, name, moment)
+    if until is not None:
+        status = (store.get(name) or {}).get("status")
+        return FetchReport(
+            name,
+            kind,
+            False,
+            f"recul jusqu'à {until.isoformat()} après HTTP {status}",
+            0.0,
+        )
+    report = _guard(name, kind, fn)
+    observe(store, name, ok=report.ok, detail=report.detail, now=moment)
+    return report
+
+
+def _probe_one(name: str, url: str) -> FetchReport:
+    started = time.perf_counter()
+    try:
+        get_text(url, timeout=12)
+    except HttpError as exc:
+        detail = f"HTTP {exc.status}, pas de contournement"
+        if name == "genybet" and exc.status == 403:
+            detail = f"HTTP {exc.status}, accès refusé (géoblocage probable), pas de contournement"
+        return FetchReport(name, "probe", False, detail, time.perf_counter() - started)
+    return FetchReport(
+        name,
+        "probe",
+        False,
+        "page ouverte mais aucune cote structurée branchée",
+        time.perf_counter() - started,
+    )
 
 
 def fetch_winamax(*, captured_at: datetime) -> FetchReport:

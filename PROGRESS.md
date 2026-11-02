@@ -12,11 +12,11 @@
 
 ## En cours
 
-- L'historique `data/cotes.jsonl` commence. La CLV française reste absente tant qu'il n'y a pas deux instants pour le même match.
+- La veille continue (workflow `Veille`) : boucle de 5 h, un relevé toutes les 6 minutes, cron de reprise toutes les 30 minutes. L'intervalle réel se lit dans les logs `RYTHME`.
 
 ## Prochaine étape
 
-- Laisser les passages de 11:00 et 16:00 UTC empiler `data/cotes.jsonl`, puis relire la CLV française. Pages est déjà demandé à Matthieu : ne pas y revenir.
+- Lire deux ou trois écarts `RYTHME` sur le premier job Actions. Pages reste hors sujet.
 
 ## Décisions
 
@@ -32,7 +32,11 @@
 - Pas de modèle de score, pas de totaux, pas de boosts inventés, pas de chasse aux lignes mortes.
 - Toute EV strictement positive est listée, avec l'avertissement historique. Aucun seuil « gagnant » n'est retenu.
 - Mise : quart de Kelly, plafond 1,5 %. ROI de suivi à mise unitaire.
-- Deux passages par jour pour rester dans le quota gratuit d'une éventuelle clé Odds API.
+- Veille : un relevé toutes les 6 minutes dans un job d'au plus 5 h (les crons GitHub seuls sont trop irréguliers). Un cron toutes les 30 minutes reprend si la boucle meurt. Concurrence : un seul job, le suivant attend. Le récapitulatif Telegram part au premier passage après 8 h, heure de Paris, une fois par jour. L'alerte immédiate ne se répète que si la cote monte d'au moins 0,05 et d'au moins 3 %.
+- Recul : après un 403 ou un 429, la source attend 15, 30, 60 puis 120 minutes. Les autres continuent. Pas de contournement.
+- Clôture sharp : seulement dans les 15 minutes avant le coup d'envoi. Un relevé plus ancien ne compte pas comme CLV.
+- Historique : `data/cotes.jsonl` ne reçoit que les cotes qui bougent d'au moins 0,01 (probabilités 0,005). L'état courant est `data/veille.json`. Les commits de données n'ont lieu qu'en cas d'alerte ou toutes les 30 minutes, et ils ne relancent pas les tests.
+- Plus de deux photos par jour. Le workflow Quotidien reste un relevé manuel.
 - Pas de clé Pinnacle à créer : la liste publique des matchs suffit. The Odds API reste facultative.
 
 ## Skills et outils externes
