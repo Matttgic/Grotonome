@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T10:56:47.484177+01:00",
+  "generated_at": "2026-11-02T11:02:47.790685+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -8,16 +8,6 @@
   "unpriced": 0,
   "shopping": [
     {
-      "match": "Lorient – Brest",
-      "books": [
-        "pmu",
-        "netbet",
-        "betclic"
-      ],
-      "margin": 0.0898483189918875,
-      "surebet": false
-    },
-    {
       "match": "Rennes – Lille",
       "books": [
         "pmu",
@@ -25,6 +15,15 @@
         "betclic"
       ],
       "margin": 0.0930842986680549,
+      "surebet": false
+    },
+    {
+      "match": "Lorient – Brest",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.09703200295128078,
       "surebet": false
     },
     {
@@ -101,6 +100,15 @@
       "surebet": false
     },
     {
+      "match": "Cagliari – Frosinone",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.1077421973910393,
+      "surebet": false
+    },
+    {
       "match": "Sunderland – Chelsea",
       "books": [
         "pmu",
@@ -164,15 +172,6 @@
       "surebet": false
     },
     {
-      "match": "Cagliari – Frosinone",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.11165800747425036,
-      "surebet": false
-    },
-    {
       "match": "Torino – Lecce",
       "books": [
         "pmu",
@@ -215,7 +214,7 @@
       "ok": true,
       "detail": "ligue 1: 10, ligue 2: 8, premier league: 11, laliga: 11, serie a: 12, bundesliga: 9, champions league: 18",
       "events": 79,
-      "elapsed_s": 3.811
+      "elapsed_s": 3.736
     },
     {
       "name": "netbet",
@@ -223,31 +222,31 @@
       "ok": true,
       "detail": "ligue 1: 8 (page partielle), premier league: 9 (page partielle), laliga: 9 (page partielle), serie a: 8 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 34,
-      "elapsed_s": 4.531
+      "elapsed_s": 4.653
     },
     {
       "name": "smarkets",
       "kind": "sharp",
       "ok": true,
-      "detail": "231 matchs listés sur 5 page(s), prix chargés après appariement",
-      "events": 231,
-      "elapsed_s": 2.054
+      "detail": "233 matchs listés sur 5 page(s), prix chargés après appariement",
+      "events": 233,
+      "elapsed_s": 2.33
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "7 matchs avec liquidité suffisante sur la page reçue",
-      "events": 7,
-      "elapsed_s": 0.484
+      "detail": "6 matchs avec liquidité suffisante sur la page reçue",
+      "events": 6,
+      "elapsed_s": 0.507
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "327 matchs nommés sur 72 h, prix après appariement",
-      "events": 327,
-      "elapsed_s": 0.423
+      "detail": "325 matchs nommés sur 72 h, prix après appariement",
+      "events": 325,
+      "elapsed_s": 0.424
     },
     {
       "name": "the-odds-api",
@@ -261,9 +260,9 @@
       "name": "betclic",
       "kind": "book",
       "ok": true,
-      "detail": "4 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
-      "events": 4,
-      "elapsed_s": 3.999
+      "detail": "3 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
+      "events": 3,
+      "elapsed_s": 4.543
     },
     {
       "name": "olybet",
@@ -295,7 +294,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.575
+      "elapsed_s": 0.438
     }
   ],
   "performance": {
