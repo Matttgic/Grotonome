@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T11:02:47.790685+01:00",
+  "generated_at": "2026-11-02T11:08:47.907518+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -37,6 +37,15 @@
       "surebet": false
     },
     {
+      "match": "Arsenal – Hull City",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.09821428571428559,
+      "surebet": false
+    },
+    {
       "match": "Atlético Madrid – FC Barcelone",
       "books": [
         "pmu",
@@ -55,12 +64,12 @@
       "surebet": false
     },
     {
-      "match": "Arsenal – Hull City",
+      "match": "Crystal Palace – Liverpool",
       "books": [
         "pmu",
         "netbet"
       ],
-      "margin": 0.10238095238095224,
+      "margin": 0.10543728423475263,
       "surebet": false
     },
     {
@@ -136,21 +145,21 @@
       "surebet": false
     },
     {
-      "match": "Crystal Palace – Liverpool",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10868298368298368,
-      "surebet": false
-    },
-    {
       "match": "Lens – Marseille",
       "books": [
         "pmu",
         "netbet"
       ],
       "margin": 0.10945566839671184,
+      "surebet": false
+    },
+    {
+      "match": "Manchester United – Aston Villa",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.10968807900215838,
       "surebet": false
     },
     {
@@ -179,16 +188,6 @@
       ],
       "margin": 0.1118362624145508,
       "surebet": false
-    },
-    {
-      "match": "Toulouse – Strasbourg",
-      "books": [
-        "pmu",
-        "netbet",
-        "betclic"
-      ],
-      "margin": 0.11197097112590071,
-      "surebet": false
     }
   ],
   "sources": [
@@ -214,7 +213,7 @@
       "ok": true,
       "detail": "ligue 1: 10, ligue 2: 8, premier league: 11, laliga: 11, serie a: 12, bundesliga: 9, champions league: 18",
       "events": 79,
-      "elapsed_s": 3.736
+      "elapsed_s": 3.485
     },
     {
       "name": "netbet",
@@ -222,7 +221,7 @@
       "ok": true,
       "detail": "ligue 1: 8 (page partielle), premier league: 9 (page partielle), laliga: 9 (page partielle), serie a: 8 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 34,
-      "elapsed_s": 4.653
+      "elapsed_s": 4.057
     },
     {
       "name": "smarkets",
@@ -230,7 +229,7 @@
       "ok": true,
       "detail": "233 matchs listés sur 5 page(s), prix chargés après appariement",
       "events": 233,
-      "elapsed_s": 2.33
+      "elapsed_s": 2.729
     },
     {
       "name": "matchbook",
@@ -238,14 +237,14 @@
       "ok": true,
       "detail": "6 matchs avec liquidité suffisante sur la page reçue",
       "events": 6,
-      "elapsed_s": 0.507
+      "elapsed_s": 0.434
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "325 matchs nommés sur 72 h, prix après appariement",
-      "events": 325,
+      "detail": "327 matchs nommés sur 72 h, prix après appariement",
+      "events": 327,
       "elapsed_s": 0.424
     },
     {
@@ -262,7 +261,7 @@
       "ok": true,
       "detail": "3 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
       "events": 3,
-      "elapsed_s": 4.543
+      "elapsed_s": 4.033
     },
     {
       "name": "olybet",
@@ -294,7 +293,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.438
+      "elapsed_s": 0.325
     }
   ],
   "performance": {
