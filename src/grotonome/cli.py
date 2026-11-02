@@ -93,6 +93,9 @@ def cmd_passage(args) -> int:
     now = datetime.now(timezone.utc)
     state = _load_state(Path(args.state))
     backoff = state.setdefault("recul", {})
+    ring = state.setdefault("rythme", [])
+    ring.append(now.isoformat())
+    del ring[:-24]
     print(f"RYTHME {now.isoformat()}", flush=True)
     reports = fetch_all(now=now, backoff=backoff)
     result = analyze(reports, pricer=_price)

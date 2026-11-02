@@ -5,6 +5,10 @@ on:
     # Filet. GitHub décale souvent ce cron : la régularité vient de la boucle.
     - cron: "*/30 * * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/veille.yml
 
 permissions:
   contents: write
@@ -58,11 +62,8 @@ jobs:
           while [ "$SECONDS" -lt "$END" ]; do
             T0=$SECONDS
             python -m grotonome passage | tee /tmp/grotonome-passage.txt
-            ALERT=$(grep -o 'alertes=[0-9]*' /tmp/grotonome-passage.txt | tail -1 | cut -d= -f2 || true)
-            if [ "${ALERT:-0}" != "0" ] || [ $((SECONDS - LAST)) -ge 1800 ]; then
-              commit_data || echo "commit non fait"
-              LAST=$SECONDS
-            fi
+            commit_data || echo "commit non fait"
+            LAST=$SECONDS
             ELAPSED=$((SECONDS - T0))
             SLEEP=$((360 - ELAPSED))
             if [ "$SLEEP" -gt 0 ] && [ $((SECONDS + SLEEP)) -lt "$END" ]; then
