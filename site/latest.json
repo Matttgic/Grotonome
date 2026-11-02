@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T20:46:52.176315+01:00",
+  "generated_at": "2026-11-02T20:52:52.154053+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -101,15 +101,6 @@
       "surebet": false
     },
     {
-      "match": "Crystal Palace – Liverpool",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10543728423475263,
-      "surebet": false
-    },
-    {
       "match": "Angers – Nice",
       "books": [
         "pmu",
@@ -153,6 +144,15 @@
         "netbet"
       ],
       "margin": 0.10744644678680726,
+      "surebet": false
+    },
+    {
+      "match": "Crystal Palace – Liverpool",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.10749853646908702,
       "surebet": false
     },
     {
@@ -215,7 +215,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 9, premier league: 21, laliga: 11, serie a: 10, bundesliga: 9, champions league: 18",
       "events": 95,
-      "elapsed_s": 4.083
+      "elapsed_s": 3.931
     },
     {
       "name": "netbet",
@@ -223,7 +223,7 @@
       "ok": true,
       "detail": "ligue 1: 7 (page partielle), premier league: 9 (page partielle), laliga: 9 (page partielle), serie a: 8 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 33,
-      "elapsed_s": 4.718
+      "elapsed_s": 5.299
     },
     {
       "name": "smarkets",
@@ -231,23 +231,23 @@
       "ok": true,
       "detail": "230 matchs listés sur 5 page(s), prix chargés après appariement",
       "events": 230,
-      "elapsed_s": 2.551
+      "elapsed_s": 2.502
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "3 matchs avec liquidité suffisante sur la page reçue",
-      "events": 3,
-      "elapsed_s": 1.777
+      "detail": "4 matchs avec liquidité suffisante sur la page reçue",
+      "events": 4,
+      "elapsed_s": 0.823
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "243 matchs nommés sur 72 h, prix après appariement",
-      "events": 243,
-      "elapsed_s": 2.98
+      "detail": "242 matchs nommés sur 72 h, prix après appariement",
+      "events": 242,
+      "elapsed_s": 0.554
     },
     {
       "name": "the-odds-api",
@@ -263,7 +263,7 @@
       "ok": true,
       "detail": "4 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 4,
-      "elapsed_s": 4.354
+      "elapsed_s": 4.781
     },
     {
       "name": "olybet",
@@ -295,7 +295,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.545
+      "elapsed_s": 0.553
     }
   ],
   "performance": {
