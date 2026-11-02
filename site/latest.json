@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T22:10:52.971595+01:00",
+  "generated_at": "2026-11-02T22:16:52.646471+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -215,7 +215,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 9, premier league: 20, laliga: 10, serie a: 10, bundesliga: 9, champions league: 18",
       "events": 93,
-      "elapsed_s": 3.858
+      "elapsed_s": 3.891
     },
     {
       "name": "netbet",
@@ -223,7 +223,7 @@
       "ok": true,
       "detail": "ligue 1: 7 (page partielle), premier league: 8 (page partielle), laliga: 8 (page partielle), serie a: 8 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 31,
-      "elapsed_s": 5.286
+      "elapsed_s": 6.196
     },
     {
       "name": "smarkets",
@@ -231,23 +231,23 @@
       "ok": true,
       "detail": "237 matchs listés sur 5 page(s), prix chargés après appariement",
       "events": 237,
-      "elapsed_s": 2.846
+      "elapsed_s": 2.521
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "6 matchs avec liquidité suffisante sur la page reçue",
-      "events": 6,
-      "elapsed_s": 1.04
+      "detail": "5 matchs avec liquidité suffisante sur la page reçue",
+      "events": 5,
+      "elapsed_s": 0.794
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "266 matchs nommés sur 72 h, prix après appariement",
-      "events": 266,
-      "elapsed_s": 0.507
+      "detail": "265 matchs nommés sur 72 h, prix après appariement",
+      "events": 265,
+      "elapsed_s": 0.848
     },
     {
       "name": "the-odds-api",
@@ -263,7 +263,7 @@
       "ok": true,
       "detail": "5 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 5,
-      "elapsed_s": 4.098
+      "elapsed_s": 4.582
     },
     {
       "name": "olybet",
@@ -295,7 +295,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.558
+      "elapsed_s": 0.337
     }
   ],
   "performance": {
