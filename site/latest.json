@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T15:06:30.638968+01:00",
+  "generated_at": "2026-11-03T15:12:30.892879+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -216,7 +216,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 9, premier league: 20, laliga: 10, serie a: 10, bundesliga: 9, champions league: 18",
       "events": 93,
-      "elapsed_s": 3.997
+      "elapsed_s": 3.978
     },
     {
       "name": "netbet",
@@ -224,15 +224,15 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 6.809
+      "elapsed_s": 6.141
     },
     {
       "name": "smarkets",
       "kind": "sharp",
       "ok": true,
-      "detail": "241 matchs listés sur 5 page(s), prix chargés après appariement",
-      "events": 241,
-      "elapsed_s": 2.446
+      "detail": "242 matchs listés sur 5 page(s), prix chargés après appariement",
+      "events": 242,
+      "elapsed_s": 2.478
     },
     {
       "name": "matchbook",
@@ -240,7 +240,7 @@
       "ok": true,
       "detail": "10 matchs avec liquidité suffisante sur la page reçue",
       "events": 10,
-      "elapsed_s": 1.006
+      "elapsed_s": 0.698
     },
     {
       "name": "pinnacle",
@@ -248,7 +248,7 @@
       "ok": true,
       "detail": "286 matchs nommés sur 72 h, prix après appariement",
       "events": 286,
-      "elapsed_s": 0.554
+      "elapsed_s": 0.556
     },
     {
       "name": "the-odds-api",
@@ -264,7 +264,7 @@
       "ok": true,
       "detail": "5 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
       "events": 5,
-      "elapsed_s": 4.179
+      "elapsed_s": 3.919
     },
     {
       "name": "olybet",
@@ -296,7 +296,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.406
+      "elapsed_s": 0.903
     }
   ],
   "performance": {
