@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T11:12:30.606044+01:00",
+  "generated_at": "2026-11-03T11:18:30.096579+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -216,7 +216,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 9, premier league: 20, laliga: 10, serie a: 10, bundesliga: 9, champions league: 18",
       "events": 93,
-      "elapsed_s": 3.969
+      "elapsed_s": 3.838
     },
     {
       "name": "netbet",
@@ -224,7 +224,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 5.349
+      "elapsed_s": 5.584
     },
     {
       "name": "smarkets",
@@ -232,7 +232,7 @@
       "ok": true,
       "detail": "229 matchs listés sur 5 page(s), prix chargés après appariement",
       "events": 229,
-      "elapsed_s": 2.452
+      "elapsed_s": 2.723
     },
     {
       "name": "matchbook",
@@ -240,15 +240,15 @@
       "ok": true,
       "detail": "6 matchs avec liquidité suffisante sur la page reçue",
       "events": 6,
-      "elapsed_s": 0.682
+      "elapsed_s": 1.047
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "288 matchs nommés sur 72 h, prix après appariement",
-      "events": 288,
-      "elapsed_s": 0.52
+      "detail": "292 matchs nommés sur 72 h, prix après appariement",
+      "events": 292,
+      "elapsed_s": 0.46
     },
     {
       "name": "the-odds-api",
@@ -264,7 +264,7 @@
       "ok": true,
       "detail": "5 matchs via SportyTrader, horloge 7:00:00. betclic.fr lui-même reste en 403.",
       "events": 5,
-      "elapsed_s": 3.861
+      "elapsed_s": 3.832
     },
     {
       "name": "olybet",
@@ -296,7 +296,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.853
+      "elapsed_s": 0.45
     }
   ],
   "performance": {
