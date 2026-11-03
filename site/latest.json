@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T11:06:30.728472+01:00",
+  "generated_at": "2026-11-03T11:12:30.606044+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -216,7 +216,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 9, premier league: 20, laliga: 10, serie a: 10, bundesliga: 9, champions league: 18",
       "events": 93,
-      "elapsed_s": 3.959
+      "elapsed_s": 3.969
     },
     {
       "name": "netbet",
@@ -224,15 +224,15 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 5.476
+      "elapsed_s": 5.349
     },
     {
       "name": "smarkets",
       "kind": "sharp",
       "ok": true,
-      "detail": "230 matchs listés sur 5 page(s), prix chargés après appariement",
-      "events": 230,
-      "elapsed_s": 2.379
+      "detail": "229 matchs listés sur 5 page(s), prix chargés après appariement",
+      "events": 229,
+      "elapsed_s": 2.452
     },
     {
       "name": "matchbook",
@@ -240,7 +240,7 @@
       "ok": true,
       "detail": "6 matchs avec liquidité suffisante sur la page reçue",
       "events": 6,
-      "elapsed_s": 0.766
+      "elapsed_s": 0.682
     },
     {
       "name": "pinnacle",
@@ -248,7 +248,7 @@
       "ok": true,
       "detail": "288 matchs nommés sur 72 h, prix après appariement",
       "events": 288,
-      "elapsed_s": 0.395
+      "elapsed_s": 0.52
     },
     {
       "name": "the-odds-api",
@@ -264,7 +264,7 @@
       "ok": true,
       "detail": "5 matchs via SportyTrader, horloge 7:00:00. betclic.fr lui-même reste en 403.",
       "events": 5,
-      "elapsed_s": 3.836
+      "elapsed_s": 3.861
     },
     {
       "name": "olybet",
@@ -296,7 +296,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.306
+      "elapsed_s": 0.853
     }
   ],
   "performance": {
