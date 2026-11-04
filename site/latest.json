@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-04T20:59:22.302060+01:00",
+  "generated_at": "2026-11-04T21:05:22.390161+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
   "skipped": [],
-  "unmatched": 82,
-  "unpriced": 7,
+  "unmatched": 74,
+  "unpriced": 3,
   "shopping": [
     {
       "match": "Real Sociedad – Rayo Vallecano",
@@ -195,7 +195,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.791
+      "elapsed_s": 0.475
     },
     {
       "name": "unibet",
@@ -209,9 +209,9 @@
       "name": "pmu",
       "kind": "book",
       "ok": true,
-      "detail": "ligue 1: 17, ligue 2: 9, premier league: 20, laliga: 10, serie a: 10, bundesliga: 9, champions league: 7",
-      "events": 82,
-      "elapsed_s": 4.179
+      "detail": "ligue 1: 17, ligue 2: 9, premier league: 20, laliga: 10, serie a: 10, bundesliga: 9, champions league: 0",
+      "events": 75,
+      "elapsed_s": 4.084
     },
     {
       "name": "netbet",
@@ -219,31 +219,31 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 6.101
+      "elapsed_s": 6.157
     },
     {
       "name": "smarkets",
       "kind": "sharp",
       "ok": true,
-      "detail": "469 matchs listés sur 10 page(s), prix chargés après appariement",
-      "events": 469,
-      "elapsed_s": 5.301
+      "detail": "464 matchs listés sur 10 page(s), prix chargés après appariement",
+      "events": 464,
+      "elapsed_s": 6.48
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "10 matchs avec liquidité suffisante sur la page reçue",
-      "events": 10,
-      "elapsed_s": 0.899
+      "detail": "3 matchs avec liquidité suffisante sur la page reçue",
+      "events": 3,
+      "elapsed_s": 0.683
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "458 matchs nommés sur 72 h, prix après appariement",
-      "events": 458,
-      "elapsed_s": 0.774
+      "detail": "453 matchs nommés sur 72 h, prix après appariement",
+      "events": 453,
+      "elapsed_s": 0.771
     },
     {
       "name": "the-odds-api",
@@ -291,7 +291,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.455
+      "elapsed_s": 0.585
     }
   ],
   "performance": {
