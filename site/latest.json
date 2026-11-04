@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-04T20:41:22.449495+01:00",
+  "generated_at": "2026-11-04T20:47:22.852705+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
   "skipped": [],
   "unmatched": 83,
-  "unpriced": 5,
+  "unpriced": 7,
   "shopping": [
     {
       "match": "Real Sociedad – Rayo Vallecano",
@@ -195,7 +195,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.486
+      "elapsed_s": 0.491
     },
     {
       "name": "unibet",
@@ -211,7 +211,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 9, premier league: 20, laliga: 10, serie a: 10, bundesliga: 9, champions league: 7",
       "events": 82,
-      "elapsed_s": 4.206
+      "elapsed_s": 4.274
     },
     {
       "name": "netbet",
@@ -219,7 +219,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 6.425
+      "elapsed_s": 6.606
     },
     {
       "name": "smarkets",
@@ -227,23 +227,23 @@
       "ok": true,
       "detail": "470 matchs listés sur 10 page(s), prix chargés après appariement",
       "events": 470,
-      "elapsed_s": 5.736
+      "elapsed_s": 5.884
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "13 matchs avec liquidité suffisante sur la page reçue",
-      "events": 13,
-      "elapsed_s": 0.711
+      "detail": "10 matchs avec liquidité suffisante sur la page reçue",
+      "events": 10,
+      "elapsed_s": 0.683
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "455 matchs nommés sur 72 h, prix après appariement",
-      "events": 455,
-      "elapsed_s": 0.69
+      "detail": "458 matchs nommés sur 72 h, prix après appariement",
+      "events": 458,
+      "elapsed_s": 0.713
     },
     {
       "name": "the-odds-api",
@@ -259,7 +259,7 @@
       "ok": false,
       "detail": "ligue 1: 18 fiches. betclic.fr répond 403 (CloudFront). La page SportyTrader est lue, mais son horloge n'est pas calée sur une heure UTC connue : cotes non utilisées.",
       "events": 0,
-      "elapsed_s": 0.665
+      "elapsed_s": 0.817
     },
     {
       "name": "olybet",
@@ -291,23 +291,23 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.57
+      "elapsed_s": 0.439
     }
   ],
   "performance": {
     "n_bets": 1,
     "n_settled": 0,
-    "n_with_clv": 0,
+    "n_with_clv": 1,
     "n_roi_matches": 0,
-    "n_clv_matches": 0,
+    "n_clv_matches": 1,
     "roi": null,
     "roi_low": null,
     "roi_high": null,
     "roi_note": null,
-    "clv_mean": null,
+    "clv_mean": 0.07020758031908625,
     "clv_low": null,
     "clv_high": null,
-    "clv_note": null,
+    "clv_note": "moins de 2 paris",
     "flat_stake": true,
     "results_note": "E0 2526: ok; F1 2526: ok; SP1 2526: ok; I1 2526: ok; D1 2526: ok; E0 2627: ok; F1 2627: ok; SP1 2627: ok; I1 2627: ok; D1 2627: ok"
   },
