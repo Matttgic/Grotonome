@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T16:22:15.799308+01:00",
+  "generated_at": "2026-11-04T16:28:15.919985+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -50,6 +50,15 @@
         "netbet"
       ],
       "margin": 0.09361107163043436,
+      "surebet": false
+    },
+    {
+      "match": "Auxerre – Paris FC",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.09498291394843106,
       "surebet": false
     },
     {
@@ -177,15 +186,6 @@
       ],
       "margin": 0.10634144177121119,
       "surebet": false
-    },
-    {
-      "match": "Celta Vigo – Levante",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10647553843959501,
-      "surebet": false
     }
   ],
   "sources": [
@@ -195,13 +195,13 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.293
+      "elapsed_s": 0.21
     },
     {
       "name": "unibet",
       "kind": "book",
       "ok": false,
-      "detail": "HTTP 403",
+      "detail": "recul jusqu'à 2026-11-04T17:22:15.799308+00:00 après HTTP 403",
       "events": 0,
       "elapsed_s": 0.0
     },
@@ -211,7 +211,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 9, premier league: 20, laliga: 10, serie a: 10, bundesliga: 9, champions league: 9",
       "events": 84,
-      "elapsed_s": 3.942
+      "elapsed_s": 3.873
     },
     {
       "name": "netbet",
@@ -219,7 +219,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 5.454
+      "elapsed_s": 5.489
     },
     {
       "name": "smarkets",
@@ -227,15 +227,15 @@
       "ok": true,
       "detail": "425 matchs listés sur 9 page(s), prix chargés après appariement",
       "events": 425,
-      "elapsed_s": 4.893
+      "elapsed_s": 5.177
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "13 matchs avec liquidité suffisante sur la page reçue",
-      "events": 13,
-      "elapsed_s": 0.903
+      "detail": "12 matchs avec liquidité suffisante sur la page reçue",
+      "events": 12,
+      "elapsed_s": 1.018
     },
     {
       "name": "pinnacle",
@@ -243,7 +243,7 @@
       "ok": true,
       "detail": "443 matchs nommés sur 72 h, prix après appariement",
       "events": 443,
-      "elapsed_s": 0.776
+      "elapsed_s": 0.665
     },
     {
       "name": "the-odds-api",
@@ -259,31 +259,31 @@
       "ok": false,
       "detail": "ligue 1: 18 fiches. betclic.fr répond 403 (CloudFront). La page SportyTrader est lue, mais son horloge n'est pas calée sur une heure UTC connue : cotes non utilisées.",
       "events": 0,
-      "elapsed_s": 0.681
+      "elapsed_s": 0.713
     },
     {
       "name": "olybet",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, pas de contournement",
+      "detail": "recul jusqu'à 2026-11-04T17:22:15.799308+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.194
+      "elapsed_s": 0.0
     },
     {
       "name": "betsson",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, pas de contournement",
+      "detail": "recul jusqu'à 2026-11-04T17:22:15.799308+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.114
+      "elapsed_s": 0.0
     },
     {
       "name": "genybet",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, accès refusé (géoblocage probable), pas de contournement",
+      "detail": "recul jusqu'à 2026-11-04T17:22:15.799308+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.337
+      "elapsed_s": 0.0
     },
     {
       "name": "vbet",
@@ -291,7 +291,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.642
+      "elapsed_s": 0.28
     }
   ],
   "performance": {
