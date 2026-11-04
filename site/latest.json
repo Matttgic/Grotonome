@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T21:11:22.605384+01:00",
+  "generated_at": "2026-11-04T21:17:23.056408+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -195,7 +195,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.353
+      "elapsed_s": 0.534
     },
     {
       "name": "unibet",
@@ -211,7 +211,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 9, premier league: 20, laliga: 10, serie a: 10, bundesliga: 9, champions league: 0",
       "events": 75,
-      "elapsed_s": 4.286
+      "elapsed_s": 4.292
     },
     {
       "name": "netbet",
@@ -219,7 +219,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 5.98
+      "elapsed_s": 6.395
     },
     {
       "name": "smarkets",
@@ -227,23 +227,23 @@
       "ok": true,
       "detail": "464 matchs listés sur 10 page(s), prix chargés après appariement",
       "events": 464,
-      "elapsed_s": 6.194
+      "elapsed_s": 5.97
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "3 matchs avec liquidité suffisante sur la page reçue",
-      "events": 3,
-      "elapsed_s": 0.685
+      "detail": "4 matchs avec liquidité suffisante sur la page reçue",
+      "events": 4,
+      "elapsed_s": 0.659
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "453 matchs nommés sur 72 h, prix après appariement",
-      "events": 453,
-      "elapsed_s": 0.722
+      "detail": "471 matchs nommés sur 72 h, prix après appariement",
+      "events": 471,
+      "elapsed_s": 0.677
     },
     {
       "name": "the-odds-api",
@@ -259,7 +259,7 @@
       "ok": false,
       "detail": "ligue 1: 18 fiches. betclic.fr répond 403 (CloudFront). La page SportyTrader est lue, mais son horloge n'est pas calée sur une heure UTC connue : cotes non utilisées.",
       "events": 0,
-      "elapsed_s": 0.658
+      "elapsed_s": 0.649
     },
     {
       "name": "olybet",
@@ -291,7 +291,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.519
+      "elapsed_s": 0.322
     }
   ],
   "performance": {
