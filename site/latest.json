@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T02:55:45.593435+01:00",
+  "generated_at": "2026-11-04T03:01:45.306891+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -216,7 +216,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 9, premier league: 20, laliga: 10, serie a: 10, bundesliga: 9, champions league: 9",
       "events": 84,
-      "elapsed_s": 3.864
+      "elapsed_s": 3.942
     },
     {
       "name": "netbet",
@@ -224,7 +224,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 6.563
+      "elapsed_s": 6.079
     },
     {
       "name": "smarkets",
@@ -232,23 +232,23 @@
       "ok": true,
       "detail": "239 matchs listés sur 5 page(s), prix chargés après appariement",
       "events": 239,
-      "elapsed_s": 2.732
+      "elapsed_s": 2.609
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "20 matchs avec liquidité suffisante sur la page reçue",
-      "events": 20,
-      "elapsed_s": 1.098
+      "detail": "19 matchs avec liquidité suffisante sur la page reçue",
+      "events": 19,
+      "elapsed_s": 1.148
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "281 matchs nommés sur 72 h, prix après appariement",
-      "events": 281,
-      "elapsed_s": 0.45
+      "detail": "280 matchs nommés sur 72 h, prix après appariement",
+      "events": 280,
+      "elapsed_s": 0.477
     },
     {
       "name": "the-odds-api",
@@ -264,7 +264,7 @@
       "ok": true,
       "detail": "5 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
       "events": 5,
-      "elapsed_s": 4.08
+      "elapsed_s": 4.014
     },
     {
       "name": "olybet",
@@ -296,7 +296,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.916
+      "elapsed_s": 0.656
     }
   ],
   "performance": {
