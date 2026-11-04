@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T04:01:45.686368+01:00",
+  "generated_at": "2026-11-04T04:07:45.255153+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -198,15 +198,15 @@
       "name": "winamax",
       "kind": "book",
       "ok": false,
-      "detail": "HTTP 403",
+      "detail": "recul jusqu'à 2026-11-04T05:01:45.686368+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.12
+      "elapsed_s": 0.0
     },
     {
       "name": "unibet",
       "kind": "book",
       "ok": false,
-      "detail": "HTTP 403",
+      "detail": "recul jusqu'à 2026-11-04T05:01:45.686368+00:00 après HTTP 403",
       "events": 0,
       "elapsed_s": 0.0
     },
@@ -216,7 +216,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 9, premier league: 20, laliga: 10, serie a: 10, bundesliga: 9, champions league: 9",
       "events": 84,
-      "elapsed_s": 3.965
+      "elapsed_s": 3.955
     },
     {
       "name": "netbet",
@@ -224,7 +224,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 6.946
+      "elapsed_s": 6.108
     },
     {
       "name": "smarkets",
@@ -232,15 +232,15 @@
       "ok": true,
       "detail": "240 matchs listés sur 5 page(s), prix chargés après appariement",
       "events": 240,
-      "elapsed_s": 2.565
+      "elapsed_s": 2.651
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "17 matchs avec liquidité suffisante sur la page reçue",
-      "events": 17,
-      "elapsed_s": 0.842
+      "detail": "14 matchs avec liquidité suffisante sur la page reçue",
+      "events": 14,
+      "elapsed_s": 1.139
     },
     {
       "name": "pinnacle",
@@ -248,7 +248,7 @@
       "ok": true,
       "detail": "291 matchs nommés sur 72 h, prix après appariement",
       "events": 291,
-      "elapsed_s": 0.539
+      "elapsed_s": 0.476
     },
     {
       "name": "the-odds-api",
@@ -264,31 +264,31 @@
       "ok": true,
       "detail": "5 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
       "events": 5,
-      "elapsed_s": 4.054
+      "elapsed_s": 4.063
     },
     {
       "name": "olybet",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, pas de contournement",
+      "detail": "recul jusqu'à 2026-11-04T05:01:45.686368+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.094
+      "elapsed_s": 0.0
     },
     {
       "name": "betsson",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, pas de contournement",
+      "detail": "recul jusqu'à 2026-11-04T05:01:45.686368+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.101
+      "elapsed_s": 0.0
     },
     {
       "name": "genybet",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, accès refusé (géoblocage probable), pas de contournement",
+      "detail": "recul jusqu'à 2026-11-04T05:01:45.686368+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.338
+      "elapsed_s": 0.0
     },
     {
       "name": "vbet",
@@ -296,7 +296,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.802
+      "elapsed_s": 0.327
     }
   ],
   "performance": {
