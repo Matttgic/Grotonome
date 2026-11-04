@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T16:45:42.777432+01:00",
+  "generated_at": "2026-11-04T16:47:22.786768+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -195,7 +195,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.339
+      "elapsed_s": 0.924
     },
     {
       "name": "unibet",
@@ -211,7 +211,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 9, premier league: 20, laliga: 10, serie a: 10, bundesliga: 9, champions league: 9",
       "events": 84,
-      "elapsed_s": 3.857
+      "elapsed_s": 4.171
     },
     {
       "name": "netbet",
@@ -219,7 +219,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 5.213
+      "elapsed_s": 5.997
     },
     {
       "name": "smarkets",
@@ -227,15 +227,15 @@
       "ok": true,
       "detail": "433 matchs listés sur 9 page(s), prix chargés après appariement",
       "events": 433,
-      "elapsed_s": 5.143
+      "elapsed_s": 6.3
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "15 matchs avec liquidité suffisante sur la page reçue",
-      "events": 15,
-      "elapsed_s": 0.927
+      "detail": "12 matchs avec liquidité suffisante sur la page reçue",
+      "events": 12,
+      "elapsed_s": 0.944
     },
     {
       "name": "pinnacle",
@@ -243,7 +243,7 @@
       "ok": true,
       "detail": "451 matchs nommés sur 72 h, prix après appariement",
       "events": 451,
-      "elapsed_s": 0.64
+      "elapsed_s": 0.677
     },
     {
       "name": "the-odds-api",
@@ -259,7 +259,7 @@
       "ok": false,
       "detail": "ligue 1: 18 fiches. betclic.fr répond 403 (CloudFront). La page SportyTrader est lue, mais son horloge n'est pas calée sur une heure UTC connue : cotes non utilisées.",
       "events": 0,
-      "elapsed_s": 0.662
+      "elapsed_s": 1.096
     },
     {
       "name": "olybet",
@@ -291,7 +291,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.268
+      "elapsed_s": 0.462
     }
   ],
   "performance": {
