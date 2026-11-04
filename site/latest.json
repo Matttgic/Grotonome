@@ -1,8 +1,29 @@
 {
-  "generated_at": "2026-11-04T13:52:15.771724+01:00",
+  "generated_at": "2026-11-04T13:58:15.942976+01:00",
   "devig": "power",
   "bankroll_eur": null,
-  "bets": [],
+  "bets": [
+    {
+      "match": "RB Leipzig – Manchester City",
+      "competition": "champions league",
+      "selection": "RB Leipzig",
+      "bookmaker": "pmu",
+      "odds": 5.8,
+      "fair_p": 0.173873539059945,
+      "ev": 0.008466526547680875,
+      "stake_fraction": 0.0004409649243583789,
+      "stake_eur": null,
+      "kickoff": "2026-11-04T21:00:00+01:00",
+      "devig": "power",
+      "overround": 0.11973210475054441,
+      "sharp_sources": [
+        "matchbook",
+        "pinnacle"
+      ],
+      "warnings": [],
+      "movement_at": "2026-11-04T12:58:16+00:00"
+    }
+  ],
   "skipped": [],
   "unmatched": 107,
   "unpriced": 0,
@@ -200,7 +221,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.261
+      "elapsed_s": 0.264
     },
     {
       "name": "unibet",
@@ -216,7 +237,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 9, premier league: 20, laliga: 10, serie a: 10, bundesliga: 9, champions league: 9",
       "events": 84,
-      "elapsed_s": 3.93
+      "elapsed_s": 6.133
     },
     {
       "name": "netbet",
@@ -224,15 +245,15 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 6.809
+      "elapsed_s": 5.609
     },
     {
       "name": "smarkets",
       "kind": "sharp",
       "ok": true,
-      "detail": "296 matchs listés sur 6 page(s), prix chargés après appariement",
-      "events": 296,
-      "elapsed_s": 3.09
+      "detail": "300 matchs listés sur 7 page(s), prix chargés après appariement",
+      "events": 300,
+      "elapsed_s": 3.761
     },
     {
       "name": "matchbook",
@@ -240,15 +261,15 @@
       "ok": true,
       "detail": "16 matchs avec liquidité suffisante sur la page reçue",
       "events": 16,
-      "elapsed_s": 0.839
+      "elapsed_s": 0.838
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "364 matchs nommés sur 72 h, prix après appariement",
-      "events": 364,
-      "elapsed_s": 0.709
+      "detail": "365 matchs nommés sur 72 h, prix après appariement",
+      "events": 365,
+      "elapsed_s": 0.641
     },
     {
       "name": "the-odds-api",
@@ -264,7 +285,7 @@
       "ok": true,
       "detail": "6 matchs via SportyTrader, horloge 6:00:00. betclic.fr lui-même reste en 403.",
       "events": 6,
-      "elapsed_s": 4.211
+      "elapsed_s": 4.234
     },
     {
       "name": "olybet",
@@ -296,11 +317,11 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.499
+      "elapsed_s": 0.379
     }
   ],
   "performance": {
-    "n_bets": 0,
+    "n_bets": 1,
     "n_settled": 0,
     "n_with_clv": 0,
     "n_roi_matches": 0,
