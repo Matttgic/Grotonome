@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-04T08:20:40.231389+01:00",
+  "generated_at": "2026-11-04T08:26:41.053844+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
   "skipped": [],
-  "unmatched": 108,
+  "unmatched": 109,
   "unpriced": 0,
   "shopping": [
     {
@@ -200,7 +200,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.258
+      "elapsed_s": 0.336
     },
     {
       "name": "unibet",
@@ -216,7 +216,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 9, premier league: 20, laliga: 10, serie a: 10, bundesliga: 9, champions league: 9",
       "events": 84,
-      "elapsed_s": 4.268
+      "elapsed_s": 4.026
     },
     {
       "name": "netbet",
@@ -224,7 +224,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 4.8
+      "elapsed_s": 4.454
     },
     {
       "name": "smarkets",
@@ -232,15 +232,15 @@
       "ok": true,
       "detail": "260 matchs listés sur 6 page(s), prix chargés après appariement",
       "events": 260,
-      "elapsed_s": 2.51
+      "elapsed_s": 2.561
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "8 matchs avec liquidité suffisante sur la page reçue",
-      "events": 8,
-      "elapsed_s": 0.478
+      "detail": "6 matchs avec liquidité suffisante sur la page reçue",
+      "events": 6,
+      "elapsed_s": 0.505
     },
     {
       "name": "pinnacle",
@@ -248,7 +248,7 @@
       "ok": true,
       "detail": "347 matchs nommés sur 72 h, prix après appariement",
       "events": 347,
-      "elapsed_s": 0.484
+      "elapsed_s": 0.509
     },
     {
       "name": "the-odds-api",
@@ -264,7 +264,7 @@
       "ok": true,
       "detail": "5 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
       "events": 5,
-      "elapsed_s": 4.024
+      "elapsed_s": 4.047
     },
     {
       "name": "olybet",
@@ -296,7 +296,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.383
+      "elapsed_s": 0.282
     }
   ],
   "performance": {
