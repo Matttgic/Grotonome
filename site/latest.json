@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-05T12:27:12.390049+01:00",
+  "generated_at": "2026-11-05T12:33:12.864428+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
   "skipped": [],
-  "unmatched": 96,
-  "unpriced": 3,
+  "unmatched": 111,
+  "unpriced": 0,
   "shopping": [
     {
       "match": "Real Sociedad – Rayo Vallecano",
@@ -14,6 +14,16 @@
         "netbet"
       ],
       "margin": 0.08974358974358987,
+      "surebet": false
+    },
+    {
+      "match": "Rennes – Lille",
+      "books": [
+        "pmu",
+        "netbet",
+        "betclic"
+      ],
+      "margin": 0.09028760018859039,
       "surebet": false
     },
     {
@@ -34,16 +44,6 @@
         "betclic"
       ],
       "margin": 0.09356874062756404,
-      "surebet": false
-    },
-    {
-      "match": "Rennes – Lille",
-      "books": [
-        "pmu",
-        "netbet",
-        "betclic"
-      ],
-      "margin": 0.09419996325588298,
       "surebet": false
     },
     {
@@ -175,21 +175,21 @@
       "surebet": false
     },
     {
-      "match": "Lens – Marseille",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10360360360360366,
-      "surebet": false
-    },
-    {
       "match": "Fiorentina – Juventus",
       "books": [
         "pmu",
         "netbet"
       ],
       "margin": 0.10480605285592492,
+      "surebet": false
+    },
+    {
+      "match": "Toulouse – Strasbourg",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.10574169530355104,
       "surebet": false
     }
   ],
@@ -200,13 +200,13 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.602
+      "elapsed_s": 0.393
     },
     {
       "name": "unibet",
       "kind": "book",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-05T11:33:11.635355+00:00 après HTTP 403",
+      "detail": "HTTP 403",
       "events": 0,
       "elapsed_s": 0.0
     },
@@ -216,7 +216,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 9, premier league: 20, laliga: 10, serie a: 10, bundesliga: 9, champions league: 18",
       "events": 93,
-      "elapsed_s": 3.965
+      "elapsed_s": 4.187
     },
     {
       "name": "netbet",
@@ -224,31 +224,31 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 5.46
+      "elapsed_s": 6.265
     },
     {
       "name": "smarkets",
       "kind": "sharp",
       "ok": true,
-      "detail": "572 matchs listés sur 12 page(s), prix chargés après appariement",
-      "events": 572,
-      "elapsed_s": 6.265
+      "detail": "574 matchs listés sur 12 page(s), prix chargés après appariement",
+      "events": 574,
+      "elapsed_s": 6.684
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "11 matchs avec liquidité suffisante sur la page reçue",
-      "events": 11,
-      "elapsed_s": 0.852
+      "detail": "10 matchs avec liquidité suffisante sur la page reçue",
+      "events": 10,
+      "elapsed_s": 0.935
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
-      "ok": true,
-      "detail": "739 matchs nommés sur 72 h, prix après appariement",
-      "events": 739,
-      "elapsed_s": 0.758
+      "ok": false,
+      "detail": "HTTP 401",
+      "events": 0,
+      "elapsed_s": 0.218
     },
     {
       "name": "the-odds-api",
@@ -264,31 +264,31 @@
       "ok": true,
       "detail": "5 matchs via SportyTrader, horloge 6:00:00. betclic.fr lui-même reste en 403.",
       "events": 5,
-      "elapsed_s": 4.127
+      "elapsed_s": 4.138
     },
     {
       "name": "olybet",
       "kind": "probe",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-05T11:33:11.635355+00:00 après HTTP 403",
+      "detail": "HTTP 403, pas de contournement",
       "events": 0,
-      "elapsed_s": 0.0
+      "elapsed_s": 0.223
     },
     {
       "name": "betsson",
       "kind": "probe",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-05T11:33:11.635355+00:00 après HTTP 403",
+      "detail": "HTTP 403, pas de contournement",
       "events": 0,
-      "elapsed_s": 0.0
+      "elapsed_s": 0.184
     },
     {
       "name": "genybet",
       "kind": "probe",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-05T11:33:11.635355+00:00 après HTTP 403",
+      "detail": "HTTP 403, accès refusé (géoblocage probable), pas de contournement",
       "events": 0,
-      "elapsed_s": 0.0
+      "elapsed_s": 0.313
     },
     {
       "name": "vbet",
@@ -296,7 +296,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.552
+      "elapsed_s": 0.412
     }
   ],
   "performance": {
