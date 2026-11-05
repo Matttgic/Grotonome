@@ -2416,3 +2416,4 @@
 {"at": "2026-11-05T01:46:52.876900+00:00", "kind": "book", "source": "pmu", "competition": "premier league", "home": "Tottenham", "away": "Ipswich Town", "kickoff": "2026-11-21T15:00:00+00:00", "odds": [1.5, 4.0, 5.2], "probs": null, "movement_at": "2026-11-05T01:46:28+00:00"}
 {"at": "2026-11-05T01:49:57.435257+00:00", "kind": "book", "source": "betclic", "competition": "ligue 1", "home": "Auxerre", "away": "Paris FC", "kickoff": "2026-11-07T18:00:00+00:00", "odds": [3.95, 3.63, 1.69], "probs": null}
 {"at": "2026-11-05T01:49:57.435257+00:00", "kind": "book", "source": "betclic", "competition": "ligue 1", "home": "PSG", "away": "ESTAC Troyes", "kickoff": "2026-11-07T20:05:00+00:00", "odds": [1.1, 7.5, 13.25], "probs": null}
+{"at": "2026-11-05T01:55:57.916558+00:00", "kind": "book", "source": "netbet", "competition": "serie a", "home": "Inter Milan", "away": "Côme", "kickoff": "2026-11-08T17:00:00+00:00", "odds": [1.75, 3.85, 3.5], "probs": null}
