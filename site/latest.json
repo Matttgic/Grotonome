@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-05T20:41:06.511580+01:00",
+  "generated_at": "2026-11-05T20:47:06.607165+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
   "skipped": [],
   "unmatched": 95,
-  "unpriced": 20,
+  "unpriced": 22,
   "shopping": [
     {
       "match": "PSG – Troyes",
@@ -71,6 +71,15 @@
         "netbet"
       ],
       "margin": 0.09541062801932365,
+      "surebet": false
+    },
+    {
+      "match": "Toulouse – Strasbourg",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.09929311556023901,
       "surebet": false
     },
     {
@@ -180,15 +189,6 @@
       ],
       "margin": 0.10547213183270143,
       "surebet": false
-    },
-    {
-      "match": "Málaga – Racing Santander",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10747432428500758,
-      "surebet": false
     }
   ],
   "sources": [
@@ -198,13 +198,13 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.391
+      "elapsed_s": 0.611
     },
     {
       "name": "unibet",
       "kind": "book",
       "ok": false,
-      "detail": "HTTP 403",
+      "detail": "recul jusqu'à 2026-11-05T21:41:06.511580+00:00 après HTTP 403",
       "events": 0,
       "elapsed_s": 0.0
     },
@@ -214,7 +214,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 9, premier league: 20, laliga: 10, serie a: 10, bundesliga: 9, champions league: 18",
       "events": 93,
-      "elapsed_s": 4.531
+      "elapsed_s": 4.51
     },
     {
       "name": "netbet",
@@ -222,7 +222,7 @@
       "ok": true,
       "detail": "ligue 1: 6 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 36,
-      "elapsed_s": 7.353
+      "elapsed_s": 5.608
     },
     {
       "name": "smarkets",
@@ -230,23 +230,23 @@
       "ok": true,
       "detail": "600 matchs listés sur 12 page(s), prix chargés après appariement",
       "events": 600,
-      "elapsed_s": 7.708
+      "elapsed_s": 7.626
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "7 matchs avec liquidité suffisante sur la page reçue",
-      "events": 7,
-      "elapsed_s": 0.798
+      "detail": "14 matchs avec liquidité suffisante sur la page reçue",
+      "events": 14,
+      "elapsed_s": 0.811
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "965 matchs nommés sur 72 h, prix après appariement",
-      "events": 965,
-      "elapsed_s": 0.684
+      "detail": "966 matchs nommés sur 72 h, prix après appariement",
+      "events": 966,
+      "elapsed_s": 0.699
     },
     {
       "name": "the-odds-api",
@@ -262,31 +262,31 @@
       "ok": true,
       "detail": "5 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 5,
-      "elapsed_s": 3.981
+      "elapsed_s": 4.068
     },
     {
       "name": "olybet",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, pas de contournement",
+      "detail": "recul jusqu'à 2026-11-05T21:41:06.511580+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.243
+      "elapsed_s": 0.0
     },
     {
       "name": "betsson",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, pas de contournement",
+      "detail": "recul jusqu'à 2026-11-05T21:41:06.511580+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.128
+      "elapsed_s": 0.0
     },
     {
       "name": "genybet",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, accès refusé (géoblocage probable), pas de contournement",
+      "detail": "recul jusqu'à 2026-11-05T21:41:06.511580+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.398
+      "elapsed_s": 0.0
     },
     {
       "name": "vbet",
@@ -294,7 +294,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.26
+      "elapsed_s": 0.416
     }
   ],
   "performance": {
