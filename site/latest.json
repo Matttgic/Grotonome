@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-05T09:45:11.166666+01:00",
+  "generated_at": "2026-11-05T09:51:11.786046+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
   "skipped": [],
-  "unmatched": 97,
+  "unmatched": 96,
   "unpriced": 3,
   "shopping": [
     {
@@ -74,6 +74,15 @@
       "surebet": false
     },
     {
+      "match": "Torino – Lecce",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.09810435802227868,
+      "surebet": false
+    },
+    {
       "match": "Le Mans – AS Monaco",
       "books": [
         "pmu",
@@ -138,6 +147,15 @@
       "surebet": false
     },
     {
+      "match": "Nottingham Forest – Manchester City",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.10177664033233191,
+      "surebet": false
+    },
+    {
       "match": "Angers – Nice",
       "books": [
         "pmu",
@@ -145,15 +163,6 @@
         "betclic"
       ],
       "margin": 0.1018099547511313,
-      "surebet": false
-    },
-    {
-      "match": "Nottingham Forest – Manchester City",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.102054496836119,
       "surebet": false
     },
     {
@@ -182,15 +191,6 @@
       ],
       "margin": 0.10360360360360366,
       "surebet": false
-    },
-    {
-      "match": "Fiorentina – Juventus",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10480605285592492,
-      "surebet": false
     }
   ],
   "sources": [
@@ -200,7 +200,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.364
+      "elapsed_s": 0.238
     },
     {
       "name": "unibet",
@@ -216,7 +216,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 9, premier league: 20, laliga: 10, serie a: 10, bundesliga: 9, champions league: 18",
       "events": 93,
-      "elapsed_s": 6.549
+      "elapsed_s": 4.149
     },
     {
       "name": "netbet",
@@ -224,7 +224,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 6.138
+      "elapsed_s": 5.211
     },
     {
       "name": "smarkets",
@@ -232,15 +232,15 @@
       "ok": true,
       "detail": "541 matchs listés sur 11 page(s), prix chargés après appariement",
       "events": 541,
-      "elapsed_s": 5.847
+      "elapsed_s": 6.014
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "7 matchs avec liquidité suffisante sur la page reçue",
-      "events": 7,
-      "elapsed_s": 0.816
+      "detail": "10 matchs avec liquidité suffisante sur la page reçue",
+      "events": 10,
+      "elapsed_s": 0.805
     },
     {
       "name": "pinnacle",
@@ -248,7 +248,7 @@
       "ok": true,
       "detail": "677 matchs nommés sur 72 h, prix après appariement",
       "events": 677,
-      "elapsed_s": 0.653
+      "elapsed_s": 0.557
     },
     {
       "name": "the-odds-api",
@@ -264,7 +264,7 @@
       "ok": true,
       "detail": "5 matchs via SportyTrader, horloge 6:00:00. betclic.fr lui-même reste en 403.",
       "events": 5,
-      "elapsed_s": 4.066
+      "elapsed_s": 4.376
     },
     {
       "name": "olybet",
@@ -296,7 +296,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.361
+      "elapsed_s": 0.369
     }
   ],
   "performance": {
