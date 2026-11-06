@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-06T18:02:00.666067+01:00",
+  "generated_at": "2026-11-06T18:08:00.703198+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
   "skipped": [],
-  "unmatched": 222,
+  "unmatched": 224,
   "unpriced": 24,
   "shopping": [
     {
@@ -44,7 +44,7 @@
         "netbet",
         "betclic"
       ],
-      "margin": 0.07873688919284527,
+      "margin": 0.07785230276469512,
       "surebet": false
     },
     {
@@ -209,7 +209,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.48
+      "elapsed_s": 0.451
     },
     {
       "name": "unibet",
@@ -217,7 +217,7 @@
       "ok": true,
       "detail": "ligue 1: 18, ligue 2: 9, premier league: 20, laliga: 20, bundesliga: 18, serie a: 20, champions league: 18, europa league: 18, conference league: 0. Unibet et Parions Sport (FDJ) partagent cette offre.",
       "events": 141,
-      "elapsed_s": 14.631
+      "elapsed_s": 15.659
     },
     {
       "name": "pmu",
@@ -225,7 +225,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 9, premier league: 20, laliga: 10, serie a: 10, bundesliga: 9, champions league: 18",
       "events": 93,
-      "elapsed_s": 4.174
+      "elapsed_s": 4.316
     },
     {
       "name": "netbet",
@@ -233,7 +233,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 5.96
+      "elapsed_s": 6.663
     },
     {
       "name": "smarkets",
@@ -241,7 +241,7 @@
       "ok": true,
       "detail": "600 matchs listés sur 12 page(s), prix chargés après appariement",
       "events": 600,
-      "elapsed_s": 7.763
+      "elapsed_s": 7.368
     },
     {
       "name": "matchbook",
@@ -249,7 +249,7 @@
       "ok": false,
       "detail": "0 matchs avec liquidité suffisante sur la page reçue",
       "events": 0,
-      "elapsed_s": 0.716
+      "elapsed_s": 0.723
     },
     {
       "name": "pinnacle",
@@ -257,7 +257,7 @@
       "ok": true,
       "detail": "1194 matchs nommés sur 72 h, prix après appariement",
       "events": 1194,
-      "elapsed_s": 1.047
+      "elapsed_s": 0.919
     },
     {
       "name": "the-odds-api",
@@ -273,7 +273,7 @@
       "ok": true,
       "detail": "4 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 4,
-      "elapsed_s": 4.451
+      "elapsed_s": 4.638
     },
     {
       "name": "olybet",
@@ -305,7 +305,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.799
+      "elapsed_s": 0.954
     }
   ],
   "performance": {
