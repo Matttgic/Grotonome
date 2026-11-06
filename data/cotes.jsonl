@@ -4086,3 +4086,4 @@
 {"at": "2026-11-06T22:55:09.367215+00:00", "kind": "book", "source": "netbet", "competition": "laliga", "home": "Valence", "away": "Real Madrid", "kickoff": "2026-11-07T20:00:00+00:00", "odds": [9.75, 6.1, 1.21], "probs": null}
 {"at": "2026-11-06T23:04:28.645554+00:00", "kind": "book", "source": "pmu", "competition": "ligue 1", "home": "Le Mans", "away": "AS Monaco", "kickoff": "2026-11-08T16:15:00+00:00", "odds": [4.0, 3.8, 1.68], "probs": null, "movement_at": "2026-11-06T23:01:56+00:00"}
 {"at": "2026-11-06T23:04:28.645554+00:00", "kind": "book", "source": "netbet", "competition": "premier league", "home": "Arsenal", "away": "Hull City", "kickoff": "2026-11-07T15:00:00+00:00", "odds": [1.1, 7.5, 18.0], "probs": null}
+{"at": "2026-11-06T23:10:28.535072+00:00", "kind": "book", "source": "netbet", "competition": "laliga", "home": "Celta Vigo", "away": "Levante", "kickoff": "2026-11-08T17:30:00+00:00", "odds": [1.75, 3.45, 3.95], "probs": null}
