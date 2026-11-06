@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T23:04:03.193495+01:00",
+  "generated_at": "2026-11-06T23:10:04.011798+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -30,7 +30,8 @@
       "match": "Auxerre – Paris FC",
       "books": [
         "pmu",
-        "netbet"
+        "netbet",
+        "betclic"
       ],
       "margin": 0.08948842694972736,
       "surebet": false
@@ -199,7 +200,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.281
+      "elapsed_s": 0.242
     },
     {
       "name": "unibet",
@@ -215,7 +216,7 @@
       "ok": true,
       "detail": "ligue 1: 16, ligue 2: 3, premier league: 19, laliga: 9, serie a: 9, bundesliga: 8, champions league: 18",
       "events": 82,
-      "elapsed_s": 3.835
+      "elapsed_s": 3.879
     },
     {
       "name": "netbet",
@@ -223,7 +224,7 @@
       "ok": true,
       "detail": "ligue 1: 8 (page partielle), premier league: 7 (page partielle), laliga: 8 (page partielle), serie a: 9 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 32,
-      "elapsed_s": 5.795
+      "elapsed_s": 5.073
     },
     {
       "name": "smarkets",
@@ -231,7 +232,7 @@
       "ok": true,
       "detail": "600 matchs listés sur 12 page(s), prix chargés après appariement",
       "events": 600,
-      "elapsed_s": 6.539
+      "elapsed_s": 6.84
     },
     {
       "name": "matchbook",
@@ -239,7 +240,7 @@
       "ok": true,
       "detail": "10 matchs avec liquidité suffisante sur la page reçue",
       "events": 10,
-      "elapsed_s": 0.961
+      "elapsed_s": 0.701
     },
     {
       "name": "pinnacle",
@@ -247,7 +248,7 @@
       "ok": true,
       "detail": "1098 matchs nommés sur 72 h, prix après appariement",
       "events": 1098,
-      "elapsed_s": 1.017
+      "elapsed_s": 0.92
     },
     {
       "name": "the-odds-api",
@@ -261,9 +262,9 @@
       "name": "betclic",
       "kind": "book",
       "ok": true,
-      "detail": "4 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
-      "events": 4,
-      "elapsed_s": 4.788
+      "detail": "5 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
+      "events": 5,
+      "elapsed_s": 4.604
     },
     {
       "name": "olybet",
@@ -295,7 +296,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.233
+      "elapsed_s": 0.703
     }
   ],
   "performance": {
