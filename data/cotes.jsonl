@@ -4044,3 +4044,4 @@
 {"at": "2026-11-06T20:04:03.673863+00:00", "kind": "book", "source": "betclic", "competition": "ligue 1", "home": "Le Havre", "away": "Lorient", "kickoff": "2026-11-08T16:15:00+00:00", "odds": [2.7, 3.15, 2.32], "probs": null}
 {"at": "2026-11-06T20:16:03.417176+00:00", "kind": "book", "source": "netbet", "competition": "serie a", "home": "AS Rome", "away": "Sassuolo", "kickoff": "2026-11-07T19:45:00+00:00", "odds": [1.24, 5.8, 8.75], "probs": null}
 {"at": "2026-11-06T20:22:03.530925+00:00", "kind": "book", "source": "netbet", "competition": "laliga", "home": "Elche", "away": "Betis", "kickoff": "2026-11-08T13:00:00+00:00", "odds": [3.2, 3.5, 1.93], "probs": null}
+{"at": "2026-11-06T20:34:03.301337+00:00", "kind": "book", "source": "pmu", "competition": "bundesliga", "home": "Mainz 05", "away": "Bayern Munich", "kickoff": "2026-11-07T14:30:00+00:00", "odds": [6.4, 5.6, 1.29], "probs": null, "movement_at": "2026-11-06T20:30:21+00:00"}
