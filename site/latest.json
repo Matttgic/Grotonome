@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T22:10:03.925073+01:00",
+  "generated_at": "2026-11-06T22:16:04.070636+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -14,7 +14,7 @@
         "netbet",
         "betclic"
       ],
-      "margin": 0.06464646464646462,
+      "margin": 0.06721056721056717,
       "surebet": false
     },
     {
@@ -215,7 +215,7 @@
       "ok": true,
       "detail": "ligue 1: 16, ligue 2: 3, premier league: 19, laliga: 9, serie a: 9, bundesliga: 8, champions league: 18",
       "events": 82,
-      "elapsed_s": 4.223
+      "elapsed_s": 4.118
     },
     {
       "name": "netbet",
@@ -223,7 +223,7 @@
       "ok": true,
       "detail": "ligue 1: 8 (page partielle), premier league: 7 (page partielle), laliga: 8 (page partielle), serie a: 9 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 32,
-      "elapsed_s": 5.451
+      "elapsed_s": 5.855
     },
     {
       "name": "smarkets",
@@ -231,7 +231,7 @@
       "ok": true,
       "detail": "600 matchs listés sur 12 page(s), prix chargés après appariement",
       "events": 600,
-      "elapsed_s": 6.828
+      "elapsed_s": 6.52
     },
     {
       "name": "matchbook",
@@ -239,15 +239,15 @@
       "ok": false,
       "detail": "0 matchs avec liquidité suffisante sur la page reçue",
       "events": 0,
-      "elapsed_s": 0.688
+      "elapsed_s": 0.683
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "1081 matchs nommés sur 72 h, prix après appariement",
-      "events": 1081,
-      "elapsed_s": 1.37
+      "detail": "1089 matchs nommés sur 72 h, prix après appariement",
+      "events": 1089,
+      "elapsed_s": 0.992
     },
     {
       "name": "the-odds-api",
@@ -263,7 +263,7 @@
       "ok": true,
       "detail": "4 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 4,
-      "elapsed_s": 4.339
+      "elapsed_s": 4.533
     },
     {
       "name": "olybet",
@@ -295,7 +295,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.787
+      "elapsed_s": 0.57
     }
   ],
   "performance": {
