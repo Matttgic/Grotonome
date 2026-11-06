@@ -3578,3 +3578,5 @@
 {"at": "2026-11-06T12:06:35.913076+00:00", "kind": "book", "source": "netbet", "competition": "premier league", "home": "Sunderland", "away": "Chelsea", "kickoff": "2026-11-08T14:00:00+00:00", "odds": [3.6, 3.45, 1.83], "probs": null}
 {"at": "2026-11-06T12:06:35.913076+00:00", "kind": "book", "source": "netbet", "competition": "laliga", "home": "Atlético Madrid", "away": "FC Barcelone", "kickoff": "2026-11-08T20:00:00+00:00", "odds": [3.55, 4.1, 1.7], "probs": null}
 {"at": "2026-11-06T12:06:35.913076+00:00", "kind": "book", "source": "netbet", "competition": "serie a", "home": "Naples", "away": "Lazio Rome", "kickoff": "2026-11-08T11:30:00+00:00", "odds": [2.15, 3.4, 2.85], "probs": null}
+{"at": "2026-11-06T12:12:35.108308+00:00", "kind": "book", "source": "netbet", "competition": "premier league", "home": "Everton", "away": "Coventry City", "kickoff": "2026-11-06T20:00:00+00:00", "odds": [1.57, 3.8, 4.7], "probs": null}
+{"at": "2026-11-06T12:12:35.108308+00:00", "kind": "book", "source": "betclic", "competition": "ligue 1", "home": "PSG", "away": "ESTAC Troyes", "kickoff": "2026-11-07T20:05:00+00:00", "odds": [1.07, 9.75, 15.0], "probs": null}
