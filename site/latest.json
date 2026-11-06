@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T15:32:00.077640+01:00",
+  "generated_at": "2026-11-06T15:38:00.242535+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -54,15 +54,6 @@
         "pmu"
       ],
       "margin": 0.08667422203333808,
-      "surebet": false
-    },
-    {
-      "match": "Grenoble – Reims",
-      "books": [
-        "unibet",
-        "pmu"
-      ],
-      "margin": 0.08858858858858842,
       "surebet": false
     },
     {
@@ -123,6 +114,15 @@
         "netbet"
       ],
       "margin": 0.09529562787887946,
+      "surebet": false
+    },
+    {
+      "match": "Grenoble – Reims",
+      "books": [
+        "unibet",
+        "pmu"
+      ],
+      "margin": 0.09652509652509633,
       "surebet": false
     },
     {
@@ -211,7 +211,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.322
+      "elapsed_s": 0.482
     },
     {
       "name": "unibet",
@@ -219,7 +219,7 @@
       "ok": true,
       "detail": "ligue 1: 18, ligue 2: 9, premier league: 20, laliga: 20, bundesliga: 18, serie a: 20, champions league: 18, europa league: 18, conference league: 0. Unibet et Parions Sport (FDJ) partagent cette offre.",
       "events": 141,
-      "elapsed_s": 15.937
+      "elapsed_s": 15.222
     },
     {
       "name": "pmu",
@@ -227,7 +227,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 9, premier league: 20, laliga: 10, serie a: 10, bundesliga: 9, champions league: 18",
       "events": 93,
-      "elapsed_s": 4.134
+      "elapsed_s": 4.247
     },
     {
       "name": "netbet",
@@ -235,7 +235,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 5.843
+      "elapsed_s": 5.923
     },
     {
       "name": "smarkets",
@@ -243,7 +243,7 @@
       "ok": true,
       "detail": "600 matchs listés sur 12 page(s), prix chargés après appariement",
       "events": 600,
-      "elapsed_s": 6.897
+      "elapsed_s": 7.707
     },
     {
       "name": "matchbook",
@@ -251,15 +251,15 @@
       "ok": true,
       "detail": "1 matchs avec liquidité suffisante sur la page reçue",
       "events": 1,
-      "elapsed_s": 0.624
+      "elapsed_s": 0.661
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "1178 matchs nommés sur 72 h, prix après appariement",
-      "events": 1178,
-      "elapsed_s": 0.888
+      "detail": "1180 matchs nommés sur 72 h, prix après appariement",
+      "events": 1180,
+      "elapsed_s": 1.002
     },
     {
       "name": "the-odds-api",
@@ -275,7 +275,7 @@
       "ok": true,
       "detail": "4 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 4,
-      "elapsed_s": 4.277
+      "elapsed_s": 4.65
     },
     {
       "name": "olybet",
@@ -307,7 +307,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.288
+      "elapsed_s": 0.609
     }
   ],
   "performance": {
