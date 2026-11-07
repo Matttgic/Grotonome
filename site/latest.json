@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T19:54:44.793353+01:00",
+  "generated_at": "2026-11-07T19:56:11.525279+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -192,7 +192,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.829
+      "elapsed_s": 0.811
     },
     {
       "name": "unibet",
@@ -208,7 +208,7 @@
       "ok": true,
       "detail": "ligue 1: 15, ligue 2: 2, premier league: 15, laliga: 6, serie a: 6, bundesliga: 3, champions league: 18",
       "events": 65,
-      "elapsed_s": 4.321
+      "elapsed_s": 4.304
     },
     {
       "name": "netbet",
@@ -216,7 +216,7 @@
       "ok": true,
       "detail": "ligue 1: 7 (page partielle), premier league: 7 (page partielle), laliga: 6 (page partielle), serie a: 6 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 26,
-      "elapsed_s": 8.626
+      "elapsed_s": 4.45
     },
     {
       "name": "smarkets",
@@ -224,7 +224,7 @@
       "ok": true,
       "detail": "419 matchs listés sur 9 page(s), prix chargés après appariement",
       "events": 419,
-      "elapsed_s": 5.209
+      "elapsed_s": 5.3
     },
     {
       "name": "matchbook",
@@ -232,7 +232,7 @@
       "ok": false,
       "detail": "0 matchs avec liquidité suffisante sur la page reçue",
       "events": 0,
-      "elapsed_s": 0.684
+      "elapsed_s": 0.666
     },
     {
       "name": "pinnacle",
@@ -240,7 +240,7 @@
       "ok": true,
       "detail": "704 matchs nommés sur 72 h, prix après appariement",
       "events": 704,
-      "elapsed_s": 0.582
+      "elapsed_s": 0.53
     },
     {
       "name": "the-odds-api",
@@ -256,7 +256,7 @@
       "ok": true,
       "detail": "5 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 5,
-      "elapsed_s": 5.109
+      "elapsed_s": 4.37
     },
     {
       "name": "olybet",
@@ -288,7 +288,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.457
+      "elapsed_s": 0.702
     }
   ],
   "performance": {
