@@ -4490,3 +4490,6 @@
 {"at": "2026-11-07T14:42:44.758548+00:00", "kind": "book", "source": "netbet", "competition": "premier league", "home": "Crystal Palace", "away": "Liverpool", "kickoff": "2026-11-08T14:00:00+00:00", "odds": [5.3, 4.2, 1.48], "probs": null}
 {"at": "2026-11-07T14:42:44.758548+00:00", "kind": "book", "source": "netbet", "competition": "laliga", "home": "Osasuna", "away": "Athletic Bilbao", "kickoff": "2026-11-07T17:30:00+00:00", "odds": [3.45, 3.35, 1.97], "probs": null}
 {"at": "2026-11-07T14:42:44.758548+00:00", "kind": "book", "source": "netbet", "competition": "serie a", "home": "Parme", "away": "Bologne", "kickoff": "2026-11-07T17:00:00+00:00", "odds": [4.9, 3.45, 1.63], "probs": null}
+{"at": "2026-11-07T14:54:44.685024+00:00", "kind": "book", "source": "netbet", "competition": "ligue 1", "home": "Paris SG", "away": "Troyes", "kickoff": "2026-11-07T20:05:00+00:00", "odds": [1.13, 7.5, 14.0], "probs": null}
+{"at": "2026-11-07T14:54:44.685024+00:00", "kind": "book", "source": "netbet", "competition": "serie a", "home": "Parme", "away": "Bologne", "kickoff": "2026-11-07T17:00:00+00:00", "odds": [4.8, 3.35, 1.63], "probs": null}
+{"at": "2026-11-07T14:54:44.685024+00:00", "kind": "book", "source": "netbet", "competition": "serie a", "home": "AS Rome", "away": "Sassuolo", "kickoff": "2026-11-07T19:45:00+00:00", "odds": [1.27, 5.4, 8.25], "probs": null}
