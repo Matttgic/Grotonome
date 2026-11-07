@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T22:13:53.924271+01:00",
+  "generated_at": "2026-11-07T22:19:53.663706+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -62,16 +62,6 @@
         "betclic"
       ],
       "margin": 0.08977361436377818,
-      "surebet": false
-    },
-    {
-      "match": "Le Havre – Lorient",
-      "books": [
-        "pmu",
-        "netbet",
-        "betclic"
-      ],
-      "margin": 0.0906164106304308,
       "surebet": false
     },
     {
@@ -163,6 +153,15 @@
       ],
       "margin": 0.10521886548523618,
       "surebet": false
+    },
+    {
+      "match": "Le Havre – Lorient",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.10634144177121119,
+      "surebet": false
     }
   ],
   "sources": [
@@ -172,7 +171,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.62
+      "elapsed_s": 0.488
     },
     {
       "name": "unibet",
@@ -188,7 +187,7 @@
       "ok": true,
       "detail": "ligue 1: 14, ligue 2: 0, premier league: 15, laliga: 5, serie a: 5, bundesliga: 3, champions league: 18",
       "events": 60,
-      "elapsed_s": 4.152
+      "elapsed_s": 4.185
     },
     {
       "name": "netbet",
@@ -196,15 +195,15 @@
       "ok": true,
       "detail": "ligue 1: 6 (page partielle), premier league: 7 (page partielle), laliga: 9 (page partielle), serie a: 7 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 29,
-      "elapsed_s": 5.442
+      "elapsed_s": 5.171
     },
     {
       "name": "smarkets",
       "kind": "sharp",
       "ok": true,
-      "detail": "393 matchs listés sur 8 page(s), prix chargés après appariement",
-      "events": 393,
-      "elapsed_s": 4.103
+      "detail": "392 matchs listés sur 8 page(s), prix chargés après appariement",
+      "events": 392,
+      "elapsed_s": 4.235
     },
     {
       "name": "matchbook",
@@ -212,15 +211,15 @@
       "ok": false,
       "detail": "0 matchs avec liquidité suffisante sur la page reçue",
       "events": 0,
-      "elapsed_s": 0.692
+      "elapsed_s": 0.687
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "658 matchs nommés sur 72 h, prix après appariement",
-      "events": 658,
-      "elapsed_s": 0.635
+      "detail": "657 matchs nommés sur 72 h, prix après appariement",
+      "events": 657,
+      "elapsed_s": 0.502
     },
     {
       "name": "the-odds-api",
@@ -234,9 +233,9 @@
       "name": "betclic",
       "kind": "book",
       "ok": true,
-      "detail": "4 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
-      "events": 4,
-      "elapsed_s": 5.643
+      "detail": "3 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
+      "events": 3,
+      "elapsed_s": 4.304
     },
     {
       "name": "olybet",
@@ -268,7 +267,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.252
+      "elapsed_s": 0.52
     }
   ],
   "performance": {
