@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T05:17:08.754849+01:00",
+  "generated_at": "2026-11-07T05:23:08.940714+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -67,8 +67,7 @@
       "match": "Auxerre – Paris FC",
       "books": [
         "pmu",
-        "netbet",
-        "betclic"
+        "netbet"
       ],
       "margin": 0.08948842694972736,
       "surebet": false
@@ -164,21 +163,21 @@
       "surebet": false
     },
     {
+      "match": "Málaga – Racing Santander",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.09927062612484616,
+      "surebet": false
+    },
+    {
       "match": "Villarreal – Getafe",
       "books": [
         "pmu",
         "netbet"
       ],
       "margin": 0.10005296355144688,
-      "surebet": false
-    },
-    {
-      "match": "Málaga – Racing Santander",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10036119711042302,
       "surebet": false
     },
     {
@@ -198,7 +197,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.28
+      "elapsed_s": 0.723
     },
     {
       "name": "unibet",
@@ -214,7 +213,7 @@
       "ok": true,
       "detail": "ligue 1: 16, ligue 2: 3, premier league: 19, laliga: 9, serie a: 9, bundesliga: 8, champions league: 18",
       "events": 82,
-      "elapsed_s": 4.157
+      "elapsed_s": 4.1
     },
     {
       "name": "netbet",
@@ -222,7 +221,7 @@
       "ok": true,
       "detail": "ligue 1: 8 (page partielle), premier league: 9 (page partielle), laliga: 9 (page partielle), serie a: 9 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 35,
-      "elapsed_s": 6.245
+      "elapsed_s": 5.561
     },
     {
       "name": "smarkets",
@@ -230,23 +229,23 @@
       "ok": true,
       "detail": "600 matchs listés sur 12 page(s), prix chargés après appariement",
       "events": 600,
-      "elapsed_s": 7.339
+      "elapsed_s": 7.823
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "2 matchs avec liquidité suffisante sur la page reçue",
-      "events": 2,
-      "elapsed_s": 0.678
+      "detail": "3 matchs avec liquidité suffisante sur la page reçue",
+      "events": 3,
+      "elapsed_s": 0.985
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "1296 matchs nommés sur 72 h, prix après appariement",
-      "events": 1296,
-      "elapsed_s": 0.88
+      "detail": "1333 matchs nommés sur 72 h, prix après appariement",
+      "events": 1333,
+      "elapsed_s": 0.879
     },
     {
       "name": "the-odds-api",
@@ -260,33 +259,33 @@
       "name": "betclic",
       "kind": "book",
       "ok": true,
-      "detail": "3 matchs via SportyTrader, horloge 7:00:00. betclic.fr lui-même reste en 403.",
-      "events": 3,
-      "elapsed_s": 4.856
+      "detail": "2 matchs via SportyTrader, horloge 7:00:00. betclic.fr lui-même reste en 403.",
+      "events": 2,
+      "elapsed_s": 4.637
     },
     {
       "name": "olybet",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, pas de contournement",
+      "detail": "recul jusqu'à 2026-11-07T06:17:08.754849+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.276
+      "elapsed_s": 0.0
     },
     {
       "name": "betsson",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, pas de contournement",
+      "detail": "recul jusqu'à 2026-11-07T06:17:08.754849+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.117
+      "elapsed_s": 0.0
     },
     {
       "name": "genybet",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, accès refusé (géoblocage probable), pas de contournement",
+      "detail": "recul jusqu'à 2026-11-07T06:17:08.754849+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.648
+      "elapsed_s": 0.0
     },
     {
       "name": "vbet",
@@ -294,7 +293,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.571
+      "elapsed_s": 0.406
     }
   ],
   "performance": {
