@@ -170,3 +170,4 @@
 {"home": "Fulham", "away": "Newcastle United", "kickoff": "2026-11-07T15:00:00+00:00", "observed_at": "2026-11-07T14:54:44.685024+00:00", "fair_p": [0.49187720611652286, 0.2489487513612997, 0.2591740425221775], "sources": ["pinnacle"]}
 {"home": "Arsenal", "away": "Hull City", "kickoff": "2026-11-07T15:00:00+00:00", "observed_at": "2026-11-07T14:54:44.685024+00:00", "fair_p": [0.8637184411520024, 0.10335968521109512, 0.03292187363690253], "sources": ["pinnacle"]}
 {"home": "Espanyol", "away": "Deportivo A Coruña", "kickoff": "2026-11-07T15:15:00+00:00", "observed_at": "2026-11-07T15:00:44.234011+00:00", "fair_p": [0.3833703307951679, 0.2941547635514677, 0.32247490565336445], "sources": ["smarkets", "pinnacle"]}
+{"home": "Espanyol", "away": "Deportivo A Coruña", "kickoff": "2026-11-07T15:15:00+00:00", "observed_at": "2026-11-07T15:06:44.413078+00:00", "fair_p": [0.3860384976262159, 0.29584490660918816, 0.31811659576459594], "sources": ["smarkets", "pinnacle"]}
