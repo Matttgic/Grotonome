@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T17:30:44.952743+01:00",
+  "generated_at": "2026-11-07T17:36:44.471143+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -34,15 +34,6 @@
         "netbet"
       ],
       "margin": 0.08009427862426266,
-      "surebet": false
-    },
-    {
-      "match": "Villarreal – Getafe",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.08477488830335655,
       "surebet": false
     },
     {
@@ -121,15 +112,6 @@
       "surebet": false
     },
     {
-      "match": "Celta Vigo – Levante",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.09437350359138064,
-      "surebet": false
-    },
-    {
       "match": "Brighton – Brentford",
       "books": [
         "pmu",
@@ -166,6 +148,15 @@
       "surebet": false
     },
     {
+      "match": "Villarreal – Getafe",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.10052910052910047,
+      "surebet": false
+    },
+    {
       "match": "Real Sociedad – Rayo Vallecano",
       "books": [
         "pmu",
@@ -191,6 +182,15 @@
       ],
       "margin": 0.10521886548523618,
       "surebet": false
+    },
+    {
+      "match": "Celta Vigo – Levante",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.11104017025804724,
+      "surebet": false
     }
   ],
   "sources": [
@@ -200,7 +200,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.492
+      "elapsed_s": 0.55
     },
     {
       "name": "unibet",
@@ -216,7 +216,7 @@
       "ok": true,
       "detail": "ligue 1: 16, ligue 2: 2, premier league: 16, laliga: 7, serie a: 7, bundesliga: 4, champions league: 18",
       "events": 70,
-      "elapsed_s": 4.207
+      "elapsed_s": 4.26
     },
     {
       "name": "netbet",
@@ -224,15 +224,15 @@
       "ok": true,
       "detail": "ligue 1: 8 (page partielle), premier league: 6 (page partielle), laliga: 7 (page partielle), serie a: 7 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 28,
-      "elapsed_s": 6.007
+      "elapsed_s": 6.309
     },
     {
       "name": "smarkets",
       "kind": "sharp",
       "ok": true,
-      "detail": "469 matchs listés sur 10 page(s), prix chargés après appariement",
-      "events": 469,
-      "elapsed_s": 6.395
+      "detail": "467 matchs listés sur 10 page(s), prix chargés après appariement",
+      "events": 467,
+      "elapsed_s": 5.883
     },
     {
       "name": "matchbook",
@@ -240,15 +240,15 @@
       "ok": false,
       "detail": "0 matchs avec liquidité suffisante sur la page reçue",
       "events": 0,
-      "elapsed_s": 0.565
+      "elapsed_s": 0.557
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "828 matchs nommés sur 72 h, prix après appariement",
-      "events": 828,
-      "elapsed_s": 7.928
+      "detail": "827 matchs nommés sur 72 h, prix après appariement",
+      "events": 827,
+      "elapsed_s": 0.663
     },
     {
       "name": "the-odds-api",
@@ -264,31 +264,31 @@
       "ok": true,
       "detail": "5 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 5,
-      "elapsed_s": 4.947
+      "elapsed_s": 4.962
     },
     {
       "name": "olybet",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, pas de contournement",
+      "detail": "recul jusqu'à 2026-11-07T18:30:44.952743+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.169
+      "elapsed_s": 0.0
     },
     {
       "name": "betsson",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, pas de contournement",
+      "detail": "recul jusqu'à 2026-11-07T18:30:44.952743+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.22
+      "elapsed_s": 0.0
     },
     {
       "name": "genybet",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, accès refusé (géoblocage probable), pas de contournement",
+      "detail": "recul jusqu'à 2026-11-07T18:30:44.952743+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.638
+      "elapsed_s": 0.0
     },
     {
       "name": "vbet",
@@ -296,7 +296,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.563
+      "elapsed_s": 0.494
     }
   ],
   "performance": {
