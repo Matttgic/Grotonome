@@ -1,15 +1,9 @@
 {
-  "generated_at": "2026-11-07T20:37:53.893334+01:00",
+  "generated_at": "2026-11-07T20:43:53.389319+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
-  "skipped": [
-    {
-      "match": "PSG – ESTAC Troyes",
-      "bookmaker": "betclic",
-      "reason": "cote Betclic figée, sharp bougé d'au moins 2 points"
-    }
-  ],
+  "skipped": [],
   "unmatched": 54,
   "unpriced": 0,
   "shopping": [
@@ -20,6 +14,16 @@
         "netbet"
       ],
       "margin": 0.08555108269001055,
+      "surebet": false
+    },
+    {
+      "match": "PSG – Troyes",
+      "books": [
+        "pmu",
+        "netbet",
+        "betclic"
+      ],
+      "margin": 0.0855614973262031,
       "surebet": false
     },
     {
@@ -39,16 +43,6 @@
         "betclic"
       ],
       "margin": 0.08744614597107869,
-      "surebet": false
-    },
-    {
-      "match": "PSG – Troyes",
-      "books": [
-        "pmu",
-        "netbet",
-        "betclic"
-      ],
-      "margin": 0.089126559714795,
       "surebet": false
     },
     {
@@ -187,7 +181,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.921
+      "elapsed_s": 0.469
     },
     {
       "name": "unibet",
@@ -203,7 +197,7 @@
       "ok": true,
       "detail": "ligue 1: 15, ligue 2: 0, premier league: 15, laliga: 6, serie a: 6, bundesliga: 3, champions league: 18",
       "events": 63,
-      "elapsed_s": 4.133
+      "elapsed_s": 4.104
     },
     {
       "name": "netbet",
@@ -211,7 +205,7 @@
       "ok": true,
       "detail": "ligue 1: 7 (page partielle), premier league: 7 (page partielle), laliga: 9 (page partielle), serie a: 6 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 29,
-      "elapsed_s": 5.76
+      "elapsed_s": 5.032
     },
     {
       "name": "smarkets",
@@ -219,15 +213,15 @@
       "ok": true,
       "detail": "423 matchs listés sur 9 page(s), prix chargés après appariement",
       "events": 423,
-      "elapsed_s": 5.293
+      "elapsed_s": 5.258
     },
     {
       "name": "matchbook",
       "kind": "sharp",
-      "ok": true,
-      "detail": "2 matchs avec liquidité suffisante sur la page reçue",
-      "events": 2,
-      "elapsed_s": 0.618
+      "ok": false,
+      "detail": "0 matchs avec liquidité suffisante sur la page reçue",
+      "events": 0,
+      "elapsed_s": 0.627
     },
     {
       "name": "pinnacle",
@@ -235,7 +229,7 @@
       "ok": true,
       "detail": "692 matchs nommés sur 72 h, prix après appariement",
       "events": 692,
-      "elapsed_s": 0.561
+      "elapsed_s": 0.513
     },
     {
       "name": "the-odds-api",
@@ -251,7 +245,7 @@
       "ok": true,
       "detail": "4 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 4,
-      "elapsed_s": 5.482
+      "elapsed_s": 4.913
     },
     {
       "name": "olybet",
@@ -283,7 +277,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.402
+      "elapsed_s": 0.415
     }
   ],
   "performance": {
