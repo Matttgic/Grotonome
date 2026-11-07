@@ -4697,3 +4697,4 @@
 {"at": "2026-11-07T22:49:53.159839+00:00", "kind": "book", "source": "netbet", "competition": "serie a", "home": "Naples", "away": "Lazio Rome", "kickoff": "2026-11-08T11:30:00+00:00", "odds": [2.22, 3.45, 2.8], "probs": null}
 {"at": "2026-11-07T22:49:53.159839+00:00", "kind": "book", "source": "netbet", "competition": "serie a", "home": "Monza", "away": "Atalanta Bergame", "kickoff": "2026-11-08T14:00:00+00:00", "odds": [3.15, 3.6, 1.99], "probs": null}
 {"at": "2026-11-07T22:49:53.159839+00:00", "kind": "sharp", "source": "matchbook", "competition": "", "home": "FC Dallas", "away": "Colorado Rapids", "kickoff": "2026-11-08T00:00:00+00:00", "odds": null, "probs": [0.4939739037062134, 0.25657800986607726, 0.24853331357907857]}
+{"at": "2026-11-07T23:01:53.980729+00:00", "kind": "book", "source": "netbet", "competition": "premier league", "home": "Brighton", "away": "Brentford", "kickoff": "2026-11-08T14:00:00+00:00", "odds": [1.78, 3.75, 3.75], "probs": null}
