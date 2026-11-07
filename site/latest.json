@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-07T09:17:08.731622+01:00",
+  "generated_at": "2026-11-07T09:23:08.767992+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
   "skipped": [],
-  "unmatched": 70,
+  "unmatched": 69,
   "unpriced": 13,
   "shopping": [
     {
@@ -99,6 +99,15 @@
       "surebet": false
     },
     {
+      "match": "Ipswich Town – Bournemouth",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.094496135479742,
+      "surebet": false
+    },
+    {
       "match": "Manchester United – Aston Villa",
       "books": [
         "pmu",
@@ -158,16 +167,7 @@
         "pmu",
         "netbet"
       ],
-      "margin": 0.09825142178083346,
-      "surebet": false
-    },
-    {
-      "match": "Ipswich Town – Bournemouth",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.0984084985470346,
+      "margin": 0.09931932017637735,
       "surebet": false
     },
     {
@@ -196,7 +196,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.848
+      "elapsed_s": 0.769
     },
     {
       "name": "unibet",
@@ -212,7 +212,7 @@
       "ok": true,
       "detail": "ligue 1: 16, ligue 2: 3, premier league: 19, laliga: 9, serie a: 9, bundesliga: 8, champions league: 18",
       "events": 82,
-      "elapsed_s": 4.12
+      "elapsed_s": 4.104
     },
     {
       "name": "netbet",
@@ -220,7 +220,7 @@
       "ok": true,
       "detail": "ligue 1: 8 (page partielle), premier league: 9 (page partielle), laliga: 9 (page partielle), serie a: 9 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 35,
-      "elapsed_s": 5.758
+      "elapsed_s": 6.489
     },
     {
       "name": "smarkets",
@@ -228,23 +228,23 @@
       "ok": true,
       "detail": "600 matchs listés sur 12 page(s), prix chargés après appariement",
       "events": 600,
-      "elapsed_s": 7.032
+      "elapsed_s": 6.818
     },
     {
       "name": "matchbook",
       "kind": "sharp",
-      "ok": false,
-      "detail": "0 matchs avec liquidité suffisante sur la page reçue",
-      "events": 0,
-      "elapsed_s": 0.738
+      "ok": true,
+      "detail": "2 matchs avec liquidité suffisante sur la page reçue",
+      "events": 2,
+      "elapsed_s": 1.035
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "1410 matchs nommés sur 72 h, prix après appariement",
-      "events": 1410,
-      "elapsed_s": 0.897
+      "detail": "1421 matchs nommés sur 72 h, prix après appariement",
+      "events": 1421,
+      "elapsed_s": 0.849
     },
     {
       "name": "the-odds-api",
@@ -260,31 +260,31 @@
       "ok": true,
       "detail": "1 matchs via SportyTrader, horloge 7:00:00. betclic.fr lui-même reste en 403.",
       "events": 1,
-      "elapsed_s": 4.737
+      "elapsed_s": 4.833
     },
     {
       "name": "olybet",
       "kind": "probe",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-07T08:23:08.281593+00:00 après HTTP 403",
+      "detail": "HTTP 403, pas de contournement",
       "events": 0,
-      "elapsed_s": 0.0
+      "elapsed_s": 0.101
     },
     {
       "name": "betsson",
       "kind": "probe",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-07T08:23:08.281593+00:00 après HTTP 403",
+      "detail": "HTTP 403, pas de contournement",
       "events": 0,
-      "elapsed_s": 0.0
+      "elapsed_s": 0.114
     },
     {
       "name": "genybet",
       "kind": "probe",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-07T08:23:08.281593+00:00 après HTTP 403",
+      "detail": "HTTP 403, accès refusé (géoblocage probable), pas de contournement",
       "events": 0,
-      "elapsed_s": 0.0
+      "elapsed_s": 0.604
     },
     {
       "name": "vbet",
@@ -292,7 +292,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.591
+      "elapsed_s": 0.528
     }
   ],
   "performance": {
