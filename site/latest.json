@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-07T16:12:44.164248+01:00",
+  "generated_at": "2026-11-07T16:18:44.872474+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
   "skipped": [],
-  "unmatched": 59,
-  "unpriced": 3,
+  "unmatched": 54,
+  "unpriced": 2,
   "shopping": [
     {
       "match": "PSG – Troyes",
@@ -199,7 +199,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.827
+      "elapsed_s": 0.543
     },
     {
       "name": "unibet",
@@ -213,25 +213,25 @@
       "name": "pmu",
       "kind": "book",
       "ok": true,
-      "detail": "ligue 1: 16, ligue 2: 2, premier league: 16, laliga: 8, serie a: 7, bundesliga: 4, champions league: 18",
-      "events": 71,
-      "elapsed_s": 4.336
+      "detail": "ligue 1: 16, ligue 2: 2, premier league: 16, laliga: 7, serie a: 7, bundesliga: 4, champions league: 18",
+      "events": 70,
+      "elapsed_s": 4.274
     },
     {
       "name": "netbet",
       "kind": "book",
       "ok": true,
-      "detail": "ligue 1: 8 (page partielle), premier league: 6 (page partielle), laliga: 8 (page partielle), serie a: 7 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
-      "events": 29,
-      "elapsed_s": 5.491
+      "detail": "ligue 1: 8 (page partielle), premier league: 6 (page partielle), laliga: 7 (page partielle), serie a: 7 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
+      "events": 28,
+      "elapsed_s": 5.979
     },
     {
       "name": "smarkets",
       "kind": "sharp",
       "ok": true,
-      "detail": "495 matchs listés sur 10 page(s), prix chargés après appariement",
-      "events": 495,
-      "elapsed_s": 5.633
+      "detail": "494 matchs listés sur 10 page(s), prix chargés après appariement",
+      "events": 494,
+      "elapsed_s": 5.967
     },
     {
       "name": "matchbook",
@@ -239,15 +239,15 @@
       "ok": false,
       "detail": "0 matchs avec liquidité suffisante sur la page reçue",
       "events": 0,
-      "elapsed_s": 0.495
+      "elapsed_s": 0.499
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "895 matchs nommés sur 72 h, prix après appariement",
-      "events": 895,
-      "elapsed_s": 0.793
+      "detail": "893 matchs nommés sur 72 h, prix après appariement",
+      "events": 893,
+      "elapsed_s": 0.728
     },
     {
       "name": "the-odds-api",
@@ -261,9 +261,9 @@
       "name": "betclic",
       "kind": "book",
       "ok": true,
-      "detail": "4 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
+      "detail": "4 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 4,
-      "elapsed_s": 5.34
+      "elapsed_s": 4.623
     },
     {
       "name": "olybet",
@@ -295,7 +295,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.335
+      "elapsed_s": 0.356
     }
   ],
   "performance": {
