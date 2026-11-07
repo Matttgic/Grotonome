@@ -4527,3 +4527,5 @@
 {"at": "2026-11-07T16:06:44.168266+00:00", "kind": "book", "source": "netbet", "competition": "ligue 1", "home": "Angers", "away": "Nice", "kickoff": "2026-11-08T16:15:00+00:00", "odds": [3.4, 3.5, 1.95], "probs": null}
 {"at": "2026-11-07T16:06:44.168266+00:00", "kind": "book", "source": "netbet", "competition": "laliga", "home": "Celta Vigo", "away": "Levante", "kickoff": "2026-11-08T17:30:00+00:00", "odds": [1.71, 3.35, 3.6], "probs": null}
 {"at": "2026-11-07T16:06:44.168266+00:00", "kind": "book", "source": "netbet", "competition": "laliga", "home": "Villarreal", "away": "Getafe", "kickoff": "2026-11-08T17:30:00+00:00", "odds": [1.31, 4.2, 6.1], "probs": null}
+{"at": "2026-11-07T16:12:44.831125+00:00", "kind": "book", "source": "pmu", "competition": "laliga", "home": "Osasuna", "away": "Athletic Bilbao", "kickoff": "2026-11-07T17:30:00+00:00", "odds": [3.35, 3.15, 2.04], "probs": null, "movement_at": "2026-11-07T16:07:09+00:00"}
+{"at": "2026-11-07T16:12:44.831125+00:00", "kind": "book", "source": "netbet", "competition": "ligue 1", "home": "Paris SG", "away": "Troyes", "kickoff": "2026-11-07T20:05:00+00:00", "odds": [1.13, 7.25, 14.0], "probs": null}
