@@ -4232,3 +4232,5 @@
 {"at": "2026-11-07T07:47:08.958922+00:00", "kind": "book", "source": "netbet", "competition": "ligue 1", "home": "Angers", "away": "Nice", "kickoff": "2026-11-08T16:15:00+00:00", "odds": [3.35, 3.4, 1.93], "probs": null}
 {"at": "2026-11-07T07:47:08.958922+00:00", "kind": "book", "source": "netbet", "competition": "laliga", "home": "Valence", "away": "Real Madrid", "kickoff": "2026-11-07T20:00:00+00:00", "odds": [9.75, 6.1, 1.21], "probs": null}
 {"at": "2026-11-07T07:53:08.331759+00:00", "kind": "book", "source": "betclic", "competition": "ligue 1", "home": "PSG", "away": "ESTAC Troyes", "kickoff": "2026-11-07T20:05:00+00:00", "odds": [1.1, 8.0, 15.0], "probs": null}
+{"at": "2026-11-07T07:59:08.971323+00:00", "kind": "book", "source": "pmu", "competition": "ligue 1", "home": "Le Mans", "away": "AS Monaco", "kickoff": "2026-11-08T16:15:00+00:00", "odds": [4.1, 3.8, 1.65], "probs": null, "movement_at": "2026-11-07T07:53:15+00:00"}
+{"at": "2026-11-07T07:59:08.971323+00:00", "kind": "book", "source": "netbet", "competition": "ligue 1", "home": "Le Mans", "away": "Monaco", "kickoff": "2026-11-08T16:15:00+00:00", "odds": [4.4, 3.85, 1.65], "probs": null}
