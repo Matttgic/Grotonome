@@ -125,3 +125,4 @@
 {"home": "Everton", "away": "Coventry City", "kickoff": "2026-11-06T20:05:00+00:00", "observed_at": "2026-11-06T19:58:03.919200+00:00", "fair_p": [0.582013047872147, 0.2355350117104403, 0.18245194041741267], "sources": ["pinnacle"]}
 {"home": "Sevilla", "away": "Alaves", "kickoff": "2026-11-06T20:05:00+00:00", "observed_at": "2026-11-06T19:58:03.919200+00:00", "fair_p": [0.4891761510092454, 0.3008026151490106, 0.2100212338417441], "sources": ["smarkets", "pinnacle"]}
 {"home": "Everton", "away": "Coventry City", "kickoff": "2026-11-06T20:00:00+00:00", "observed_at": "2026-11-06T19:58:03.919200+00:00", "fair_p": [0.582013047872147, 0.2355350117104403, 0.18245194041741267], "sources": ["pinnacle"]}
+{"home": "Leeds", "away": "Tottenham", "kickoff": "2026-11-07T12:30:00+00:00", "observed_at": "2026-11-07T12:18:14.913262+00:00", "fair_p": [0.33895, 0.2837, 0.37735], "sources": ["smarkets"]}
