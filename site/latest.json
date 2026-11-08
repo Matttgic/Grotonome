@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T13:58:11.316088+01:00",
+  "generated_at": "2026-11-08T14:04:11.652570+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -10,7 +10,7 @@
       "reason": "cote Betclic figée, sharp bougé d'au moins 2 points"
     }
   ],
-  "unmatched": 54,
+  "unmatched": 53,
   "unpriced": 0,
   "shopping": [
     {
@@ -50,15 +50,6 @@
         "betclic"
       ],
       "margin": 0.08272549368439774,
-      "surebet": false
-    },
-    {
-      "match": "Crystal Palace – Liverpool",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.08813358813358807,
       "surebet": false
     },
     {
@@ -113,6 +104,15 @@
         "netbet"
       ],
       "margin": 0.09187799288229703,
+      "surebet": false
+    },
+    {
+      "match": "Crystal Palace – Liverpool",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.09273002130144992,
       "surebet": false
     },
     {
@@ -177,7 +177,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.937
+      "elapsed_s": 0.95
     },
     {
       "name": "unibet",
@@ -191,25 +191,25 @@
       "name": "pmu",
       "kind": "book",
       "ok": true,
-      "detail": "ligue 1: 14, ligue 2: 0, premier league: 15, laliga: 5, serie a: 4, bundesliga: 3, champions league: 18",
-      "events": 59,
-      "elapsed_s": 4.476
+      "detail": "ligue 1: 14, ligue 2: 0, premier league: 15, laliga: 4, serie a: 4, bundesliga: 3, champions league: 18",
+      "events": 58,
+      "elapsed_s": 4.131
     },
     {
       "name": "netbet",
       "kind": "book",
       "ok": true,
-      "detail": "ligue 1: 6 (page partielle), premier league: 7 (page partielle), laliga: 9 (page partielle), serie a: 6 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
-      "events": 28,
-      "elapsed_s": 5.724
+      "detail": "ligue 1: 6 (page partielle), premier league: 7 (page partielle), laliga: 8 (page partielle), serie a: 6 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
+      "events": 27,
+      "elapsed_s": 5.354
     },
     {
       "name": "smarkets",
       "kind": "sharp",
       "ok": true,
-      "detail": "285 matchs listés sur 6 page(s), prix chargés après appariement",
-      "events": 285,
-      "elapsed_s": 3.39
+      "detail": "263 matchs listés sur 6 page(s), prix chargés après appariement",
+      "events": 263,
+      "elapsed_s": 3.318
     },
     {
       "name": "matchbook",
@@ -217,15 +217,15 @@
       "ok": false,
       "detail": "0 matchs avec liquidité suffisante sur la page reçue",
       "events": 0,
-      "elapsed_s": 0.605
+      "elapsed_s": 0.666
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "705 matchs nommés sur 72 h, prix après appariement",
-      "events": 705,
-      "elapsed_s": 0.483
+      "detail": "620 matchs nommés sur 72 h, prix après appariement",
+      "events": 620,
+      "elapsed_s": 0.501
     },
     {
       "name": "the-odds-api",
@@ -241,7 +241,7 @@
       "ok": true,
       "detail": "3 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 3,
-      "elapsed_s": 4.867
+      "elapsed_s": 5.595
     },
     {
       "name": "olybet",
@@ -273,7 +273,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.308
+      "elapsed_s": 0.792
     }
   ],
   "performance": {
