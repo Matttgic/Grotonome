@@ -307,3 +307,4 @@
 {"home": "Fiorentina", "away": "Juventus", "kickoff": "2026-11-08T19:45:00+00:00", "observed_at": "2026-11-08T19:40:27.842023+00:00", "fair_p": [0.2835737226134912, 0.2788268879326701, 0.4375993894538388], "sources": ["smarkets", "pinnacle"]}
 {"home": "Lens", "away": "Marseille", "kickoff": "2026-11-08T19:45:00+00:00", "observed_at": "2026-11-08T19:40:27.842023+00:00", "fair_p": [0.43695574808109605, 0.25749675953485396, 0.30554749238405], "sources": ["smarkets", "pinnacle"]}
 {"home": "Lens", "away": "Marseille", "kickoff": "2026-11-08T19:45:00+00:00", "observed_at": "2026-11-08T19:40:27.842023+00:00", "fair_p": [0.43695574808109605, 0.25749675953485396, 0.30554749238405], "sources": ["smarkets", "pinnacle"]}
+{"home": "Fiorentina", "away": "Juventus", "kickoff": "2026-11-08T19:50:00+00:00", "observed_at": "2026-11-08T19:46:27.118150+00:00", "fair_p": [0.28663878932696135, 0.2746913580246914, 0.4386698526483473], "sources": ["smarkets"]}
