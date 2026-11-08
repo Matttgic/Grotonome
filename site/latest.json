@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T11:34:11.293420+01:00",
+  "generated_at": "2026-11-08T11:40:11.099993+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -15,6 +15,15 @@
         "betclic"
       ],
       "margin": 0.0665524951239238,
+      "surebet": false
+    },
+    {
+      "match": "Fiorentina – Juventus",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.0846295531564838,
       "surebet": false
     },
     {
@@ -45,15 +54,6 @@
       "surebet": false
     },
     {
-      "match": "Fiorentina – Juventus",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.08934264376565082,
-      "surebet": false
-    },
-    {
       "match": "Brighton – Brentford",
       "books": [
         "pmu",
@@ -75,7 +75,8 @@
       "match": "Lens – Marseille",
       "books": [
         "pmu",
-        "netbet"
+        "netbet",
+        "betclic"
       ],
       "margin": 0.09084552446853911,
       "surebet": false
@@ -126,21 +127,21 @@
       "surebet": false
     },
     {
+      "match": "Sunderland – Chelsea",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.0961948249619482,
+      "surebet": false
+    },
+    {
       "match": "Crystal Palace – Liverpool",
       "books": [
         "pmu",
         "netbet"
       ],
       "margin": 0.09691306049357817,
-      "surebet": false
-    },
-    {
-      "match": "Sunderland – Chelsea",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.09780735696228637,
       "surebet": false
     },
     {
@@ -169,7 +170,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.926
+      "elapsed_s": 0.908
     },
     {
       "name": "unibet",
@@ -185,7 +186,7 @@
       "ok": true,
       "detail": "ligue 1: 14, ligue 2: 0, premier league: 15, laliga: 5, serie a: 5, bundesliga: 3, champions league: 18",
       "events": 60,
-      "elapsed_s": 4.14
+      "elapsed_s": 4.21
     },
     {
       "name": "netbet",
@@ -193,31 +194,31 @@
       "ok": true,
       "detail": "ligue 1: 6 (page partielle), premier league: 7 (page partielle), laliga: 9 (page partielle), serie a: 7 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 29,
-      "elapsed_s": 4.64
+      "elapsed_s": 4.829
     },
     {
       "name": "smarkets",
       "kind": "sharp",
       "ok": true,
-      "detail": "335 matchs listés sur 7 page(s), prix chargés après appariement",
-      "events": 335,
-      "elapsed_s": 4.42
+      "detail": "336 matchs listés sur 7 page(s), prix chargés après appariement",
+      "events": 336,
+      "elapsed_s": 3.765
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "5 matchs avec liquidité suffisante sur la page reçue",
-      "events": 5,
-      "elapsed_s": 0.633
+      "detail": "7 matchs avec liquidité suffisante sur la page reçue",
+      "events": 7,
+      "elapsed_s": 0.643
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "895 matchs nommés sur 72 h, prix après appariement",
-      "events": 895,
-      "elapsed_s": 1.015
+      "detail": "901 matchs nommés sur 72 h, prix après appariement",
+      "events": 901,
+      "elapsed_s": 0.507
     },
     {
       "name": "the-odds-api",
@@ -231,9 +232,9 @@
       "name": "betclic",
       "kind": "book",
       "ok": true,
-      "detail": "1 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
-      "events": 1,
-      "elapsed_s": 4.578
+      "detail": "2 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
+      "events": 2,
+      "elapsed_s": 5.442
     },
     {
       "name": "olybet",
@@ -265,7 +266,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.321
+      "elapsed_s": 0.567
     }
   ],
   "performance": {
