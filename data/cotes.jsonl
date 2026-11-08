@@ -4781,3 +4781,4 @@
 {"at": "2026-11-08T04:59:10.361413+00:00", "kind": "book", "source": "netbet", "competition": "ligue 1", "home": "Le Mans", "away": "Monaco", "kickoff": "2026-11-08T16:15:00+00:00", "odds": [4.6, 3.7, 1.65], "probs": null}
 {"at": "2026-11-08T04:59:10.361413+00:00", "kind": "book", "source": "netbet", "competition": "ligue 1", "home": "Lens", "away": "Marseille", "kickoff": "2026-11-08T19:45:00+00:00", "odds": [2.17, 3.7, 2.77], "probs": null}
 {"at": "2026-11-08T04:59:10.361413+00:00", "kind": "book", "source": "netbet", "competition": "premier league", "home": "Sunderland", "away": "Chelsea", "kickoff": "2026-11-08T14:00:00+00:00", "odds": [3.55, 3.5, 1.88], "probs": null}
+{"at": "2026-11-08T05:01:13.145867+00:00", "kind": "sharp", "source": "matchbook", "competition": "", "home": "Qingdao Hainiu", "away": "Shenzhen Peng City", "kickoff": "2026-11-08T07:30:00+00:00", "odds": null, "probs": [0.09545041318557441, 0.14955112243498536, 0.7634029695549844]}
