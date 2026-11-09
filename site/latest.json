@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T18:42:35.923956+01:00",
+  "generated_at": "2026-11-09T18:48:35.344969+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -199,7 +199,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.731
+      "elapsed_s": 0.286
     },
     {
       "name": "unibet",
@@ -215,7 +215,7 @@
       "ok": true,
       "detail": "ligue 1: 8, ligue 2: 0, premier league: 10, laliga: 9, serie a: 10, bundesliga: 9, champions league: 18",
       "events": 64,
-      "elapsed_s": 4.231
+      "elapsed_s": 4.075
     },
     {
       "name": "netbet",
@@ -223,31 +223,31 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 5.539
+      "elapsed_s": 4.992
     },
     {
       "name": "smarkets",
       "kind": "sharp",
       "ok": true,
-      "detail": "97 matchs listés sur 2 page(s), prix chargés après appariement",
-      "events": 97,
-      "elapsed_s": 0.877
+      "detail": "98 matchs listés sur 2 page(s), prix chargés après appariement",
+      "events": 98,
+      "elapsed_s": 0.938
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "8 matchs avec liquidité suffisante sur la page reçue",
-      "events": 8,
-      "elapsed_s": 0.773
+      "detail": "6 matchs avec liquidité suffisante sur la page reçue",
+      "events": 6,
+      "elapsed_s": 0.786
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "119 matchs nommés sur 72 h, prix après appariement",
-      "events": 119,
-      "elapsed_s": 0.281
+      "detail": "120 matchs nommés sur 72 h, prix après appariement",
+      "events": 120,
+      "elapsed_s": 0.267
     },
     {
       "name": "the-odds-api",
@@ -263,7 +263,7 @@
       "ok": true,
       "detail": "5 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 5,
-      "elapsed_s": 4.364
+      "elapsed_s": 4.281
     },
     {
       "name": "olybet",
@@ -295,7 +295,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 1.079
+      "elapsed_s": 0.746
     }
   ],
   "performance": {
