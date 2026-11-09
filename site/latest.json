@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T10:59:42.544536+01:00",
+  "generated_at": "2026-11-09T11:05:42.559309+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -7,15 +7,6 @@
   "unmatched": 85,
   "unpriced": 0,
   "shopping": [
-    {
-      "match": "Brentford – Everton",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.09931932017637735,
-      "surebet": false
-    },
     {
       "match": "Paris FC – Angers",
       "books": [
@@ -80,6 +71,24 @@
       "surebet": false
     },
     {
+      "match": "Brentford – Everton",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.12451326006313224,
+      "surebet": false
+    },
+    {
+      "match": "Strasbourg – Brest",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.1251895493076789,
+      "surebet": false
+    },
+    {
       "match": "Tottenham – Ipswich Town",
       "books": [
         "pmu",
@@ -107,15 +116,6 @@
       "surebet": false
     },
     {
-      "match": "Strasbourg – Brest",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.12968191229060788,
-      "surebet": false
-    },
-    {
       "match": "Nice – PSG",
       "books": [
         "pmu",
@@ -134,21 +134,21 @@
       "surebet": false
     },
     {
-      "match": "Lille – Lyon",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.1350332095012945,
-      "surebet": false
-    },
-    {
       "match": "Hull City – Brighton",
       "books": [
         "pmu",
         "netbet"
       ],
       "margin": 0.13675958188153325,
+      "surebet": false
+    },
+    {
+      "match": "Lille – Lyon",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.13718652560809907,
       "surebet": false
     },
     {
@@ -177,7 +177,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.278
+      "elapsed_s": 0.226
     },
     {
       "name": "unibet",
@@ -193,7 +193,7 @@
       "ok": true,
       "detail": "ligue 1: 8, ligue 2: 0, premier league: 10, laliga: 0, serie a: 10, bundesliga: 0, champions league: 18",
       "events": 46,
-      "elapsed_s": 3.864
+      "elapsed_s": 3.677
     },
     {
       "name": "netbet",
@@ -201,30 +201,30 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 4.553
+      "elapsed_s": 4.539
     },
     {
       "name": "smarkets",
       "kind": "sharp",
       "ok": true,
-      "detail": "81 matchs listés sur 2 page(s), prix chargés après appariement",
-      "events": 81,
-      "elapsed_s": 0.639
+      "detail": "85 matchs listés sur 2 page(s), prix chargés après appariement",
+      "events": 85,
+      "elapsed_s": 0.715
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "10 matchs avec liquidité suffisante sur la page reçue",
-      "events": 10,
-      "elapsed_s": 0.423
+      "detail": "11 matchs avec liquidité suffisante sur la page reçue",
+      "events": 11,
+      "elapsed_s": 0.48
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "124 matchs nommés sur 72 h, prix après appariement",
-      "events": 124,
+      "detail": "125 matchs nommés sur 72 h, prix après appariement",
+      "events": 125,
       "elapsed_s": 0.171
     },
     {
@@ -241,7 +241,7 @@
       "ok": false,
       "detail": "0 matchs via SportyTrader, horloge 7:00:00. betclic.fr lui-même reste en 403.",
       "events": 0,
-      "elapsed_s": 4.054
+      "elapsed_s": 4.089
     },
     {
       "name": "olybet",
@@ -273,7 +273,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.572
+      "elapsed_s": 0.497
     }
   ],
   "performance": {
