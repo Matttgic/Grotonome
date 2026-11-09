@@ -5590,3 +5590,4 @@
 {"at": "2026-11-09T07:23:42.938468+00:00", "kind": "book", "source": "netbet", "competition": "serie a", "home": "Bologne", "away": "Udinese", "kickoff": "2026-11-22T14:00:00+00:00", "odds": [1.61, 3.45, 4.5], "probs": null}
 {"at": "2026-11-09T07:23:42.938468+00:00", "kind": "book", "source": "netbet", "competition": "serie a", "home": "Milan AC", "away": "Frosinone", "kickoff": "2026-11-22T17:00:00+00:00", "odds": [1.43, 4.3, 4.8], "probs": null}
 {"at": "2026-11-09T07:23:42.938468+00:00", "kind": "sharp", "source": "matchbook", "competition": "", "home": "FC Botosani", "away": "Otelul Galati", "kickoff": "2026-11-09T18:00:00+00:00", "odds": null, "probs": [0.43873059516426494, 0.2800625727548669, 0.2819115998322761]}
+{"at": "2026-11-09T07:29:42.906722+00:00", "kind": "book", "source": "netbet", "competition": "laliga", "home": "Séville", "away": "Betis", "kickoff": "2026-11-21T17:30:00+00:00", "odds": [2.7, 3.3, 2.17], "probs": null}
