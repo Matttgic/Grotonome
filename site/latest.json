@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T07:02:47.630904+01:00",
+  "generated_at": "2026-11-11T07:08:47.782684+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -199,7 +199,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.63
+      "elapsed_s": 0.374
     },
     {
       "name": "unibet",
@@ -215,7 +215,7 @@
       "ok": true,
       "detail": "ligue 1: 8, ligue 2: 0, premier league: 10, laliga: 9, serie a: 10, bundesliga: 9, champions league: 18",
       "events": 64,
-      "elapsed_s": 3.855
+      "elapsed_s": 4.027
     },
     {
       "name": "netbet",
@@ -223,7 +223,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 6.361
+      "elapsed_s": 5.454
     },
     {
       "name": "smarkets",
@@ -231,7 +231,7 @@
       "ok": true,
       "detail": "178 matchs listés sur 4 page(s), prix chargés après appariement",
       "events": 178,
-      "elapsed_s": 2.174
+      "elapsed_s": 2.177
     },
     {
       "name": "matchbook",
@@ -239,7 +239,7 @@
       "ok": true,
       "detail": "5 matchs avec liquidité suffisante sur la page reçue",
       "events": 5,
-      "elapsed_s": 0.933
+      "elapsed_s": 0.744
     },
     {
       "name": "pinnacle",
@@ -247,7 +247,7 @@
       "ok": true,
       "detail": "221 matchs nommés sur 72 h, prix après appariement",
       "events": 221,
-      "elapsed_s": 0.3
+      "elapsed_s": 0.269
     },
     {
       "name": "the-odds-api",
@@ -263,7 +263,7 @@
       "ok": true,
       "detail": "5 matchs via SportyTrader, horloge 7:00:00. betclic.fr lui-même reste en 403.",
       "events": 5,
-      "elapsed_s": 4.481
+      "elapsed_s": 4.425
     },
     {
       "name": "olybet",
@@ -295,7 +295,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.385
+      "elapsed_s": 0.433
     }
   ],
   "performance": {
