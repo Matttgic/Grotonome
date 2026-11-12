@@ -6699,3 +6699,4 @@
 {"at": "2026-11-12T04:46:32.098861+00:00", "kind": "book", "source": "netbet", "competition": "serie a", "home": "Bologne", "away": "Udinese", "kickoff": "2026-11-22T14:00:00+00:00", "odds": [1.63, 3.4, 4.4], "probs": null}
 {"at": "2026-11-12T04:46:32.098861+00:00", "kind": "book", "source": "netbet", "competition": "serie a", "home": "Sassuolo", "away": "Genoa", "kickoff": "2026-11-22T14:00:00+00:00", "odds": [2.4, 3.05, 2.55], "probs": null}
 {"at": "2026-11-12T04:46:32.098861+00:00", "kind": "book", "source": "netbet", "competition": "serie a", "home": "Atalanta Bergame", "away": "Inter Milan", "kickoff": "2026-11-22T19:45:00+00:00", "odds": [4.4, 4.0, 1.51], "probs": null}
+{"at": "2026-11-12T04:52:32.125445+00:00", "kind": "sharp", "source": "matchbook", "competition": "", "home": "Montenegro", "away": "Latvia", "kickoff": "2026-11-12T19:45:00+00:00", "odds": null, "probs": [0.7604669742525769, 0.16538821846964347, 0.0741744976414219]}
