@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T06:04:32.747079+01:00",
+  "generated_at": "2026-11-12T06:10:32.835569+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -13,7 +13,16 @@
         "pmu",
         "netbet"
       ],
-      "margin": 0.10642191342139862,
+      "margin": 0.09699329439757731,
+      "surebet": false
+    },
+    {
+      "match": "Lorient – Rennes",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.11108201834008291,
       "surebet": false
     },
     {
@@ -55,6 +64,15 @@
       "surebet": false
     },
     {
+      "match": "Marseille – Le Mans",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.11880666244992621,
+      "surebet": false
+    },
+    {
       "match": "Troyes – Le Havre",
       "books": [
         "netbet",
@@ -64,30 +82,12 @@
       "surebet": false
     },
     {
-      "match": "Aston Villa – Sunderland",
+      "match": "Tottenham – Ipswich Town",
       "books": [
         "pmu",
         "netbet"
       ],
-      "margin": 0.12002767478994714,
-      "surebet": false
-    },
-    {
-      "match": "Lorient – Rennes",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.12195063846007237,
-      "surebet": false
-    },
-    {
-      "match": "Marseille – Le Mans",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.12385716750043119,
+      "margin": 0.1225798011512298,
       "surebet": false
     },
     {
@@ -118,12 +118,21 @@
       "surebet": false
     },
     {
-      "match": "Tottenham – Ipswich Town",
+      "match": "Strasbourg – Brest",
       "books": [
         "pmu",
         "netbet"
       ],
-      "margin": 0.1263505402160865,
+      "margin": 0.12554112554112562,
+      "surebet": false
+    },
+    {
+      "match": "Aston Villa – Sunderland",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.12936994838835325,
       "surebet": false
     },
     {
@@ -145,21 +154,21 @@
       "surebet": false
     },
     {
+      "match": "Getafe – Atlético Madrid",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.1318925699948681,
+      "surebet": false
+    },
+    {
       "match": "Racing Santander – Real Sociedad",
       "books": [
         "pmu",
         "netbet"
       ],
       "margin": 0.13190227369015672,
-      "surebet": false
-    },
-    {
-      "match": "Strasbourg – Brest",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.1322751322751321,
       "surebet": false
     },
     {
@@ -179,15 +188,6 @@
       ],
       "margin": 0.13314572935471314,
       "surebet": false
-    },
-    {
-      "match": "Levante – Elche",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.13468265867066465,
-      "surebet": false
     }
   ],
   "sources": [
@@ -197,7 +197,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.461
+      "elapsed_s": 0.336
     },
     {
       "name": "unibet",
@@ -213,7 +213,7 @@
       "ok": true,
       "detail": "ligue 1: 8, ligue 2: 0, premier league: 10, laliga: 9, serie a: 10, bundesliga: 9, champions league: 18",
       "events": 64,
-      "elapsed_s": 3.995
+      "elapsed_s": 3.706
     },
     {
       "name": "netbet",
@@ -221,7 +221,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 4.574
+      "elapsed_s": 4.844
     },
     {
       "name": "smarkets",
@@ -229,23 +229,23 @@
       "ok": true,
       "detail": "309 matchs listés sur 7 page(s), prix chargés après appariement",
       "events": 309,
-      "elapsed_s": 3.365
+      "elapsed_s": 3.11
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "12 matchs avec liquidité suffisante sur la page reçue",
-      "events": 12,
-      "elapsed_s": 0.511
+      "detail": "11 matchs avec liquidité suffisante sur la page reçue",
+      "events": 11,
+      "elapsed_s": 0.538
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "286 matchs nommés sur 72 h, prix après appariement",
-      "events": 286,
-      "elapsed_s": 0.293
+      "detail": "290 matchs nommés sur 72 h, prix après appariement",
+      "events": 290,
+      "elapsed_s": 0.328
     },
     {
       "name": "the-odds-api",
@@ -261,7 +261,7 @@
       "ok": true,
       "detail": "3 matchs via SportyTrader, horloge 6:00:00. betclic.fr lui-même reste en 403.",
       "events": 3,
-      "elapsed_s": 4.12
+      "elapsed_s": 4.053
     },
     {
       "name": "olybet",
@@ -293,7 +293,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.393
+      "elapsed_s": 0.289
     }
   ],
   "performance": {
