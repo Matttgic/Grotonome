@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T20:19:38.110776+01:00",
+  "generated_at": "2026-11-13T20:25:38.955927+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -37,6 +37,15 @@
       "surebet": false
     },
     {
+      "match": "Aston Villa – Sunderland",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.11828265442723285,
+      "surebet": false
+    },
+    {
       "match": "AS Monaco – Auxerre",
       "books": [
         "pmu",
@@ -53,6 +62,15 @@
         "betclic"
       ],
       "margin": 0.11974866885090485,
+      "surebet": false
+    },
+    {
+      "match": "Real Madrid – Celta Vigo",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.12052631578947381,
       "surebet": false
     },
     {
@@ -74,30 +92,12 @@
       "surebet": false
     },
     {
-      "match": "Real Madrid – Celta Vigo",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.12495575221238941,
-      "surebet": false
-    },
-    {
       "match": "Lorient – Rennes",
       "books": [
         "pmu",
         "netbet"
       ],
       "margin": 0.12528943924292757,
-      "surebet": false
-    },
-    {
-      "match": "Aston Villa – Sunderland",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.12562911343399152,
       "surebet": false
     },
     {
@@ -198,7 +198,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.291
+      "elapsed_s": 0.542
     },
     {
       "name": "unibet",
@@ -214,7 +214,7 @@
       "ok": true,
       "detail": "ligue 1: 8, ligue 2: 0, premier league: 10, laliga: 9, serie a: 19, bundesliga: 9, champions league: 18",
       "events": 73,
-      "elapsed_s": 3.602
+      "elapsed_s": 3.935
     },
     {
       "name": "netbet",
@@ -222,7 +222,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 5.255
+      "elapsed_s": 4.967
     },
     {
       "name": "smarkets",
@@ -230,15 +230,15 @@
       "ok": true,
       "detail": "372 matchs listés sur 8 page(s), prix chargés après appariement",
       "events": 372,
-      "elapsed_s": 3.609
+      "elapsed_s": 3.839
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "12 matchs avec liquidité suffisante sur la page reçue",
-      "events": 12,
-      "elapsed_s": 0.59
+      "detail": "16 matchs avec liquidité suffisante sur la page reçue",
+      "events": 16,
+      "elapsed_s": 0.505
     },
     {
       "name": "pinnacle",
@@ -246,7 +246,7 @@
       "ok": true,
       "detail": "587 matchs nommés sur 72 h, prix après appariement",
       "events": 587,
-      "elapsed_s": 0.515
+      "elapsed_s": 0.455
     },
     {
       "name": "the-odds-api",
@@ -262,7 +262,7 @@
       "ok": true,
       "detail": "4 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
       "events": 4,
-      "elapsed_s": 4.126
+      "elapsed_s": 4.111
     },
     {
       "name": "olybet",
@@ -294,7 +294,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.22
+      "elapsed_s": 0.531
     }
   ],
   "performance": {
