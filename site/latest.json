@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T06:10:42.979893+01:00",
+  "generated_at": "2026-11-13T06:11:01.219275+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -198,7 +198,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.304
+      "elapsed_s": 0.462
     },
     {
       "name": "unibet",
@@ -214,7 +214,7 @@
       "ok": true,
       "detail": "ligue 1: 8, ligue 2: 0, premier league: 10, laliga: 9, serie a: 10, bundesliga: 9, champions league: 18",
       "events": 64,
-      "elapsed_s": 3.856
+      "elapsed_s": 4.103
     },
     {
       "name": "netbet",
@@ -230,15 +230,15 @@
       "ok": true,
       "detail": "357 matchs listés sur 8 page(s), prix chargés après appariement",
       "events": 357,
-      "elapsed_s": 2.807
+      "elapsed_s": 2.84
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "10 matchs avec liquidité suffisante sur la page reçue",
-      "events": 10,
-      "elapsed_s": 0.779
+      "detail": "12 matchs avec liquidité suffisante sur la page reçue",
+      "events": 12,
+      "elapsed_s": 0.807
     },
     {
       "name": "pinnacle",
@@ -246,7 +246,7 @@
       "ok": true,
       "detail": "466 matchs nommés sur 72 h, prix après appariement",
       "events": 466,
-      "elapsed_s": 0.373
+      "elapsed_s": 0.354
     },
     {
       "name": "the-odds-api",
@@ -262,7 +262,7 @@
       "ok": true,
       "detail": "4 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 4,
-      "elapsed_s": 4.206
+      "elapsed_s": 4.208
     },
     {
       "name": "olybet",
@@ -294,7 +294,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.261
+      "elapsed_s": 0.265
     }
   ],
   "performance": {
