@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T10:48:28.923903+01:00",
+  "generated_at": "2026-11-16T10:54:28.466106+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -15,15 +15,6 @@
         "betclic"
       ],
       "margin": 0.1063972781114797,
-      "surebet": false
-    },
-    {
-      "match": "AS Monaco – Auxerre",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10735285203370304,
       "surebet": false
     },
     {
@@ -43,6 +34,15 @@
         "netbet"
       ],
       "margin": 0.11102898474209377,
+      "surebet": false
+    },
+    {
+      "match": "AS Monaco – Auxerre",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.11680911680911676,
       "surebet": false
     },
     {
@@ -197,7 +197,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.519
+      "elapsed_s": 0.276
     },
     {
       "name": "unibet",
@@ -213,7 +213,7 @@
       "ok": true,
       "detail": "ligue 1: 8, ligue 2: 1, premier league: 20, laliga: 14, serie a: 16, bundesliga: 9, champions league: 18",
       "events": 86,
-      "elapsed_s": 3.708
+      "elapsed_s": 3.972
     },
     {
       "name": "netbet",
@@ -221,23 +221,23 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 4.488
+      "elapsed_s": 4.622
     },
     {
       "name": "smarkets",
       "kind": "sharp",
       "ok": true,
-      "detail": "151 matchs listés sur 4 page(s), prix chargés après appariement",
-      "events": 151,
-      "elapsed_s": 1.647
+      "detail": "154 matchs listés sur 4 page(s), prix chargés après appariement",
+      "events": 154,
+      "elapsed_s": 1.575
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "13 matchs avec liquidité suffisante sur la page reçue",
-      "events": 13,
-      "elapsed_s": 0.518
+      "detail": "12 matchs avec liquidité suffisante sur la page reçue",
+      "events": 12,
+      "elapsed_s": 0.513
     },
     {
       "name": "pinnacle",
@@ -245,7 +245,7 @@
       "ok": true,
       "detail": "167 matchs nommés sur 72 h, prix après appariement",
       "events": 167,
-      "elapsed_s": 0.273
+      "elapsed_s": 0.257
     },
     {
       "name": "the-odds-api",
@@ -261,7 +261,7 @@
       "ok": true,
       "detail": "2 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 2,
-      "elapsed_s": 4.054
+      "elapsed_s": 4.053
     },
     {
       "name": "olybet",
@@ -293,7 +293,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.344
+      "elapsed_s": 0.297
     }
   ],
   "performance": {
