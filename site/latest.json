@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T11:42:28.082130+01:00",
+  "generated_at": "2026-11-16T11:48:28.616161+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -197,7 +197,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.27
+      "elapsed_s": 0.314
     },
     {
       "name": "unibet",
@@ -213,7 +213,7 @@
       "ok": true,
       "detail": "ligue 1: 8, ligue 2: 1, premier league: 20, laliga: 19, serie a: 16, bundesliga: 9, champions league: 18",
       "events": 91,
-      "elapsed_s": 3.797
+      "elapsed_s": 3.664
     },
     {
       "name": "netbet",
@@ -221,7 +221,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 4.838
+      "elapsed_s": 4.46
     },
     {
       "name": "smarkets",
@@ -229,23 +229,23 @@
       "ok": true,
       "detail": "162 matchs listés sur 4 page(s), prix chargés après appariement",
       "events": 162,
-      "elapsed_s": 1.976
+      "elapsed_s": 1.643
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "14 matchs avec liquidité suffisante sur la page reçue",
-      "events": 14,
-      "elapsed_s": 0.365
+      "detail": "13 matchs avec liquidité suffisante sur la page reçue",
+      "events": 13,
+      "elapsed_s": 0.594
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "174 matchs nommés sur 72 h, prix après appariement",
-      "events": 174,
-      "elapsed_s": 0.276
+      "detail": "173 matchs nommés sur 72 h, prix après appariement",
+      "events": 173,
+      "elapsed_s": 0.292
     },
     {
       "name": "the-odds-api",
@@ -261,7 +261,7 @@
       "ok": true,
       "detail": "2 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 2,
-      "elapsed_s": 4.022
+      "elapsed_s": 4.077
     },
     {
       "name": "olybet",
@@ -293,7 +293,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.233
+      "elapsed_s": 0.66
     }
   ],
   "performance": {
