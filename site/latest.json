@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T10:07:36.254653+01:00",
+  "generated_at": "2026-11-17T10:13:36.574262+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -42,7 +42,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.383
+      "elapsed_s": 0.18
     },
     {
       "name": "unibet",
@@ -58,7 +58,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 4, premier league: 20, laliga: 19, serie a: 20, bundesliga: 9, champions league: 18",
       "events": 107,
-      "elapsed_s": 3.61
+      "elapsed_s": 3.893
     },
     {
       "name": "netbet",
@@ -66,7 +66,7 @@
       "ok": false,
       "detail": "ligue 1: HTTP 503, premier league: HTTP 503, laliga: HTTP 503, serie a: HTTP 503",
       "events": 0,
-      "elapsed_s": 5.301
+      "elapsed_s": 6.086
     },
     {
       "name": "smarkets",
@@ -74,7 +74,7 @@
       "ok": true,
       "detail": "149 matchs listés sur 3 page(s), prix chargés après appariement",
       "events": 149,
-      "elapsed_s": 1.125
+      "elapsed_s": 1.22
     },
     {
       "name": "matchbook",
@@ -82,15 +82,15 @@
       "ok": true,
       "detail": "9 matchs avec liquidité suffisante sur la page reçue",
       "events": 9,
-      "elapsed_s": 0.476
+      "elapsed_s": 0.744
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "173 matchs nommés sur 72 h, prix après appariement",
-      "events": 173,
-      "elapsed_s": 0.294
+      "detail": "181 matchs nommés sur 72 h, prix après appariement",
+      "events": 181,
+      "elapsed_s": 0.267
     },
     {
       "name": "the-odds-api",
@@ -106,7 +106,7 @@
       "ok": true,
       "detail": "3 matchs via SportyTrader, horloge 6:00:00. betclic.fr lui-même reste en 403.",
       "events": 3,
-      "elapsed_s": 3.857
+      "elapsed_s": 3.841
     },
     {
       "name": "olybet",
@@ -138,7 +138,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.291
+      "elapsed_s": 0.293
     }
   ],
   "performance": {
