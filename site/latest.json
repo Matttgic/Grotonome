@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T10:14:41.689950+01:00",
+  "generated_at": "2026-11-17T10:14:57.580014+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -42,7 +42,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.163
+      "elapsed_s": 0.2
     },
     {
       "name": "unibet",
@@ -58,7 +58,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 4, premier league: 20, laliga: 19, serie a: 20, bundesliga: 9, champions league: 18",
       "events": 107,
-      "elapsed_s": 3.601
+      "elapsed_s": 3.461
     },
     {
       "name": "netbet",
@@ -66,7 +66,7 @@
       "ok": false,
       "detail": "ligue 1: HTTP 503, premier league: HTTP 503, laliga: HTTP 503, serie a: HTTP 503",
       "events": 0,
-      "elapsed_s": 4.813
+      "elapsed_s": 4.831
     },
     {
       "name": "smarkets",
@@ -74,7 +74,7 @@
       "ok": true,
       "detail": "149 matchs listés sur 3 page(s), prix chargés après appariement",
       "events": 149,
-      "elapsed_s": 0.796
+      "elapsed_s": 0.786
     },
     {
       "name": "matchbook",
@@ -82,7 +82,7 @@
       "ok": true,
       "detail": "9 matchs avec liquidité suffisante sur la page reçue",
       "events": 9,
-      "elapsed_s": 0.689
+      "elapsed_s": 0.53
     },
     {
       "name": "pinnacle",
@@ -90,7 +90,7 @@
       "ok": true,
       "detail": "181 matchs nommés sur 72 h, prix après appariement",
       "events": 181,
-      "elapsed_s": 0.277
+      "elapsed_s": 0.303
     },
     {
       "name": "the-odds-api",
@@ -106,7 +106,7 @@
       "ok": true,
       "detail": "3 matchs via SportyTrader, horloge 6:00:00. betclic.fr lui-même reste en 403.",
       "events": 3,
-      "elapsed_s": 3.794
+      "elapsed_s": 3.754
     },
     {
       "name": "olybet",
@@ -138,7 +138,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.232
+      "elapsed_s": 0.312
     }
   ],
   "performance": {
