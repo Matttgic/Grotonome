@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T12:21:54.423258+01:00",
+  "generated_at": "2026-11-18T12:27:55.063836+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -83,21 +83,30 @@
       "surebet": false
     },
     {
-      "match": "Bournemouth – Nottingham Forest",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.11976350133391023,
-      "surebet": false
-    },
-    {
       "match": "Marseille – Le Mans",
       "books": [
         "pmu",
         "netbet"
       ],
       "margin": 0.1214019338558765,
+      "surebet": false
+    },
+    {
+      "match": "Bournemouth – Nottingham Forest",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.12273332789603897,
+      "surebet": false
+    },
+    {
+      "match": "Coventry City – Crystal Palace",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.12483323804078528,
       "surebet": false
     },
     {
@@ -180,15 +189,6 @@
       ],
       "margin": 0.12964744866585365,
       "surebet": false
-    },
-    {
-      "match": "Aston Villa – Sunderland",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.1304925360546514,
-      "surebet": false
     }
   ],
   "sources": [
@@ -198,13 +198,13 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.787
+      "elapsed_s": 0.804
     },
     {
       "name": "unibet",
       "kind": "book",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-18T11:27:28.734105+00:00 après HTTP 403",
+      "detail": "HTTP 403",
       "events": 0,
       "elapsed_s": 0.0
     },
@@ -214,7 +214,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 4, premier league: 20, laliga: 19, serie a: 20, bundesliga: 10, champions league: 18",
       "events": 108,
-      "elapsed_s": 3.929
+      "elapsed_s": 4.078
     },
     {
       "name": "netbet",
@@ -222,7 +222,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 5.899
+      "elapsed_s": 6.779
     },
     {
       "name": "smarkets",
@@ -230,7 +230,7 @@
       "ok": true,
       "detail": "212 matchs listés sur 5 page(s), prix chargés après appariement",
       "events": 212,
-      "elapsed_s": 2.669
+      "elapsed_s": 2.597
     },
     {
       "name": "matchbook",
@@ -238,7 +238,7 @@
       "ok": true,
       "detail": "4 matchs avec liquidité suffisante sur la page reçue",
       "events": 4,
-      "elapsed_s": 0.661
+      "elapsed_s": 0.526
     },
     {
       "name": "pinnacle",
@@ -246,7 +246,7 @@
       "ok": true,
       "detail": "310 matchs nommés sur 72 h, prix après appariement",
       "events": 310,
-      "elapsed_s": 0.381
+      "elapsed_s": 0.369
     },
     {
       "name": "the-odds-api",
@@ -262,31 +262,31 @@
       "ok": true,
       "detail": "4 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 4,
-      "elapsed_s": 4.013
+      "elapsed_s": 3.892
     },
     {
       "name": "olybet",
       "kind": "probe",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-18T11:27:28.734105+00:00 après HTTP 403",
+      "detail": "HTTP 403, pas de contournement",
       "events": 0,
-      "elapsed_s": 0.0
+      "elapsed_s": 0.145
     },
     {
       "name": "betsson",
       "kind": "probe",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-18T11:27:28.734105+00:00 après HTTP 403",
+      "detail": "HTTP 403, pas de contournement",
       "events": 0,
-      "elapsed_s": 0.0
+      "elapsed_s": 0.096
     },
     {
       "name": "genybet",
       "kind": "probe",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-18T11:27:28.734105+00:00 après HTTP 403",
+      "detail": "HTTP 403, accès refusé (géoblocage probable), pas de contournement",
       "events": 0,
-      "elapsed_s": 0.0
+      "elapsed_s": 0.586
     },
     {
       "name": "vbet",
@@ -294,7 +294,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.366
+      "elapsed_s": 0.316
     }
   ],
   "performance": {
