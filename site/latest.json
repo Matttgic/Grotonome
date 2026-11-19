@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T17:46:26.549123+01:00",
+  "generated_at": "2026-11-19T17:52:26.688582+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -64,6 +64,16 @@
       "surebet": false
     },
     {
+      "match": "Lens – Toulouse",
+      "books": [
+        "pmu",
+        "netbet",
+        "betclic"
+      ],
+      "margin": 0.11242469119181453,
+      "surebet": false
+    },
+    {
       "match": "Strasbourg – Brest",
       "books": [
         "pmu",
@@ -91,31 +101,12 @@
       "surebet": false
     },
     {
-      "match": "Lens – Toulouse",
-      "books": [
-        "pmu",
-        "netbet",
-        "betclic"
-      ],
-      "margin": 0.11612702366127037,
-      "surebet": false
-    },
-    {
       "match": "Liverpool – Manchester United",
       "books": [
         "pmu",
         "netbet"
       ],
       "margin": 0.1161663539712321,
-      "surebet": false
-    },
-    {
-      "match": "Real Madrid – Celta Vigo",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.11783211783211778,
       "surebet": false
     },
     {
@@ -137,12 +128,39 @@
       "surebet": false
     },
     {
+      "match": "FC Barcelone – Villarreal",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.1200501253132833,
+      "surebet": false
+    },
+    {
       "match": "Coventry City – Crystal Palace",
       "books": [
         "pmu",
         "netbet"
       ],
       "margin": 0.12031039769704943,
+      "surebet": false
+    },
+    {
+      "match": "Real Madrid – Celta Vigo",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.12068112068112047,
+      "surebet": false
+    },
+    {
+      "match": "Tottenham – Ipswich Town",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.12121892782270138,
       "surebet": false
     },
     {
@@ -171,24 +189,6 @@
       ],
       "margin": 0.12301587301587302,
       "surebet": false
-    },
-    {
-      "match": "Osasuna – Málaga",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.12382373668283386,
-      "surebet": false
-    },
-    {
-      "match": "Aston Villa – Sunderland",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.12408985535638495,
-      "surebet": false
     }
   ],
   "sources": [
@@ -214,7 +214,7 @@
       "ok": true,
       "detail": "ligue 1: 18, ligue 2: 9, premier league: 20, laliga: 20, serie a: 20, bundesliga: 17, champions league: 18",
       "events": 122,
-      "elapsed_s": 4.294
+      "elapsed_s": 4.435
     },
     {
       "name": "netbet",
@@ -222,7 +222,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 6.373
+      "elapsed_s": 6.675
     },
     {
       "name": "smarkets",
@@ -230,15 +230,15 @@
       "ok": true,
       "detail": "566 matchs listés sur 12 page(s), prix chargés après appariement",
       "events": 566,
-      "elapsed_s": 6.658
+      "elapsed_s": 7.789
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "11 matchs avec liquidité suffisante sur la page reçue",
-      "events": 11,
-      "elapsed_s": 1.055
+      "detail": "9 matchs avec liquidité suffisante sur la page reçue",
+      "events": 9,
+      "elapsed_s": 0.765
     },
     {
       "name": "pinnacle",
@@ -246,7 +246,7 @@
       "ok": true,
       "detail": "805 matchs nommés sur 72 h, prix après appariement",
       "events": 805,
-      "elapsed_s": 0.751
+      "elapsed_s": 0.705
     },
     {
       "name": "the-odds-api",
@@ -262,7 +262,7 @@
       "ok": true,
       "detail": "3 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
       "events": 3,
-      "elapsed_s": 4.486
+      "elapsed_s": 4.356
     },
     {
       "name": "olybet",
@@ -294,7 +294,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.839
+      "elapsed_s": 0.709
     }
   ],
   "performance": {
