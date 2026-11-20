@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-20T19:14:43.825504+01:00",
+  "generated_at": "2026-11-20T19:20:43.920340+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
   "skipped": [],
-  "unmatched": 122,
+  "unmatched": 121,
   "unpriced": 25,
   "shopping": [
     {
@@ -26,12 +26,12 @@
       "surebet": false
     },
     {
-      "match": "Real Madrid – Celta Vigo",
+      "match": "Getafe – Atlético Madrid",
       "books": [
         "pmu",
         "netbet"
       ],
-      "margin": 0.08541658170547706,
+      "margin": 0.08131948241297615,
       "surebet": false
     },
     {
@@ -53,12 +53,12 @@
       "surebet": false
     },
     {
-      "match": "Getafe – Atlético Madrid",
+      "match": "Real Madrid – Celta Vigo",
       "books": [
         "pmu",
         "netbet"
       ],
-      "margin": 0.09039938556067595,
+      "margin": 0.08971765697429412,
       "surebet": false
     },
     {
@@ -195,7 +195,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.479
+      "elapsed_s": 0.298
     },
     {
       "name": "unibet",
@@ -211,7 +211,7 @@
       "ok": true,
       "detail": "ligue 1: 18, ligue 2: 9, premier league: 20, laliga: 20, serie a: 20, bundesliga: 18, champions league: 18",
       "events": 123,
-      "elapsed_s": 3.97
+      "elapsed_s": 3.722
     },
     {
       "name": "netbet",
@@ -219,7 +219,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 5.585
+      "elapsed_s": 5.371
     },
     {
       "name": "smarkets",
@@ -227,23 +227,23 @@
       "ok": true,
       "detail": "600 matchs listés sur 12 page(s), prix chargés après appariement",
       "events": 600,
-      "elapsed_s": 6.833
+      "elapsed_s": 6.736
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "3 matchs avec liquidité suffisante sur la page reçue",
-      "events": 3,
-      "elapsed_s": 0.597
+      "detail": "4 matchs avec liquidité suffisante sur la page reçue",
+      "events": 4,
+      "elapsed_s": 0.581
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "1000 matchs nommés sur 72 h, prix après appariement",
-      "events": 1000,
-      "elapsed_s": 0.884
+      "detail": "1011 matchs nommés sur 72 h, prix après appariement",
+      "events": 1011,
+      "elapsed_s": 0.82
     },
     {
       "name": "the-odds-api",
@@ -257,9 +257,9 @@
       "name": "betclic",
       "kind": "book",
       "ok": false,
-      "detail": "0 matchs via SportyTrader, horloge 6:00:00. betclic.fr lui-même reste en 403.",
+      "detail": "0 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
       "events": 0,
-      "elapsed_s": 4.361
+      "elapsed_s": 4.305
     },
     {
       "name": "olybet",
@@ -291,7 +291,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.384
+      "elapsed_s": 0.423
     }
   ],
   "performance": {
