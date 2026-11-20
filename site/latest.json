@@ -1,21 +1,12 @@
 {
-  "generated_at": "2026-11-20T20:56:43.756754+01:00",
+  "generated_at": "2026-11-20T21:02:44.022895+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
   "skipped": [],
-  "unmatched": 114,
-  "unpriced": 23,
+  "unmatched": 111,
+  "unpriced": 24,
   "shopping": [
-    {
-      "match": "AS Monaco – Auxerre",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.07076719576719581,
-      "surebet": false
-    },
     {
       "match": "Liverpool – Manchester United",
       "books": [
@@ -32,6 +23,15 @@
         "netbet"
       ],
       "margin": 0.07969807969807974,
+      "surebet": false
+    },
+    {
+      "match": "AS Monaco – Auxerre",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.0811191626409018,
       "surebet": false
     },
     {
@@ -80,6 +80,15 @@
       "surebet": false
     },
     {
+      "match": "Aston Villa – Sunderland",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.08976085720271776,
+      "surebet": false
+    },
+    {
       "match": "Coventry City – Crystal Palace",
       "books": [
         "pmu",
@@ -107,12 +116,12 @@
       "surebet": false
     },
     {
-      "match": "Aston Villa – Sunderland",
+      "match": "Lens – Toulouse",
       "books": [
         "pmu",
         "netbet"
       ],
-      "margin": 0.09316083000293518,
+      "margin": 0.094496135479742,
       "surebet": false
     },
     {
@@ -125,12 +134,12 @@
       "surebet": false
     },
     {
-      "match": "Lens – Toulouse",
+      "match": "Hull City – Brighton",
       "books": [
         "pmu",
         "netbet"
       ],
-      "margin": 0.09979842856555177,
+      "margin": 0.10016420361247946,
       "surebet": false
     },
     {
@@ -170,15 +179,6 @@
       "surebet": false
     },
     {
-      "match": "Hull City – Brighton",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10166345398729204,
-      "surebet": false
-    },
-    {
       "match": "Brentford – Everton",
       "books": [
         "pmu",
@@ -195,7 +195,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.178
+      "elapsed_s": 0.553
     },
     {
       "name": "unibet",
@@ -209,25 +209,25 @@
       "name": "pmu",
       "kind": "book",
       "ok": true,
-      "detail": "ligue 1: 17, ligue 2: 4, premier league: 20, laliga: 20, serie a: 20, bundesliga: 17, champions league: 18",
-      "events": 116,
-      "elapsed_s": 3.847
+      "detail": "ligue 1: 17, ligue 2: 4, premier league: 20, laliga: 19, serie a: 20, bundesliga: 17, champions league: 18",
+      "events": 115,
+      "elapsed_s": 3.754
     },
     {
       "name": "netbet",
       "kind": "book",
       "ok": true,
-      "detail": "ligue 1: 8 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
-      "events": 38,
-      "elapsed_s": 6.009
+      "detail": "ligue 1: 8 (page partielle), premier league: 10 (page partielle), laliga: 9 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
+      "events": 37,
+      "elapsed_s": 5.518
     },
     {
       "name": "smarkets",
       "kind": "sharp",
       "ok": true,
-      "detail": "558 matchs listés sur 12 page(s), prix chargés après appariement",
-      "events": 558,
-      "elapsed_s": 6.207
+      "detail": "559 matchs listés sur 12 page(s), prix chargés après appariement",
+      "events": 559,
+      "elapsed_s": 6.415
     },
     {
       "name": "matchbook",
@@ -235,15 +235,15 @@
       "ok": false,
       "detail": "0 matchs avec liquidité suffisante sur la page reçue",
       "events": 0,
-      "elapsed_s": 0.495
+      "elapsed_s": 0.473
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "947 matchs nommés sur 72 h, prix après appariement",
-      "events": 947,
-      "elapsed_s": 0.829
+      "detail": "944 matchs nommés sur 72 h, prix après appariement",
+      "events": 944,
+      "elapsed_s": 0.87
     },
     {
       "name": "the-odds-api",
@@ -259,7 +259,7 @@
       "ok": false,
       "detail": "0 matchs via SportyTrader, horloge 6:00:00. betclic.fr lui-même reste en 403.",
       "events": 0,
-      "elapsed_s": 4.856
+      "elapsed_s": 4.507
     },
     {
       "name": "olybet",
@@ -291,7 +291,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.249
+      "elapsed_s": 0.479
     }
   ],
   "performance": {
