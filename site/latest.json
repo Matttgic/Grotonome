@@ -1,8 +1,28 @@
 {
-  "generated_at": "2026-11-20T21:32:43.175800+01:00",
+  "generated_at": "2026-11-20T21:38:43.904293+01:00",
   "devig": "power",
   "bankroll_eur": null,
-  "bets": [],
+  "bets": [
+    {
+      "match": "Lens – Toulouse",
+      "competition": "ligue 1",
+      "selection": "Toulouse",
+      "bookmaker": "pmu",
+      "odds": 3.7,
+      "fair_p": 0.275761787240229,
+      "ev": 0.02031861278884728,
+      "stake_fraction": 0.0018813530360043775,
+      "stake_eur": null,
+      "kickoff": "2026-11-21T20:45:00+01:00",
+      "devig": "power",
+      "overround": 0.11061962899243571,
+      "sharp_sources": [
+        "pinnacle"
+      ],
+      "warnings": [],
+      "movement_at": "2026-11-20T20:38:20+00:00"
+    }
+  ],
   "skipped": [],
   "unmatched": 111,
   "unpriced": 24,
@@ -14,6 +34,15 @@
         "netbet"
       ],
       "margin": 0.07076719576719581,
+      "surebet": false
+    },
+    {
+      "match": "Lens – Toulouse",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.07615776662701745,
       "surebet": false
     },
     {
@@ -116,12 +145,12 @@
       "surebet": false
     },
     {
-      "match": "Lens – Toulouse",
+      "match": "Levante – Elche",
       "books": [
         "pmu",
         "netbet"
       ],
-      "margin": 0.094496135479742,
+      "margin": 0.095527505064672,
       "surebet": false
     },
     {
@@ -149,15 +178,6 @@
         "netbet"
       ],
       "margin": 0.10016420361247946,
-      "surebet": false
-    },
-    {
-      "match": "Levante – Elche",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10081571236239806,
       "surebet": false
     },
     {
@@ -195,7 +215,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.166
+      "elapsed_s": 0.199
     },
     {
       "name": "unibet",
@@ -211,7 +231,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 4, premier league: 20, laliga: 19, serie a: 20, bundesliga: 17, champions league: 18",
       "events": 115,
-      "elapsed_s": 3.679
+      "elapsed_s": 3.92
     },
     {
       "name": "netbet",
@@ -219,7 +239,7 @@
       "ok": true,
       "detail": "ligue 1: 8 (page partielle), premier league: 10 (page partielle), laliga: 9 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 37,
-      "elapsed_s": 5.821
+      "elapsed_s": 5.239
     },
     {
       "name": "smarkets",
@@ -227,7 +247,7 @@
       "ok": true,
       "detail": "559 matchs listés sur 12 page(s), prix chargés après appariement",
       "events": 559,
-      "elapsed_s": 6.273
+      "elapsed_s": 6.337
     },
     {
       "name": "matchbook",
@@ -235,7 +255,7 @@
       "ok": false,
       "detail": "0 matchs avec liquidité suffisante sur la page reçue",
       "events": 0,
-      "elapsed_s": 0.373
+      "elapsed_s": 0.362
     },
     {
       "name": "pinnacle",
@@ -243,7 +263,7 @@
       "ok": true,
       "detail": "940 matchs nommés sur 72 h, prix après appariement",
       "events": 940,
-      "elapsed_s": 0.817
+      "elapsed_s": 1.029
     },
     {
       "name": "the-odds-api",
@@ -259,7 +279,7 @@
       "ok": false,
       "detail": "0 matchs via SportyTrader, horloge 6:00:00. betclic.fr lui-même reste en 403.",
       "events": 0,
-      "elapsed_s": 3.959
+      "elapsed_s": 4.392
     },
     {
       "name": "olybet",
@@ -291,11 +311,11 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.618
+      "elapsed_s": 0.361
     }
   ],
   "performance": {
-    "n_bets": 1,
+    "n_bets": 2,
     "n_settled": 0,
     "n_with_clv": 1,
     "n_roi_matches": 0,
