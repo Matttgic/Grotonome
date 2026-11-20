@@ -10583,3 +10583,4 @@
 {"at": "2026-11-20T00:29:38.399228+00:00", "kind": "book", "source": "netbet", "competition": "serie a", "home": "Lazio Rome", "away": "Lecce", "kickoff": "2026-11-21T14:00:00+00:00", "odds": [1.24, 4.6, 6.4], "probs": null}
 {"at": "2026-11-20T00:35:38.446822+00:00", "kind": "book", "source": "netbet", "competition": "serie a", "home": "Lazio Rome", "away": "Lecce", "kickoff": "2026-11-21T14:00:00+00:00", "odds": [1.25, 4.6, 6.4], "probs": null}
 {"at": "2026-11-20T00:35:38.446822+00:00", "kind": "sharp", "source": "matchbook", "competition": "", "home": "Seattle Sounders", "away": "Real Salt Lake", "kickoff": "2026-11-20T03:00:00+00:00", "odds": null, "probs": [0.4784797287632408, 0.25320419070278444, 0.2703179235841]}
+{"at": "2026-11-20T00:47:38.093076+00:00", "kind": "book", "source": "netbet", "competition": "laliga", "home": "Athletic Bilbao", "away": "Espanyol Barcelone", "kickoff": "2026-11-20T20:00:00+00:00", "odds": [1.4, 4.2, 6.4], "probs": null}
