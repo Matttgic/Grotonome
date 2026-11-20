@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T11:48:35.223103+01:00",
+  "generated_at": "2026-11-20T11:54:35.440131+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -14,16 +14,6 @@
         "netbet"
       ],
       "margin": 0.08089782557867675,
-      "surebet": false
-    },
-    {
-      "match": "Nice – PSG",
-      "books": [
-        "pmu",
-        "netbet",
-        "betclic"
-      ],
-      "margin": 0.08277793876171158,
       "surebet": false
     },
     {
@@ -72,16 +62,6 @@
       "surebet": false
     },
     {
-      "match": "Lille – Lyon",
-      "books": [
-        "pmu",
-        "netbet",
-        "betclic"
-      ],
-      "margin": 0.09592381403419004,
-      "surebet": false
-    },
-    {
       "match": "Coventry City – Crystal Palace",
       "books": [
         "pmu",
@@ -109,23 +89,39 @@
       "surebet": false
     },
     {
-      "match": "Strasbourg – Brest",
-      "books": [
-        "pmu",
-        "netbet",
-        "betclic"
-      ],
-      "margin": 0.09800999426739732,
-      "surebet": false
-    },
-    {
       "match": "Lens – Toulouse",
       "books": [
         "pmu",
-        "netbet",
-        "betclic"
+        "netbet"
       ],
       "margin": 0.0991997584176354,
+      "surebet": false
+    },
+    {
+      "match": "Lille – Lyon",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.09922414406719327,
+      "surebet": false
+    },
+    {
+      "match": "Strasbourg – Brest",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.09926303288604754,
+      "surebet": false
+    },
+    {
+      "match": "Nice – PSG",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.09946546483597118,
       "surebet": false
     },
     {
@@ -183,12 +179,12 @@
       "surebet": false
     },
     {
-      "match": "Osasuna – Málaga",
+      "match": "Aston Villa – Sunderland",
       "books": [
         "pmu",
         "netbet"
       ],
-      "margin": 0.1069255288322224,
+      "margin": 0.10611033588176344,
       "surebet": false
     }
   ],
@@ -199,7 +195,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.252
+      "elapsed_s": 0.23
     },
     {
       "name": "unibet",
@@ -215,7 +211,7 @@
       "ok": true,
       "detail": "ligue 1: 18, ligue 2: 9, premier league: 20, laliga: 20, serie a: 20, bundesliga: 18, champions league: 18",
       "events": 123,
-      "elapsed_s": 3.951
+      "elapsed_s": 3.74
     },
     {
       "name": "netbet",
@@ -223,7 +219,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 4.579
+      "elapsed_s": 4.958
     },
     {
       "name": "smarkets",
@@ -231,15 +227,15 @@
       "ok": true,
       "detail": "600 matchs listés sur 12 page(s), prix chargés après appariement",
       "events": 600,
-      "elapsed_s": 5.83
+      "elapsed_s": 6.554
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "5 matchs avec liquidité suffisante sur la page reçue",
-      "events": 5,
-      "elapsed_s": 0.5
+      "detail": "6 matchs avec liquidité suffisante sur la page reçue",
+      "events": 6,
+      "elapsed_s": 0.412
     },
     {
       "name": "pinnacle",
@@ -247,7 +243,7 @@
       "ok": true,
       "detail": "988 matchs nommés sur 72 h, prix après appariement",
       "events": 988,
-      "elapsed_s": 0.737
+      "elapsed_s": 0.727
     },
     {
       "name": "the-odds-api",
@@ -260,10 +256,10 @@
     {
       "name": "betclic",
       "kind": "book",
-      "ok": true,
-      "detail": "4 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
-      "events": 4,
-      "elapsed_s": 4.243
+      "ok": false,
+      "detail": "0 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
+      "events": 0,
+      "elapsed_s": 5.845
     },
     {
       "name": "olybet",
@@ -295,7 +291,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.38
+      "elapsed_s": 0.381
     }
   ],
   "performance": {
