@@ -377,3 +377,4 @@
 {"home": "Sevilla", "away": "Real Betis", "kickoff": "2026-11-21T17:30:00+00:00", "observed_at": "2026-11-21T17:24:03.656441+00:00", "fair_p": [0.34829343096434623, 0.28855178796771314, 0.3631547810679406], "sources": ["matchbook", "smarkets", "pinnacle"]}
 {"home": "FC Schalke 04", "away": "VfB Stuttgart", "kickoff": "2026-11-21T17:30:00+00:00", "observed_at": "2026-11-21T17:24:03.656441+00:00", "fair_p": [0.26886466209637483, 0.24731705057839182, 0.4838182873252334], "sources": ["matchbook"]}
 {"home": "Newcastle", "away": "Arsenal", "kickoff": "2026-11-21T17:30:00+00:00", "observed_at": "2026-11-21T17:24:03.656441+00:00", "fair_p": [0.14049957620780773, 0.2056140000997158, 0.6538864236924765], "sources": ["smarkets"]}
+{"home": "Reims", "away": "Saint-Étienne", "kickoff": "2026-11-21T19:00:00+00:00", "observed_at": "2026-11-21T18:49:17.623841+00:00", "fair_p": [0.27582409840141864, 0.27099532360317174, 0.4531805779954096], "sources": ["smarkets", "pinnacle"]}
