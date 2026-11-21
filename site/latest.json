@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-21T06:22:14.032405+01:00",
+  "generated_at": "2026-11-21T06:28:13.167407+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
   "skipped": [],
-  "unmatched": 109,
+  "unmatched": 108,
   "unpriced": 24,
   "shopping": [
     {
@@ -71,6 +71,15 @@
       "surebet": false
     },
     {
+      "match": "Lorient – Rennes",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.0866848025880449,
+      "surebet": false
+    },
+    {
       "match": "Coventry City – Crystal Palace",
       "books": [
         "pmu",
@@ -89,30 +98,12 @@
       "surebet": false
     },
     {
-      "match": "Real Madrid – Celta Vigo",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.08971765697429412,
-      "surebet": false
-    },
-    {
       "match": "Aston Villa – Sunderland",
       "books": [
         "pmu",
         "netbet"
       ],
       "margin": 0.09095412950982107,
-      "surebet": false
-    },
-    {
-      "match": "Lorient – Rennes",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.09120764293178096,
       "surebet": false
     },
     {
@@ -143,6 +134,15 @@
       "surebet": false
     },
     {
+      "match": "Manchester City – Fulham",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.09274059274059265,
+      "surebet": false
+    },
+    {
       "match": "Brentford – Everton",
       "books": [
         "pmu",
@@ -161,25 +161,25 @@
       "surebet": false
     },
     {
-      "match": "Manchester City – Fulham",
+      "match": "Real Madrid – Celta Vigo",
       "books": [
         "pmu",
         "netbet"
       ],
-      "margin": 0.09651133180544935,
+      "margin": 0.0976190476190475,
+      "surebet": false
+    },
+    {
+      "match": "Bournemouth – Nottingham Forest",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.09929976602555968,
       "surebet": false
     },
     {
       "match": "Hull City – Brighton",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10016420361247946,
-      "surebet": false
-    },
-    {
-      "match": "FC Barcelone – Villarreal",
       "books": [
         "pmu",
         "netbet"
@@ -195,7 +195,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.85
+      "elapsed_s": 0.522
     },
     {
       "name": "unibet",
@@ -211,7 +211,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 4, premier league: 20, laliga: 19, serie a: 20, bundesliga: 17, champions league: 18",
       "events": 115,
-      "elapsed_s": 4.182
+      "elapsed_s": 4.406
     },
     {
       "name": "netbet",
@@ -219,7 +219,7 @@
       "ok": true,
       "detail": "ligue 1: 8 (page partielle), premier league: 10 (page partielle), laliga: 9 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 37,
-      "elapsed_s": 6.456
+      "elapsed_s": 6.443
     },
     {
       "name": "smarkets",
@@ -227,15 +227,15 @@
       "ok": true,
       "detail": "565 matchs listés sur 12 page(s), prix chargés après appariement",
       "events": 565,
-      "elapsed_s": 6.342
+      "elapsed_s": 6.568
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "4 matchs avec liquidité suffisante sur la page reçue",
-      "events": 4,
-      "elapsed_s": 0.737
+      "detail": "5 matchs avec liquidité suffisante sur la page reçue",
+      "events": 5,
+      "elapsed_s": 0.635
     },
     {
       "name": "pinnacle",
@@ -259,7 +259,7 @@
       "ok": false,
       "detail": "0 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 0,
-      "elapsed_s": 5.214
+      "elapsed_s": 4.835
     },
     {
       "name": "olybet",
@@ -291,7 +291,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.354
+      "elapsed_s": 0.975
     }
   ],
   "performance": {
