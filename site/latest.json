@@ -1,22 +1,12 @@
 {
-  "generated_at": "2026-11-21T20:37:17.302561+01:00",
+  "generated_at": "2026-11-21T20:43:17.793616+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
   "skipped": [],
-  "unmatched": 81,
+  "unmatched": 82,
   "unpriced": 0,
   "shopping": [
-    {
-      "match": "AS Monaco – Auxerre",
-      "books": [
-        "pmu",
-        "netbet",
-        "betclic"
-      ],
-      "margin": 0.062403638606228995,
-      "surebet": false
-    },
     {
       "match": "Marseille – Le Mans",
       "books": [
@@ -83,22 +73,21 @@
       "surebet": false
     },
     {
-      "match": "Lens – Toulouse",
-      "books": [
-        "pmu",
-        "netbet",
-        "betclic"
-      ],
-      "margin": 0.095527505064672,
-      "surebet": false
-    },
-    {
       "match": "Levante – Elche",
       "books": [
         "pmu",
         "netbet"
       ],
       "margin": 0.095527505064672,
+      "surebet": false
+    },
+    {
+      "match": "Real Madrid – Alaves",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.0967342342342341,
       "surebet": false
     },
     {
@@ -129,13 +118,13 @@
       "surebet": false
     },
     {
-      "match": "Lille – Lyon",
+      "match": "AS Monaco – Auxerre",
       "books": [
         "pmu",
         "netbet",
         "betclic"
       ],
-      "margin": 0.10018214936247727,
+      "margin": 0.10083357014303296,
       "surebet": false
     },
     {
@@ -191,6 +180,15 @@
       ],
       "margin": 0.10708963167979557,
       "surebet": false
+    },
+    {
+      "match": "Ipswich Town – Aston Villa",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.10730593607305927,
+      "surebet": false
     }
   ],
   "sources": [
@@ -200,7 +198,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.463
+      "elapsed_s": 0.371
     },
     {
       "name": "unibet",
@@ -216,15 +214,15 @@
       "ok": true,
       "detail": "ligue 1: 16, ligue 2: 2, premier league: 13, laliga: 16, serie a: 17, bundesliga: 11, champions league: 18",
       "events": 93,
-      "elapsed_s": 4.109
+      "elapsed_s": 4.254
     },
     {
       "name": "netbet",
       "kind": "book",
       "ok": true,
-      "detail": "ligue 1: 7 (page partielle), premier league: 9 (page partielle), laliga: 7 (page partielle), serie a: 7 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
-      "events": 30,
-      "elapsed_s": 4.774
+      "detail": "ligue 1: 7 (page partielle), premier league: 9 (page partielle), laliga: 8 (page partielle), serie a: 7 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
+      "events": 31,
+      "elapsed_s": 5.495
     },
     {
       "name": "smarkets",
@@ -232,15 +230,15 @@
       "ok": true,
       "detail": "306 matchs listés sur 7 page(s), prix chargés après appariement",
       "events": 306,
-      "elapsed_s": 3.999
+      "elapsed_s": 4.023
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "9 matchs avec liquidité suffisante sur la page reçue",
-      "events": 9,
-      "elapsed_s": 0.657
+      "detail": "7 matchs avec liquidité suffisante sur la page reçue",
+      "events": 7,
+      "elapsed_s": 0.72
     },
     {
       "name": "pinnacle",
@@ -248,7 +246,7 @@
       "ok": true,
       "detail": "593 matchs nommés sur 72 h, prix après appariement",
       "events": 593,
-      "elapsed_s": 0.647
+      "elapsed_s": 0.671
     },
     {
       "name": "the-odds-api",
@@ -264,7 +262,7 @@
       "ok": true,
       "detail": "6 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 6,
-      "elapsed_s": 4.537
+      "elapsed_s": 6.132
     },
     {
       "name": "olybet",
@@ -296,7 +294,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.724
+      "elapsed_s": 0.508
     }
   ],
   "performance": {
@@ -309,9 +307,9 @@
     "roi_low": null,
     "roi_high": null,
     "roi_note": null,
-    "clv_mean": 0.06558555483311967,
-    "clv_low": 0.04684339258690549,
-    "clv_high": 0.08432771707933387,
+    "clv_mean": 0.06691832424085475,
+    "clv_low": 0.04556393395547981,
+    "clv_high": 0.0882727145262297,
     "clv_note": null,
     "flat_stake": true,
     "results_note": "E0 2526: ok; F1 2526: ok; SP1 2526: ok; I1 2526: ok; D1 2526: ok; E0 2627: ok; F1 2627: ok; SP1 2627: ok; I1 2627: ok; D1 2627: ok"
