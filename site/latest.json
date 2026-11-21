@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T01:27:16.059894+01:00",
+  "generated_at": "2026-11-21T01:33:16.472909+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -211,7 +211,7 @@
       "ok": true,
       "detail": "ligue 1: 17, ligue 2: 4, premier league: 20, laliga: 19, serie a: 20, bundesliga: 17, champions league: 18",
       "events": 115,
-      "elapsed_s": 4.189
+      "elapsed_s": 4.171
     },
     {
       "name": "netbet",
@@ -219,7 +219,7 @@
       "ok": true,
       "detail": "ligue 1: 8 (page partielle), premier league: 10 (page partielle), laliga: 9 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 37,
-      "elapsed_s": 5.181
+      "elapsed_s": 5.378
     },
     {
       "name": "smarkets",
@@ -227,7 +227,7 @@
       "ok": true,
       "detail": "565 matchs listés sur 12 page(s), prix chargés après appariement",
       "events": 565,
-      "elapsed_s": 6.06
+      "elapsed_s": 6.223
     },
     {
       "name": "matchbook",
@@ -235,15 +235,15 @@
       "ok": true,
       "detail": "10 matchs avec liquidité suffisante sur la page reçue",
       "events": 10,
-      "elapsed_s": 0.9
+      "elapsed_s": 0.886
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "1003 matchs nommés sur 72 h, prix après appariement",
-      "events": 1003,
-      "elapsed_s": 0.756
+      "detail": "1001 matchs nommés sur 72 h, prix après appariement",
+      "events": 1001,
+      "elapsed_s": 0.682
     },
     {
       "name": "the-odds-api",
@@ -259,7 +259,7 @@
       "ok": false,
       "detail": "0 matchs via SportyTrader, horloge 6:00:00. betclic.fr lui-même reste en 403.",
       "events": 0,
-      "elapsed_s": 4.771
+      "elapsed_s": 5.18
     },
     {
       "name": "olybet",
@@ -291,7 +291,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.612
+      "elapsed_s": 0.459
     }
   ],
   "performance": {
