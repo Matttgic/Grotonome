@@ -1,10 +1,31 @@
 {
-  "generated_at": "2026-11-21T20:43:17.793616+01:00",
+  "generated_at": "2026-11-21T20:49:17.886494+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
-  "skipped": [],
-  "unmatched": 82,
+  "skipped": [
+    {
+      "match": "Lens – Toulouse",
+      "bookmaker": "betclic",
+      "reason": "coup d'envoi passé"
+    },
+    {
+      "match": "Lille – Lyon",
+      "bookmaker": "betclic",
+      "reason": "coup d'envoi passé"
+    },
+    {
+      "match": "Monaco – Auxerre",
+      "bookmaker": "betclic",
+      "reason": "coup d'envoi passé"
+    },
+    {
+      "match": "Strasbourg – Brest",
+      "bookmaker": "betclic",
+      "reason": "coup d'envoi passé"
+    }
+  ],
+  "unmatched": 81,
   "unpriced": 0,
   "shopping": [
     {
@@ -118,16 +139,6 @@
       "surebet": false
     },
     {
-      "match": "AS Monaco – Auxerre",
-      "books": [
-        "pmu",
-        "netbet",
-        "betclic"
-      ],
-      "margin": 0.10083357014303296,
-      "surebet": false
-    },
-    {
       "match": "Fulham – Bournemouth",
       "books": [
         "pmu",
@@ -189,6 +200,15 @@
       ],
       "margin": 0.10730593607305927,
       "surebet": false
+    },
+    {
+      "match": "Arsenal – Manchester City",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.10893246187363848,
+      "surebet": false
     }
   ],
   "sources": [
@@ -198,7 +218,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.371
+      "elapsed_s": 0.796
     },
     {
       "name": "unibet",
@@ -212,41 +232,41 @@
       "name": "pmu",
       "kind": "book",
       "ok": true,
-      "detail": "ligue 1: 16, ligue 2: 2, premier league: 13, laliga: 16, serie a: 17, bundesliga: 11, champions league: 18",
-      "events": 93,
-      "elapsed_s": 4.254
+      "detail": "ligue 1: 12, ligue 2: 2, premier league: 13, laliga: 16, serie a: 16, bundesliga: 11, champions league: 18",
+      "events": 88,
+      "elapsed_s": 4.029
     },
     {
       "name": "netbet",
       "kind": "book",
       "ok": true,
-      "detail": "ligue 1: 7 (page partielle), premier league: 9 (page partielle), laliga: 8 (page partielle), serie a: 7 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
-      "events": 31,
-      "elapsed_s": 5.495
+      "detail": "ligue 1: 3 (page partielle), premier league: 9 (page partielle), laliga: 8 (page partielle), serie a: 6 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
+      "events": 26,
+      "elapsed_s": 5.263
     },
     {
       "name": "smarkets",
       "kind": "sharp",
       "ok": true,
-      "detail": "306 matchs listés sur 7 page(s), prix chargés après appariement",
-      "events": 306,
-      "elapsed_s": 4.023
+      "detail": "322 matchs listés sur 7 page(s), prix chargés après appariement",
+      "events": 322,
+      "elapsed_s": 3.92
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "7 matchs avec liquidité suffisante sur la page reçue",
-      "events": 7,
-      "elapsed_s": 0.72
+      "detail": "5 matchs avec liquidité suffisante sur la page reçue",
+      "events": 5,
+      "elapsed_s": 0.711
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "593 matchs nommés sur 72 h, prix après appariement",
-      "events": 593,
-      "elapsed_s": 0.671
+      "detail": "610 matchs nommés sur 72 h, prix après appariement",
+      "events": 610,
+      "elapsed_s": 0.696
     },
     {
       "name": "the-odds-api",
@@ -262,7 +282,7 @@
       "ok": true,
       "detail": "6 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 6,
-      "elapsed_s": 6.132
+      "elapsed_s": 5.172
     },
     {
       "name": "olybet",
@@ -294,7 +314,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.508
+      "elapsed_s": 0.701
     }
   ],
   "performance": {
