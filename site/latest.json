@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T03:20:25.836068+01:00",
+  "generated_at": "2026-11-22T03:26:25.210376+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -197,7 +197,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.731
+      "elapsed_s": 0.725
     },
     {
       "name": "unibet",
@@ -213,7 +213,7 @@
       "ok": true,
       "detail": "ligue 1: 12, ligue 2: 2, premier league: 13, laliga: 15, serie a: 16, bundesliga: 11, champions league: 18",
       "events": 87,
-      "elapsed_s": 4.177
+      "elapsed_s": 4.075
     },
     {
       "name": "netbet",
@@ -221,7 +221,7 @@
       "ok": true,
       "detail": "ligue 1: 6 (page partielle), premier league: 9 (page partielle), laliga: 7 (page partielle), serie a: 7 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 29,
-      "elapsed_s": 5.032
+      "elapsed_s": 5.367
     },
     {
       "name": "smarkets",
@@ -229,7 +229,7 @@
       "ok": true,
       "detail": "315 matchs listés sur 7 page(s), prix chargés après appariement",
       "events": 315,
-      "elapsed_s": 4.014
+      "elapsed_s": 3.821
     },
     {
       "name": "matchbook",
@@ -237,7 +237,7 @@
       "ok": true,
       "detail": "13 matchs avec liquidité suffisante sur la page reçue",
       "events": 13,
-      "elapsed_s": 0.766
+      "elapsed_s": 0.788
     },
     {
       "name": "pinnacle",
@@ -245,7 +245,7 @@
       "ok": true,
       "detail": "705 matchs nommés sur 72 h, prix après appariement",
       "events": 705,
-      "elapsed_s": 0.531
+      "elapsed_s": 0.501
     },
     {
       "name": "the-odds-api",
@@ -261,7 +261,7 @@
       "ok": true,
       "detail": "2 matchs via SportyTrader, horloge 6:00:00. betclic.fr lui-même reste en 403.",
       "events": 2,
-      "elapsed_s": 4.564
+      "elapsed_s": 4.81
     },
     {
       "name": "olybet",
@@ -293,7 +293,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.304
+      "elapsed_s": 0.585
     }
   ],
   "performance": {
