@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T10:27:22.598772+01:00",
+  "generated_at": "2026-11-22T10:33:22.957088+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -55,15 +55,6 @@
       "surebet": false
     },
     {
-      "match": "Getafe – Atlético Madrid",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.09385852242995085,
-      "surebet": false
-    },
-    {
       "match": "Brentford – Everton",
       "books": [
         "pmu",
@@ -88,6 +79,15 @@
         "netbet"
       ],
       "margin": 0.09757859098163424,
+      "surebet": false
+    },
+    {
+      "match": "Getafe – Atlético Madrid",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.09874252731395572,
       "surebet": false
     },
     {
@@ -197,13 +197,13 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.331
+      "elapsed_s": 0.701
     },
     {
       "name": "unibet",
       "kind": "book",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-22T09:27:22.662234+00:00 après HTTP 403",
+      "detail": "HTTP 403",
       "events": 0,
       "elapsed_s": 0.0
     },
@@ -213,7 +213,7 @@
       "ok": true,
       "detail": "ligue 1: 12, ligue 2: 2, premier league: 13, laliga: 15, serie a: 16, bundesliga: 11, champions league: 18",
       "events": 87,
-      "elapsed_s": 4.04
+      "elapsed_s": 4.113
     },
     {
       "name": "netbet",
@@ -221,31 +221,31 @@
       "ok": true,
       "detail": "ligue 1: 6 (page partielle), premier league: 9 (page partielle), laliga: 7 (page partielle), serie a: 7 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 29,
-      "elapsed_s": 5.276
+      "elapsed_s": 4.353
     },
     {
       "name": "smarkets",
       "kind": "sharp",
       "ok": true,
-      "detail": "321 matchs listés sur 7 page(s), prix chargés après appariement",
-      "events": 321,
-      "elapsed_s": 3.653
+      "detail": "323 matchs listés sur 7 page(s), prix chargés après appariement",
+      "events": 323,
+      "elapsed_s": 3.596
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "11 matchs avec liquidité suffisante sur la page reçue",
-      "events": 11,
-      "elapsed_s": 0.527
+      "detail": "9 matchs avec liquidité suffisante sur la page reçue",
+      "events": 9,
+      "elapsed_s": 0.577
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "870 matchs nommés sur 72 h, prix après appariement",
-      "events": 870,
-      "elapsed_s": 0.594
+      "detail": "868 matchs nommés sur 72 h, prix après appariement",
+      "events": 868,
+      "elapsed_s": 0.623
     },
     {
       "name": "the-odds-api",
@@ -261,31 +261,31 @@
       "ok": true,
       "detail": "2 matchs via SportyTrader, horloge 6:00:00. betclic.fr lui-même reste en 403.",
       "events": 2,
-      "elapsed_s": 4.882
+      "elapsed_s": 4.646
     },
     {
       "name": "olybet",
       "kind": "probe",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-22T09:27:22.662234+00:00 après HTTP 403",
+      "detail": "HTTP 403, pas de contournement",
       "events": 0,
-      "elapsed_s": 0.0
+      "elapsed_s": 0.205
     },
     {
       "name": "betsson",
       "kind": "probe",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-22T09:27:22.662234+00:00 après HTTP 403",
+      "detail": "HTTP 403, pas de contournement",
       "events": 0,
-      "elapsed_s": 0.0
+      "elapsed_s": 0.071
     },
     {
       "name": "genybet",
       "kind": "probe",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-22T09:27:22.662234+00:00 après HTTP 403",
+      "detail": "HTTP 403, accès refusé (géoblocage probable), pas de contournement",
       "events": 0,
-      "elapsed_s": 0.0
+      "elapsed_s": 0.383
     },
     {
       "name": "vbet",
@@ -293,7 +293,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.315
+      "elapsed_s": 0.484
     }
   ],
   "performance": {
