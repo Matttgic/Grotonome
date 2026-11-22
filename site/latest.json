@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T08:21:22.514852+01:00",
+  "generated_at": "2026-11-22T08:27:22.662234+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -15,16 +15,6 @@
         "betclic"
       ],
       "margin": 0.07410714285714293,
-      "surebet": false
-    },
-    {
-      "match": "Marseille – Le Mans",
-      "books": [
-        "pmu",
-        "netbet",
-        "betclic"
-      ],
-      "margin": 0.08071597433299571,
       "surebet": false
     },
     {
@@ -46,6 +36,16 @@
       "surebet": false
     },
     {
+      "match": "Marseille – Le Mans",
+      "books": [
+        "pmu",
+        "netbet",
+        "betclic"
+      ],
+      "margin": 0.08300378032704736,
+      "surebet": false
+    },
+    {
       "match": "Levante – Elche",
       "books": [
         "pmu",
@@ -64,15 +64,6 @@
       "surebet": false
     },
     {
-      "match": "Hull City – Brighton",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.09314916141622831,
-      "surebet": false
-    },
-    {
       "match": "Lorient – Rennes",
       "books": [
         "pmu",
@@ -88,6 +79,15 @@
         "netbet"
       ],
       "margin": 0.09508357041251769,
+      "surebet": false
+    },
+    {
+      "match": "Hull City – Brighton",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.09579326506509123,
       "surebet": false
     },
     {
@@ -197,13 +197,13 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.587
+      "elapsed_s": 0.652
     },
     {
       "name": "unibet",
       "kind": "book",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-22T07:27:22.579641+00:00 après HTTP 403",
+      "detail": "HTTP 403",
       "events": 0,
       "elapsed_s": 0.0
     },
@@ -213,7 +213,7 @@
       "ok": true,
       "detail": "ligue 1: 12, ligue 2: 2, premier league: 13, laliga: 15, serie a: 16, bundesliga: 11, champions league: 18",
       "events": 87,
-      "elapsed_s": 4.132
+      "elapsed_s": 3.949
     },
     {
       "name": "netbet",
@@ -221,7 +221,7 @@
       "ok": true,
       "detail": "ligue 1: 6 (page partielle), premier league: 9 (page partielle), laliga: 7 (page partielle), serie a: 7 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 29,
-      "elapsed_s": 4.434
+      "elapsed_s": 4.888
     },
     {
       "name": "smarkets",
@@ -229,23 +229,23 @@
       "ok": true,
       "detail": "327 matchs listés sur 7 page(s), prix chargés après appariement",
       "events": 327,
-      "elapsed_s": 3.69
+      "elapsed_s": 3.742
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "6 matchs avec liquidité suffisante sur la page reçue",
-      "events": 6,
-      "elapsed_s": 0.773
+      "detail": "4 matchs avec liquidité suffisante sur la page reçue",
+      "events": 4,
+      "elapsed_s": 0.831
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "848 matchs nommés sur 72 h, prix après appariement",
-      "events": 848,
-      "elapsed_s": 0.595
+      "detail": "856 matchs nommés sur 72 h, prix après appariement",
+      "events": 856,
+      "elapsed_s": 0.615
     },
     {
       "name": "the-odds-api",
@@ -261,31 +261,31 @@
       "ok": true,
       "detail": "2 matchs via SportyTrader, horloge 6:00:00. betclic.fr lui-même reste en 403.",
       "events": 2,
-      "elapsed_s": 4.258
+      "elapsed_s": 4.538
     },
     {
       "name": "olybet",
       "kind": "probe",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-22T07:27:22.579641+00:00 après HTTP 403",
+      "detail": "HTTP 403, pas de contournement",
       "events": 0,
-      "elapsed_s": 0.0
+      "elapsed_s": 0.129
     },
     {
       "name": "betsson",
       "kind": "probe",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-22T07:27:22.579641+00:00 après HTTP 403",
+      "detail": "HTTP 403, pas de contournement",
       "events": 0,
-      "elapsed_s": 0.0
+      "elapsed_s": 0.179
     },
     {
       "name": "genybet",
       "kind": "probe",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-22T07:27:22.579641+00:00 après HTTP 403",
+      "detail": "HTTP 403, accès refusé (géoblocage probable), pas de contournement",
       "events": 0,
-      "elapsed_s": 0.0
+      "elapsed_s": 0.376
     },
     {
       "name": "vbet",
@@ -293,7 +293,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.281
+      "elapsed_s": 0.269
     }
   ],
   "performance": {
