@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-22T17:16:37.339025+01:00",
+  "generated_at": "2026-11-22T17:22:37.275656+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
   "skipped": [],
-  "unmatched": 91,
+  "unmatched": 92,
   "unpriced": 0,
   "shopping": [
     {
@@ -36,12 +36,12 @@
       "surebet": false
     },
     {
-      "match": "Getafe – Atlético Madrid",
+      "match": "Liverpool – Manchester United",
       "books": [
         "pmu",
         "netbet"
       ],
-      "margin": 0.09385852242995085,
+      "margin": 0.09470134874759162,
       "surebet": false
     },
     {
@@ -51,6 +51,15 @@
         "netbet"
       ],
       "margin": 0.09502900200574627,
+      "surebet": false
+    },
+    {
+      "match": "Getafe – Atlético Madrid",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.0954159354159354,
       "surebet": false
     },
     {
@@ -79,15 +88,6 @@
         "betclic"
       ],
       "margin": 0.09791189202953898,
-      "surebet": false
-    },
-    {
-      "match": "Liverpool – Manchester United",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.09806201550387605,
       "surebet": false
     },
     {
@@ -125,6 +125,15 @@
         "betclic"
       ],
       "margin": 0.1013419216317768,
+      "surebet": false
+    },
+    {
+      "match": "Toulouse – Rennes",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.10158261396335,
       "surebet": false
     },
     {
@@ -181,15 +190,6 @@
       ],
       "margin": 0.1050505026088282,
       "surebet": false
-    },
-    {
-      "match": "Lyon – AS Monaco",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10582433312883732,
-      "surebet": false
     }
   ],
   "sources": [
@@ -199,7 +199,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.77
+      "elapsed_s": 0.828
     },
     {
       "name": "unibet",
@@ -215,31 +215,31 @@
       "ok": true,
       "detail": "ligue 1: 10, ligue 2: 2, premier league: 12, laliga: 13, serie a: 13, bundesliga: 10, champions league: 18",
       "events": 78,
-      "elapsed_s": 4.488
+      "elapsed_s": 4.191
     },
     {
       "name": "netbet",
       "kind": "book",
       "ok": true,
-      "detail": "ligue 1: 7 (page partielle), premier league: 11 (page partielle), laliga: 7 (page partielle), serie a: 9 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
-      "events": 34,
-      "elapsed_s": 5.366
+      "detail": "ligue 1: 8 (page partielle), premier league: 11 (page partielle), laliga: 7 (page partielle), serie a: 9 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
+      "events": 35,
+      "elapsed_s": 5.822
     },
     {
       "name": "smarkets",
       "kind": "sharp",
       "ok": true,
-      "detail": "237 matchs listés sur 5 page(s), prix chargés après appariement",
-      "events": 237,
-      "elapsed_s": 2.797
+      "detail": "238 matchs listés sur 5 page(s), prix chargés après appariement",
+      "events": 238,
+      "elapsed_s": 2.703
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "3 matchs avec liquidité suffisante sur la page reçue",
-      "events": 3,
-      "elapsed_s": 0.63
+      "detail": "2 matchs avec liquidité suffisante sur la page reçue",
+      "events": 2,
+      "elapsed_s": 0.642
     },
     {
       "name": "pinnacle",
@@ -247,7 +247,7 @@
       "ok": true,
       "detail": "313 matchs nommés sur 72 h, prix après appariement",
       "events": 313,
-      "elapsed_s": 0.412
+      "elapsed_s": 0.416
     },
     {
       "name": "the-odds-api",
@@ -263,7 +263,7 @@
       "ok": true,
       "detail": "4 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 4,
-      "elapsed_s": 4.913
+      "elapsed_s": 4.31
     },
     {
       "name": "olybet",
@@ -295,7 +295,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.702
+      "elapsed_s": 0.445
     }
   ],
   "performance": {
