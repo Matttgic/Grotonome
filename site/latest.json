@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T09:51:22.620633+01:00",
+  "generated_at": "2026-11-22T09:57:23.001063+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -198,7 +198,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.579
+      "elapsed_s": 2.007
     },
     {
       "name": "unibet",
@@ -214,7 +214,7 @@
       "ok": true,
       "detail": "ligue 1: 12, ligue 2: 2, premier league: 13, laliga: 15, serie a: 16, bundesliga: 11, champions league: 18",
       "events": 87,
-      "elapsed_s": 4.029
+      "elapsed_s": 4.046
     },
     {
       "name": "netbet",
@@ -222,7 +222,7 @@
       "ok": true,
       "detail": "ligue 1: 6 (page partielle), premier league: 9 (page partielle), laliga: 7 (page partielle), serie a: 7 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 29,
-      "elapsed_s": 5.087
+      "elapsed_s": 4.994
     },
     {
       "name": "smarkets",
@@ -230,7 +230,7 @@
       "ok": true,
       "detail": "320 matchs listés sur 7 page(s), prix chargés après appariement",
       "events": 320,
-      "elapsed_s": 3.41
+      "elapsed_s": 3.651
     },
     {
       "name": "matchbook",
@@ -238,7 +238,7 @@
       "ok": true,
       "detail": "9 matchs avec liquidité suffisante sur la page reçue",
       "events": 9,
-      "elapsed_s": 0.805
+      "elapsed_s": 0.739
     },
     {
       "name": "pinnacle",
@@ -246,7 +246,7 @@
       "ok": true,
       "detail": "858 matchs nommés sur 72 h, prix après appariement",
       "events": 858,
-      "elapsed_s": 0.554
+      "elapsed_s": 0.604
     },
     {
       "name": "the-odds-api",
@@ -262,7 +262,7 @@
       "ok": true,
       "detail": "3 matchs via SportyTrader, horloge 6:00:00. betclic.fr lui-même reste en 403.",
       "events": 3,
-      "elapsed_s": 4.698
+      "elapsed_s": 4.583
     },
     {
       "name": "olybet",
@@ -294,7 +294,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.798
+      "elapsed_s": 0.536
     }
   ],
   "performance": {
