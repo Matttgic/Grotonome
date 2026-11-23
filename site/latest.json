@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T19:56:34.464084+01:00",
+  "generated_at": "2026-11-23T20:02:34.587623+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -14,6 +14,25 @@
         "pmu"
       ],
       "margin": 0.08018170019467874,
+      "surebet": false
+    },
+    {
+      "match": "Nantes – Grenoble",
+      "books": [
+        "winamax",
+        "pmu"
+      ],
+      "margin": 0.0844155844155845,
+      "surebet": false
+    },
+    {
+      "match": "Monza – Fiorentina",
+      "books": [
+        "winamax",
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.08578370809653246,
       "surebet": false
     },
     {
@@ -72,15 +91,6 @@
       "surebet": false
     },
     {
-      "match": "Nantes – Grenoble",
-      "books": [
-        "winamax",
-        "pmu"
-      ],
-      "margin": 0.09499200196874624,
-      "surebet": false
-    },
-    {
       "match": "Brest – Paris FC",
       "books": [
         "pmu",
@@ -119,16 +129,6 @@
       "surebet": false
     },
     {
-      "match": "Monza – Fiorentina",
-      "books": [
-        "winamax",
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.09819846794919762,
-      "surebet": false
-    },
-    {
       "match": "Ipswich Town – Aston Villa",
       "books": [
         "pmu",
@@ -153,15 +153,6 @@
         "netbet"
       ],
       "margin": 0.09935897435897445,
-      "surebet": false
-    },
-    {
-      "match": "Sochaux – Dunkerque",
-      "books": [
-        "winamax",
-        "pmu"
-      ],
-      "margin": 0.09984917043740582,
       "surebet": false
     },
     {
@@ -191,6 +182,16 @@
       ],
       "margin": 0.1015617585337818,
       "surebet": false
+    },
+    {
+      "match": "Le Havre – Strasbourg",
+      "books": [
+        "pmu",
+        "netbet",
+        "betclic"
+      ],
+      "margin": 0.10203413913661263,
+      "surebet": false
     }
   ],
   "sources": [
@@ -198,9 +199,9 @@
       "name": "winamax",
       "kind": "book",
       "ok": true,
-      "detail": "24 matchs de football avant-match dans la page publique",
-      "events": 24,
-      "elapsed_s": 0.961
+      "detail": "23 matchs de football avant-match dans la page publique",
+      "events": 23,
+      "elapsed_s": 1.249
     },
     {
       "name": "unibet",
@@ -216,7 +217,7 @@
       "ok": true,
       "detail": "ligue 1: 18, ligue 2: 2, premier league: 21, laliga: 23, serie a: 21, bundesliga: 9, champions league: 18",
       "events": 112,
-      "elapsed_s": 3.947
+      "elapsed_s": 4.075
     },
     {
       "name": "netbet",
@@ -224,31 +225,31 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 9 (page partielle), serie a: 9 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 37,
-      "elapsed_s": 6.183
+      "elapsed_s": 5.734
     },
     {
       "name": "smarkets",
       "kind": "sharp",
       "ok": true,
-      "detail": "200 matchs listés sur 5 page(s), prix chargés après appariement",
-      "events": 200,
-      "elapsed_s": 2.493
+      "detail": "191 matchs listés sur 4 page(s), prix chargés après appariement",
+      "events": 191,
+      "elapsed_s": 1.996
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "12 matchs avec liquidité suffisante sur la page reçue",
-      "events": 12,
-      "elapsed_s": 0.812
+      "detail": "11 matchs avec liquidité suffisante sur la page reçue",
+      "events": 11,
+      "elapsed_s": 0.444
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "278 matchs nommés sur 72 h, prix après appariement",
-      "events": 278,
-      "elapsed_s": 0.393
+      "detail": "265 matchs nommés sur 72 h, prix après appariement",
+      "events": 265,
+      "elapsed_s": 0.399
     },
     {
       "name": "the-odds-api",
@@ -264,7 +265,7 @@
       "ok": true,
       "detail": "4 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 4,
-      "elapsed_s": 4.054
+      "elapsed_s": 4.15
     },
     {
       "name": "olybet",
@@ -296,7 +297,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.351
+      "elapsed_s": 0.329
     }
   ],
   "performance": {
