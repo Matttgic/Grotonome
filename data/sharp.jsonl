@@ -518,3 +518,4 @@
 {"home": "ES Ben Aknoun", "away": "USM Alger", "kickoff": "2026-11-23T16:45:00+00:00", "observed_at": "2026-11-23T16:44:34.918871+00:00", "fair_p": [0.24158990788946738, 0.32308770524629554, 0.435322386864237], "sources": ["smarkets"]}
 {"home": "Slaven Belupo", "away": "Osijek", "kickoff": "2026-11-23T17:00:00+00:00", "observed_at": "2026-11-23T16:50:34.665753+00:00", "fair_p": [0.39181770521404163, 0.2605923366343348, 0.3475899581516237], "sources": ["pinnacle"]}
 {"home": "Krasava ENY", "away": "Anorthosis Famagouste", "kickoff": "2026-11-23T17:00:00+00:00", "observed_at": "2026-11-23T16:50:34.665753+00:00", "fair_p": [0.23469952197830246, 0.2678488261556534, 0.4974516518660441], "sources": ["matchbook"]}
+{"home": "Slaven Belupo", "away": "Osijek", "kickoff": "2026-11-23T17:00:00+00:00", "observed_at": "2026-11-23T16:56:34.075597+00:00", "fair_p": [0.4142687907919343, 0.2523273045172816, 0.3334039046907842], "sources": ["pinnacle"]}
