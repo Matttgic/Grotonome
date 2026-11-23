@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T16:20:07.269929+01:00",
+  "generated_at": "2026-11-23T16:26:07.791152+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -8,21 +8,21 @@
   "unpriced": 0,
   "shopping": [
     {
+      "match": "Brentford – Everton",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.09090909090909083,
+      "surebet": false
+    },
+    {
       "match": "Sunderland – Tottenham",
       "books": [
         "pmu",
         "netbet"
       ],
       "margin": 0.09189042089985477,
-      "surebet": false
-    },
-    {
-      "match": "Brentford – Everton",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.092670289107458,
       "surebet": false
     },
     {
@@ -81,6 +81,15 @@
       "surebet": false
     },
     {
+      "match": "Monza – Fiorentina",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.10101469029229149,
+      "surebet": false
+    },
+    {
       "match": "Angers – Lens",
       "books": [
         "pmu",
@@ -106,6 +115,15 @@
         "netbet"
       ],
       "margin": 0.10139786814622198,
+      "surebet": false
+    },
+    {
+      "match": "Coventry City – Ipswich Town",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.1015617585337818,
       "surebet": false
     },
     {
@@ -137,15 +155,6 @@
       "surebet": false
     },
     {
-      "match": "Monza – Fiorentina",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10392082223068133,
-      "surebet": false
-    },
-    {
       "match": "Le Mans – Lille",
       "books": [
         "pmu",
@@ -162,15 +171,6 @@
         "netbet"
       ],
       "margin": 0.10560675883256532,
-      "surebet": false
-    },
-    {
-      "match": "Coventry City – Ipswich Town",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.1058485445159918,
       "surebet": false
     },
     {
@@ -199,7 +199,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.484
+      "elapsed_s": 0.201
     },
     {
       "name": "unibet",
@@ -215,7 +215,7 @@
       "ok": true,
       "detail": "ligue 1: 18, ligue 2: 2, premier league: 21, laliga: 23, serie a: 21, bundesliga: 9, champions league: 18",
       "events": 112,
-      "elapsed_s": 3.714
+      "elapsed_s": 5.36
     },
     {
       "name": "netbet",
@@ -223,7 +223,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 9 (page partielle), serie a: 9 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 37,
-      "elapsed_s": 4.346
+      "elapsed_s": 4.498
     },
     {
       "name": "smarkets",
@@ -231,23 +231,23 @@
       "ok": true,
       "detail": "202 matchs listés sur 5 page(s), prix chargés après appariement",
       "events": 202,
-      "elapsed_s": 1.774
+      "elapsed_s": 2.078
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "12 matchs avec liquidité suffisante sur la page reçue",
-      "events": 12,
-      "elapsed_s": 0.517
+      "detail": "9 matchs avec liquidité suffisante sur la page reçue",
+      "events": 9,
+      "elapsed_s": 0.537
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "269 matchs nommés sur 72 h, prix après appariement",
-      "events": 269,
-      "elapsed_s": 0.451
+      "detail": "274 matchs nommés sur 72 h, prix après appariement",
+      "events": 274,
+      "elapsed_s": 0.469
     },
     {
       "name": "the-odds-api",
@@ -263,7 +263,7 @@
       "ok": true,
       "detail": "4 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
       "events": 4,
-      "elapsed_s": 3.987
+      "elapsed_s": 4.058
     },
     {
       "name": "olybet",
@@ -295,7 +295,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.615
+      "elapsed_s": 0.27
     }
   ],
   "performance": {
