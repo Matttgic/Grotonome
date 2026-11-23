@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T19:20:34.106232+01:00",
+  "generated_at": "2026-11-23T19:26:34.936069+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -200,7 +200,7 @@
       "ok": true,
       "detail": "20 matchs de football avant-match dans la page publique",
       "events": 20,
-      "elapsed_s": 0.998
+      "elapsed_s": 0.958
     },
     {
       "name": "unibet",
@@ -216,7 +216,7 @@
       "ok": true,
       "detail": "ligue 1: 18, ligue 2: 2, premier league: 21, laliga: 23, serie a: 21, bundesliga: 9, champions league: 18",
       "events": 112,
-      "elapsed_s": 3.806
+      "elapsed_s": 3.791
     },
     {
       "name": "netbet",
@@ -224,7 +224,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 9 (page partielle), serie a: 9 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 37,
-      "elapsed_s": 6.259
+      "elapsed_s": 6.456
     },
     {
       "name": "smarkets",
@@ -232,15 +232,15 @@
       "ok": true,
       "detail": "203 matchs listés sur 5 page(s), prix chargés après appariement",
       "events": 203,
-      "elapsed_s": 2.727
+      "elapsed_s": 2.776
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "9 matchs avec liquidité suffisante sur la page reçue",
-      "events": 9,
-      "elapsed_s": 0.704
+      "detail": "12 matchs avec liquidité suffisante sur la page reçue",
+      "events": 12,
+      "elapsed_s": 0.787
     },
     {
       "name": "pinnacle",
@@ -248,7 +248,7 @@
       "ok": true,
       "detail": "278 matchs nommés sur 72 h, prix après appariement",
       "events": 278,
-      "elapsed_s": 0.407
+      "elapsed_s": 2.028
     },
     {
       "name": "the-odds-api",
@@ -264,7 +264,7 @@
       "ok": true,
       "detail": "4 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 4,
-      "elapsed_s": 4.072
+      "elapsed_s": 4.185
     },
     {
       "name": "olybet",
@@ -296,7 +296,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.35
+      "elapsed_s": 0.286
     }
   ],
   "performance": {
