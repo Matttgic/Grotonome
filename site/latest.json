@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T10:55:00.835075+01:00",
+  "generated_at": "2026-11-23T11:01:00.888900+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -7,6 +7,15 @@
   "unmatched": 138,
   "unpriced": 0,
   "shopping": [
+    {
+      "match": "Arsenal – Borussia Dortmund",
+      "books": [
+        "winamax",
+        "pmu"
+      ],
+      "margin": 0.08359788359788345,
+      "surebet": false
+    },
     {
       "match": "RB Leipzig – Lens",
       "books": [
@@ -17,12 +26,12 @@
       "surebet": false
     },
     {
-      "match": "Arsenal – Borussia Dortmund",
+      "match": "Real Madrid – PSV Eindhoven",
       "books": [
         "winamax",
         "pmu"
       ],
-      "margin": 0.08912579957356082,
+      "margin": 0.08697595423259141,
       "surebet": false
     },
     {
@@ -32,15 +41,6 @@
         "pmu"
       ],
       "margin": 0.0902961980548187,
-      "surebet": false
-    },
-    {
-      "match": "Real Madrid – PSV Eindhoven",
-      "books": [
-        "winamax",
-        "pmu"
-      ],
-      "margin": 0.0913049585615957,
       "surebet": false
     },
     {
@@ -200,13 +200,13 @@
       "ok": true,
       "detail": "35 matchs de football avant-match dans la page publique",
       "events": 35,
-      "elapsed_s": 0.5
+      "elapsed_s": 0.788
     },
     {
       "name": "unibet",
       "kind": "book",
       "ok": false,
-      "detail": "HTTP 403",
+      "detail": "recul jusqu'à 2026-11-23T11:55:00.835075+00:00 après HTTP 403",
       "events": 0,
       "elapsed_s": 0.0
     },
@@ -216,7 +216,7 @@
       "ok": true,
       "detail": "ligue 1: 11, ligue 2: 2, premier league: 21, laliga: 13, serie a: 21, bundesliga: 9, champions league: 18",
       "events": 95,
-      "elapsed_s": 3.228
+      "elapsed_s": 3.246
     },
     {
       "name": "netbet",
@@ -224,7 +224,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 12 (page partielle), laliga: 9 (page partielle), serie a: 9 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 4.356
+      "elapsed_s": 4.072
     },
     {
       "name": "smarkets",
@@ -232,23 +232,23 @@
       "ok": true,
       "detail": "205 matchs listés sur 5 page(s), prix chargés après appariement",
       "events": 205,
-      "elapsed_s": 2.141
+      "elapsed_s": 1.996
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "2 matchs avec liquidité suffisante sur la page reçue",
-      "events": 2,
-      "elapsed_s": 0.394
+      "detail": "4 matchs avec liquidité suffisante sur la page reçue",
+      "events": 4,
+      "elapsed_s": 0.405
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "275 matchs nommés sur 72 h, prix après appariement",
-      "events": 275,
-      "elapsed_s": 0.289
+      "detail": "274 matchs nommés sur 72 h, prix après appariement",
+      "events": 274,
+      "elapsed_s": 0.288
     },
     {
       "name": "the-odds-api",
@@ -264,31 +264,31 @@
       "ok": true,
       "detail": "3 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
       "events": 3,
-      "elapsed_s": 3.754
+      "elapsed_s": 3.761
     },
     {
       "name": "olybet",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, pas de contournement",
+      "detail": "recul jusqu'à 2026-11-23T11:55:00.835075+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.116
+      "elapsed_s": 0.0
     },
     {
       "name": "betsson",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, pas de contournement",
+      "detail": "recul jusqu'à 2026-11-23T11:55:00.835075+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.116
+      "elapsed_s": 0.0
     },
     {
       "name": "genybet",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, accès refusé (géoblocage probable), pas de contournement",
+      "detail": "recul jusqu'à 2026-11-23T11:55:00.835075+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.086
+      "elapsed_s": 0.0
     },
     {
       "name": "vbet",
@@ -296,7 +296,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.393
+      "elapsed_s": 0.389
     }
   ],
   "performance": {
