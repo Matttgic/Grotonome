@@ -524,3 +524,4 @@
 {"home": "Hammarby IF", "away": "IFK Göteborg", "kickoff": "2026-11-23T18:00:00+00:00", "observed_at": "2026-11-23T17:56:34.067809+00:00", "fair_p": [0.8542739777316352, 0.09715025273535212, 0.04857576953301276], "sources": ["matchbook"]}
 {"home": "JS Kabylie", "away": "MC Alger", "kickoff": "2026-11-23T18:00:00+00:00", "observed_at": "2026-11-23T17:56:34.067809+00:00", "fair_p": [0.4310435553859692, 0.3634979868168522, 0.20545845779717864], "sources": ["smarkets", "pinnacle"]}
 {"home": "AD Ceuta", "away": "Almeria", "kickoff": "2026-11-23T19:30:00+00:00", "observed_at": "2026-11-23T19:20:34.275530+00:00", "fair_p": [0.25634132201972964, 0.2571337585288595, 0.48652491945141085], "sources": ["smarkets", "pinnacle"]}
+{"home": "AD Ceuta", "away": "Almeria", "kickoff": "2026-11-23T19:30:00+00:00", "observed_at": "2026-11-23T19:26:34.487602+00:00", "fair_p": [0.2620989323298182, 0.2562401739534824, 0.48166089371669935], "sources": ["smarkets", "pinnacle"]}
