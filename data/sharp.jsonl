@@ -554,3 +554,4 @@
 {"home": "Levante", "away": "Elche", "kickoff": "2026-11-23T20:00:00+00:00", "observed_at": "2026-11-23T19:56:34.548640+00:00", "fair_p": [0.4790837379945834, 0.2622549245328249, 0.25866133747259173], "sources": ["pinnacle"]}
 {"home": "Brentford", "away": "Everton", "kickoff": "2026-11-23T20:00:00+00:00", "observed_at": "2026-11-23T19:56:34.548640+00:00", "fair_p": [0.45345436547635143, 0.2770859540576716, 0.2694596804659769], "sources": ["matchbook", "smarkets", "pinnacle"]}
 {"home": "Levante", "away": "Elche", "kickoff": "2026-11-23T20:00:00+00:00", "observed_at": "2026-11-23T19:56:34.548640+00:00", "fair_p": [0.4790837379945834, 0.2622549245328249, 0.25866133747259173], "sources": ["pinnacle"]}
+{"home": "Galatasaray", "away": "Aston Villa", "kickoff": "2026-11-24T17:45:00+00:00", "observed_at": "2026-11-24T17:35:43.655776+00:00", "fair_p": [0.270254279870556, 0.2387741850408481, 0.4909715350885959], "sources": ["smarkets", "pinnacle"]}
