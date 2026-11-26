@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T09:22:15.829141+01:00",
+  "generated_at": "2026-11-26T09:28:15.332497+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -127,21 +127,21 @@
       "surebet": false
     },
     {
-      "match": "Auxerre – Marseille",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10984580085703688,
-      "surebet": false
-    },
-    {
       "match": "Málaga – Athletic Bilbao",
       "books": [
         "pmu",
         "netbet"
       ],
       "margin": 0.11137250667201459,
+      "surebet": false
+    },
+    {
+      "match": "Auxerre – Marseille",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.11301979946047735,
       "surebet": false
     },
     {
@@ -197,7 +197,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.905
+      "elapsed_s": 0.917
     },
     {
       "name": "unibet",
@@ -213,7 +213,7 @@
       "ok": true,
       "detail": "ligue 1: 18, ligue 2: 0, premier league: 20, laliga: 22, serie a: 20, bundesliga: 16, champions league: 0",
       "events": 96,
-      "elapsed_s": 4.467
+      "elapsed_s": 4.347
     },
     {
       "name": "netbet",
@@ -221,7 +221,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 12 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 41,
-      "elapsed_s": 5.543
+      "elapsed_s": 5.783
     },
     {
       "name": "smarkets",
@@ -229,15 +229,15 @@
       "ok": true,
       "detail": "464 matchs listés sur 10 page(s), prix chargés après appariement",
       "events": 464,
-      "elapsed_s": 5.385
+      "elapsed_s": 5.345
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "5 matchs avec liquidité suffisante sur la page reçue",
-      "events": 5,
-      "elapsed_s": 0.788
+      "detail": "4 matchs avec liquidité suffisante sur la page reçue",
+      "events": 4,
+      "elapsed_s": 0.884
     },
     {
       "name": "pinnacle",
@@ -245,7 +245,7 @@
       "ok": true,
       "detail": "604 matchs nommés sur 72 h, prix après appariement",
       "events": 604,
-      "elapsed_s": 1.663
+      "elapsed_s": 1.359
     },
     {
       "name": "the-odds-api",
@@ -261,7 +261,7 @@
       "ok": true,
       "detail": "2 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
       "events": 2,
-      "elapsed_s": 4.186
+      "elapsed_s": 4.026
     },
     {
       "name": "olybet",
@@ -293,7 +293,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.481
+      "elapsed_s": 0.436
     }
   ],
   "performance": {
