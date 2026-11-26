@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T14:16:33.621859+01:00",
+  "generated_at": "2026-11-26T14:22:33.303121+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -91,6 +91,15 @@
       "surebet": false
     },
     {
+      "match": "Sunderland – Tottenham",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.11102009051997808,
+      "surebet": false
+    },
+    {
       "match": "Fulham – Bournemouth",
       "books": [
         "pmu",
@@ -133,15 +142,6 @@
         "netbet"
       ],
       "margin": 0.11487387436754526,
-      "surebet": false
-    },
-    {
-      "match": "Sunderland – Tottenham",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.11528266511503338,
       "surebet": false
     },
     {
@@ -197,13 +197,13 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.367
+      "elapsed_s": 1.042
     },
     {
       "name": "unibet",
       "kind": "book",
       "ok": false,
-      "detail": "HTTP 403",
+      "detail": "recul jusqu'à 2026-11-26T15:16:33.621859+00:00 après HTTP 403",
       "events": 0,
       "elapsed_s": 0.0
     },
@@ -213,7 +213,7 @@
       "ok": true,
       "detail": "ligue 1: 18, ligue 2: 0, premier league: 20, laliga: 22, serie a: 20, bundesliga: 16, champions league: 18",
       "events": 114,
-      "elapsed_s": 4.018
+      "elapsed_s": 3.925
     },
     {
       "name": "netbet",
@@ -221,23 +221,23 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 5.344
+      "elapsed_s": 4.937
     },
     {
       "name": "smarkets",
       "kind": "sharp",
       "ok": true,
-      "detail": "527 matchs listés sur 11 page(s), prix chargés après appariement",
-      "events": 527,
-      "elapsed_s": 5.221
+      "detail": "528 matchs listés sur 11 page(s), prix chargés après appariement",
+      "events": 528,
+      "elapsed_s": 6.087
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "9 matchs avec liquidité suffisante sur la page reçue",
-      "events": 9,
-      "elapsed_s": 0.819
+      "detail": "8 matchs avec liquidité suffisante sur la page reçue",
+      "events": 8,
+      "elapsed_s": 0.875
     },
     {
       "name": "pinnacle",
@@ -245,7 +245,7 @@
       "ok": true,
       "detail": "664 matchs nommés sur 72 h, prix après appariement",
       "events": 664,
-      "elapsed_s": 0.605
+      "elapsed_s": 0.663
     },
     {
       "name": "the-odds-api",
@@ -261,31 +261,31 @@
       "ok": true,
       "detail": "2 matchs via SportyTrader, horloge 6:00:00. betclic.fr lui-même reste en 403.",
       "events": 2,
-      "elapsed_s": 4.431
+      "elapsed_s": 4.118
     },
     {
       "name": "olybet",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, pas de contournement",
+      "detail": "recul jusqu'à 2026-11-26T15:16:33.621859+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.135
+      "elapsed_s": 0.0
     },
     {
       "name": "betsson",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, pas de contournement",
+      "detail": "recul jusqu'à 2026-11-26T15:16:33.621859+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.092
+      "elapsed_s": 0.0
     },
     {
       "name": "genybet",
       "kind": "probe",
       "ok": false,
-      "detail": "HTTP 403, accès refusé (géoblocage probable), pas de contournement",
+      "detail": "recul jusqu'à 2026-11-26T15:16:33.621859+00:00 après HTTP 403",
       "events": 0,
-      "elapsed_s": 0.272
+      "elapsed_s": 0.0
     },
     {
       "name": "vbet",
@@ -293,7 +293,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.364
+      "elapsed_s": 0.736
     }
   ],
   "performance": {
