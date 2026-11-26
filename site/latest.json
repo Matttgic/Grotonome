@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T06:04:15.096333+01:00",
+  "generated_at": "2026-11-26T06:10:15.340191+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -81,6 +81,15 @@
       "surebet": false
     },
     {
+      "match": "Elche – Atlético Madrid",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.11331626120358518,
+      "surebet": false
+    },
+    {
       "match": "Fulham – Bournemouth",
       "books": [
         "pmu",
@@ -123,15 +132,6 @@
         "netbet"
       ],
       "margin": 0.11827172503242545,
-      "surebet": false
-    },
-    {
-      "match": "Elche – Atlético Madrid",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.11860167346574157,
       "surebet": false
     },
     {
@@ -196,13 +196,13 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.9
+      "elapsed_s": 0.808
     },
     {
       "name": "unibet",
       "kind": "book",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-26T05:09:58.163007+00:00 après HTTP 403",
+      "detail": "HTTP 403",
       "events": 0,
       "elapsed_s": 0.0
     },
@@ -212,7 +212,7 @@
       "ok": true,
       "detail": "ligue 1: 18, ligue 2: 0, premier league: 20, laliga: 22, serie a: 20, bundesliga: 16, champions league: 0",
       "events": 96,
-      "elapsed_s": 4.345
+      "elapsed_s": 4.39
     },
     {
       "name": "netbet",
@@ -220,7 +220,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 11 (page partielle), laliga: 12 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 42,
-      "elapsed_s": 5.299
+      "elapsed_s": 5.418
     },
     {
       "name": "smarkets",
@@ -228,15 +228,15 @@
       "ok": true,
       "detail": "456 matchs listés sur 10 page(s), prix chargés après appariement",
       "events": 456,
-      "elapsed_s": 5.223
+      "elapsed_s": 5.481
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "10 matchs avec liquidité suffisante sur la page reçue",
-      "events": 10,
-      "elapsed_s": 1.083
+      "detail": "9 matchs avec liquidité suffisante sur la page reçue",
+      "events": 9,
+      "elapsed_s": 0.798
     },
     {
       "name": "pinnacle",
@@ -244,7 +244,7 @@
       "ok": true,
       "detail": "475 matchs nommés sur 72 h, prix après appariement",
       "events": 475,
-      "elapsed_s": 3.307
+      "elapsed_s": 1.256
     },
     {
       "name": "the-odds-api",
@@ -260,31 +260,31 @@
       "ok": true,
       "detail": "1 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 1,
-      "elapsed_s": 4.081
+      "elapsed_s": 4.02
     },
     {
       "name": "olybet",
       "kind": "probe",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-26T05:09:58.163007+00:00 après HTTP 403",
+      "detail": "HTTP 403, pas de contournement",
       "events": 0,
-      "elapsed_s": 0.0
+      "elapsed_s": 0.236
     },
     {
       "name": "betsson",
       "kind": "probe",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-26T05:09:58.163007+00:00 après HTTP 403",
+      "detail": "HTTP 403, pas de contournement",
       "events": 0,
-      "elapsed_s": 0.0
+      "elapsed_s": 0.115
     },
     {
       "name": "genybet",
       "kind": "probe",
       "ok": false,
-      "detail": "recul jusqu'à 2026-11-26T05:09:58.163007+00:00 après HTTP 403",
+      "detail": "HTTP 403, accès refusé (géoblocage probable), pas de contournement",
       "events": 0,
-      "elapsed_s": 0.0
+      "elapsed_s": 0.64
     },
     {
       "name": "vbet",
@@ -292,7 +292,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.267
+      "elapsed_s": 0.41
     }
   ],
   "performance": {
