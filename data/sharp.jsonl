@@ -591,3 +591,4 @@
 {"home": "PSG", "away": "Roma", "kickoff": "2026-11-25T20:00:00+00:00", "observed_at": "2026-11-25T19:57:16.312706+00:00", "fair_p": [0.6559988179732539, 0.19206679239117283, 0.1519343896355733], "sources": ["matchbook", "smarkets", "pinnacle"]}
 {"home": "Shakhtar Donetsk", "away": "Fenerbahçe", "kickoff": "2026-11-25T20:00:00+00:00", "observed_at": "2026-11-25T19:57:16.312706+00:00", "fair_p": [0.3520510715509666, 0.278118742448743, 0.3698301860002904], "sources": ["smarkets", "pinnacle"]}
 {"home": "Lille", "away": "Bayern Munich", "kickoff": "2026-11-25T20:05:00+00:00", "observed_at": "2026-11-25T19:57:16.312706+00:00", "fair_p": [0.17539180313190839, 0.23603337841471758, 0.588574818453374], "sources": ["pinnacle"]}
+{"home": "Al Fateh", "away": "Al Riyadh", "kickoff": "2026-11-26T14:25:00+00:00", "observed_at": "2026-11-26T14:11:26.890862+00:00", "fair_p": [0.3904608833913483, 0.2646121350151871, 0.3449269815934645], "sources": ["pinnacle"]}
