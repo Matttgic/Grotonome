@@ -1,23 +1,12 @@
 {
-  "generated_at": "2026-11-26T17:41:26.208494+01:00",
+  "generated_at": "2026-11-26T17:47:26.857033+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
   "skipped": [],
-  "unmatched": 162,
-  "unpriced": 36,
+  "unmatched": 161,
+  "unpriced": 38,
   "shopping": [
-    {
-      "match": "Paris SG – Lorient",
-      "books": [
-        "winamax",
-        "pmu",
-        "netbet",
-        "betclic"
-      ],
-      "margin": 0.07136752136752134,
-      "surebet": false
-    },
     {
       "match": "Real Madrid – Alaves",
       "books": [
@@ -26,6 +15,25 @@
         "netbet"
       ],
       "margin": 0.0753259295026556,
+      "surebet": false
+    },
+    {
+      "match": "Nottingham Forest – Chelsea",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.09200603318250389,
+      "surebet": false
+    },
+    {
+      "match": "PSG – Lorient",
+      "books": [
+        "pmu",
+        "netbet",
+        "betclic"
+      ],
+      "margin": 0.09428418803418803,
       "surebet": false
     },
     {
@@ -48,12 +56,12 @@
       "surebet": false
     },
     {
-      "match": "Deportivo La Corogne – FC Barcelone",
+      "match": "Everton – Liverpool",
       "books": [
-        "winamax",
+        "pmu",
         "netbet"
       ],
-      "margin": 0.10086893316152912,
+      "margin": 0.10360360360360366,
       "surebet": false
     },
     {
@@ -100,24 +108,6 @@
         "netbet"
       ],
       "margin": 0.10918862674157181,
-      "surebet": false
-    },
-    {
-      "match": "Nottingham Forest – Chelsea",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.11084605597964381,
-      "surebet": false
-    },
-    {
-      "match": "Everton – Liverpool",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.1131131370022116,
       "surebet": false
     },
     {
@@ -168,6 +158,15 @@
       "surebet": false
     },
     {
+      "match": "Manchester United – Brentford",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.11616161616161613,
+      "surebet": false
+    },
+    {
       "match": "Levante – Racing Santander",
       "books": [
         "pmu",
@@ -202,7 +201,7 @@
       "ok": true,
       "detail": "34 matchs de football avant-match dans la page publique",
       "events": 34,
-      "elapsed_s": 0.588
+      "elapsed_s": 0.422
     },
     {
       "name": "unibet",
@@ -218,7 +217,7 @@
       "ok": true,
       "detail": "ligue 1: 18, ligue 2: 0, premier league: 20, laliga: 22, serie a: 20, bundesliga: 17, champions league: 18",
       "events": 115,
-      "elapsed_s": 3.259
+      "elapsed_s": 3.274
     },
     {
       "name": "netbet",
@@ -226,7 +225,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 39,
-      "elapsed_s": 4.323
+      "elapsed_s": 4.165
     },
     {
       "name": "smarkets",
@@ -234,15 +233,15 @@
       "ok": true,
       "detail": "600 matchs listés sur 12 page(s), prix chargés après appariement",
       "events": 600,
-      "elapsed_s": 6.384
+      "elapsed_s": 6.47
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "15 matchs avec liquidité suffisante sur la page reçue",
-      "events": 15,
-      "elapsed_s": 0.597
+      "detail": "10 matchs avec liquidité suffisante sur la page reçue",
+      "events": 10,
+      "elapsed_s": 0.535
     },
     {
       "name": "pinnacle",
@@ -250,7 +249,7 @@
       "ok": true,
       "detail": "751 matchs nommés sur 72 h, prix après appariement",
       "events": 751,
-      "elapsed_s": 0.615
+      "elapsed_s": 0.639
     },
     {
       "name": "the-odds-api",
@@ -266,7 +265,7 @@
       "ok": true,
       "detail": "5 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
       "events": 5,
-      "elapsed_s": 3.953
+      "elapsed_s": 3.945
     },
     {
       "name": "olybet",
@@ -298,7 +297,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.166
+      "elapsed_s": 0.281
     }
   ],
   "performance": {
