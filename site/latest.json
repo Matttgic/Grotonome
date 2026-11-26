@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T04:39:58.715601+01:00",
+  "generated_at": "2026-11-26T04:45:58.614369+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -90,6 +90,15 @@
       "surebet": false
     },
     {
+      "match": "Málaga – Athletic Bilbao",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.11502347417840375,
+      "surebet": false
+    },
+    {
       "match": "Everton – Liverpool",
       "books": [
         "pmu",
@@ -99,12 +108,12 @@
       "surebet": false
     },
     {
-      "match": "Málaga – Athletic Bilbao",
+      "match": "Manchester United – Brentford",
       "books": [
         "pmu",
         "netbet"
       ],
-      "margin": 0.11639652337326756,
+      "margin": 0.11748622267556352,
       "surebet": false
     },
     {
@@ -117,6 +126,15 @@
       "surebet": false
     },
     {
+      "match": "Nottingham Forest – Chelsea",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.11827172503242545,
+      "surebet": false
+    },
+    {
       "match": "Sunderland – Tottenham",
       "books": [
         "pmu",
@@ -126,21 +144,12 @@
       "surebet": false
     },
     {
-      "match": "Auxerre – Marseille",
+      "match": "Arsenal – Manchester City",
       "books": [
         "pmu",
         "netbet"
       ],
-      "margin": 0.12063449499722578,
-      "surebet": false
-    },
-    {
-      "match": "Nottingham Forest – Chelsea",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.1211843711843712,
+      "margin": 0.12025068546807671,
       "surebet": false
     },
     {
@@ -150,6 +159,15 @@
         "netbet"
       ],
       "margin": 0.12235449735449722,
+      "surebet": false
+    },
+    {
+      "match": "Auxerre – Marseille",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.12317895194607509,
       "surebet": false
     },
     {
@@ -169,24 +187,6 @@
       ],
       "margin": 0.12380952380952381,
       "surebet": false
-    },
-    {
-      "match": "Arsenal – Manchester City",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.12451326006313224,
-      "surebet": false
-    },
-    {
-      "match": "Le Mans – Lille",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.12453007518796988,
-      "surebet": false
     }
   ],
   "sources": [
@@ -196,7 +196,7 @@
       "ok": false,
       "detail": "0 matchs de football avant-match dans la page publique",
       "events": 0,
-      "elapsed_s": 0.658
+      "elapsed_s": 0.725
     },
     {
       "name": "unibet",
@@ -212,7 +212,7 @@
       "ok": true,
       "detail": "ligue 1: 18, ligue 2: 0, premier league: 20, laliga: 22, serie a: 20, bundesliga: 16, champions league: 0",
       "events": 96,
-      "elapsed_s": 4.248
+      "elapsed_s": 4.14
     },
     {
       "name": "netbet",
@@ -220,7 +220,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 11 (page partielle), laliga: 12 (page partielle), serie a: 10 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 42,
-      "elapsed_s": 6.296
+      "elapsed_s": 6.027
     },
     {
       "name": "smarkets",
@@ -228,15 +228,15 @@
       "ok": true,
       "detail": "432 matchs listés sur 9 page(s), prix chargés après appariement",
       "events": 432,
-      "elapsed_s": 5.189
+      "elapsed_s": 5.471
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "7 matchs avec liquidité suffisante sur la page reçue",
-      "events": 7,
-      "elapsed_s": 0.706
+      "detail": "6 matchs avec liquidité suffisante sur la page reçue",
+      "events": 6,
+      "elapsed_s": 0.75
     },
     {
       "name": "pinnacle",
@@ -244,7 +244,7 @@
       "ok": true,
       "detail": "450 matchs nommés sur 72 h, prix après appariement",
       "events": 450,
-      "elapsed_s": 0.761
+      "elapsed_s": 0.694
     },
     {
       "name": "the-odds-api",
@@ -260,7 +260,7 @@
       "ok": true,
       "detail": "1 matchs via SportyTrader, horloge 6:00:00. betclic.fr lui-même reste en 403.",
       "events": 1,
-      "elapsed_s": 4.603
+      "elapsed_s": 4.549
     },
     {
       "name": "olybet",
@@ -292,7 +292,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.338
+      "elapsed_s": 0.432
     }
   ],
   "performance": {
