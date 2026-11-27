@@ -16838,3 +16838,4 @@
 {"at": "2026-11-27T06:54:55.170841+00:00", "kind": "sharp", "source": "matchbook", "competition": "", "home": "Macarthur FC", "away": "Melbourne City FC", "kickoff": "2026-11-27T08:40:00+00:00", "odds": null, "probs": [0.3367324716405139, 0.25320419070278444, 0.41494398219322237]}
 {"at": "2026-11-27T07:06:55.702860+00:00", "kind": "book", "source": "netbet", "competition": "ligue 1", "home": "Auxerre", "away": "Marseille", "kickoff": "2026-11-29T14:00:00+00:00", "odds": [3.55, 3.55, 1.78], "probs": null}
 {"at": "2026-11-27T07:06:55.702860+00:00", "kind": "book", "source": "netbet", "competition": "serie a", "home": "Venise", "away": "Bologne", "kickoff": "2026-11-27T19:45:00+00:00", "odds": [2.87, 3.15, 2.3], "probs": null}
+{"at": "2026-11-27T07:12:55.783862+00:00", "kind": "book", "source": "netbet", "competition": "ligue 1", "home": "Auxerre", "away": "Marseille", "kickoff": "2026-11-29T14:00:00+00:00", "odds": [3.4, 3.55, 1.83], "probs": null}
