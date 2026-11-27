@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T13:08:25.388544+01:00",
+  "generated_at": "2026-11-27T13:14:25.482535+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -95,16 +95,6 @@
       "surebet": false
     },
     {
-      "match": "Manchester United – Brentford",
-      "books": [
-        "winamax",
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.1022829925268951,
-      "surebet": false
-    },
-    {
       "match": "Everton – Liverpool",
       "books": [
         "winamax",
@@ -150,6 +140,16 @@
         "netbet"
       ],
       "margin": 0.10361067503924648,
+      "surebet": false
+    },
+    {
+      "match": "Manchester United – Brentford",
+      "books": [
+        "winamax",
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.10456570667401599,
       "surebet": false
     },
     {
@@ -207,7 +207,7 @@
       "ok": true,
       "detail": "32 matchs de football avant-match dans la page publique",
       "events": 32,
-      "elapsed_s": 0.596
+      "elapsed_s": 1.005
     },
     {
       "name": "unibet",
@@ -223,7 +223,7 @@
       "ok": true,
       "detail": "ligue 1: 18, ligue 2: 0, premier league: 20, laliga: 22, serie a: 20, bundesliga: 18, champions league: 18",
       "events": 116,
-      "elapsed_s": 3.256
+      "elapsed_s": 3.35
     },
     {
       "name": "netbet",
@@ -231,7 +231,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 9 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 38,
-      "elapsed_s": 4.471
+      "elapsed_s": 4.289
     },
     {
       "name": "smarkets",
@@ -239,7 +239,7 @@
       "ok": true,
       "detail": "600 matchs listés sur 12 page(s), prix chargés après appariement",
       "events": 600,
-      "elapsed_s": 5.534
+      "elapsed_s": 6.538
     },
     {
       "name": "matchbook",
@@ -247,15 +247,15 @@
       "ok": true,
       "detail": "4 matchs avec liquidité suffisante sur la page reçue",
       "events": 4,
-      "elapsed_s": 0.429
+      "elapsed_s": 0.401
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "866 matchs nommés sur 72 h, prix après appariement",
-      "events": 866,
-      "elapsed_s": 0.595
+      "detail": "877 matchs nommés sur 72 h, prix après appariement",
+      "events": 877,
+      "elapsed_s": 0.724
     },
     {
       "name": "the-odds-api",
@@ -271,7 +271,7 @@
       "ok": false,
       "detail": "0 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
       "events": 0,
-      "elapsed_s": 4.157
+      "elapsed_s": 3.818
     },
     {
       "name": "olybet",
@@ -303,7 +303,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.165
+      "elapsed_s": 0.159
     }
   ],
   "performance": {
