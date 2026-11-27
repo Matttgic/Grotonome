@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T12:20:25.232682+01:00",
+  "generated_at": "2026-11-27T12:26:25.948396+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
@@ -68,15 +68,6 @@
       "surebet": false
     },
     {
-      "match": "Venise – Bologne",
-      "books": [
-        "winamax",
-        "netbet"
-      ],
-      "margin": 0.09697200266900863,
-      "surebet": false
-    },
-    {
       "match": "Everton – Liverpool",
       "books": [
         "pmu",
@@ -127,6 +118,15 @@
       "surebet": false
     },
     {
+      "match": "Venise – Bologne",
+      "books": [
+        "winamax",
+        "netbet"
+      ],
+      "margin": 0.10204718366903998,
+      "surebet": false
+    },
+    {
       "match": "Elche – Atletico Madrid",
       "books": [
         "winamax",
@@ -143,15 +143,6 @@
         "netbet"
       ],
       "margin": 0.10598411085248438,
-      "surebet": false
-    },
-    {
-      "match": "Sunderland – Tottenham",
-      "books": [
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10687930377049559,
       "surebet": false
     },
     {
@@ -194,6 +185,15 @@
       "surebet": false
     },
     {
+      "match": "Sunderland – Tottenham",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.10957792207792205,
+      "surebet": false
+    },
+    {
       "match": "Udinese – Fiorentina",
       "books": [
         "pmu",
@@ -210,7 +210,7 @@
       "ok": true,
       "detail": "30 matchs de football avant-match dans la page publique",
       "events": 30,
-      "elapsed_s": 0.486
+      "elapsed_s": 0.507
     },
     {
       "name": "unibet",
@@ -226,7 +226,7 @@
       "ok": true,
       "detail": "ligue 1: 18, ligue 2: 0, premier league: 20, laliga: 22, serie a: 20, bundesliga: 18, champions league: 18",
       "events": 116,
-      "elapsed_s": 3.259
+      "elapsed_s": 3.257
     },
     {
       "name": "netbet",
@@ -234,7 +234,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 9 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 38,
-      "elapsed_s": 4.475
+      "elapsed_s": 4.515
     },
     {
       "name": "smarkets",
@@ -242,7 +242,7 @@
       "ok": true,
       "detail": "600 matchs listés sur 12 page(s), prix chargés après appariement",
       "events": 600,
-      "elapsed_s": 6.494
+      "elapsed_s": 6.232
     },
     {
       "name": "matchbook",
@@ -250,7 +250,7 @@
       "ok": true,
       "detail": "4 matchs avec liquidité suffisante sur la page reçue",
       "events": 4,
-      "elapsed_s": 0.419
+      "elapsed_s": 0.427
     },
     {
       "name": "pinnacle",
@@ -258,7 +258,7 @@
       "ok": true,
       "detail": "869 matchs nommés sur 72 h, prix après appariement",
       "events": 869,
-      "elapsed_s": 0.583
+      "elapsed_s": 0.59
     },
     {
       "name": "the-odds-api",
@@ -274,7 +274,7 @@
       "ok": true,
       "detail": "5 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 5,
-      "elapsed_s": 4.109
+      "elapsed_s": 3.848
     },
     {
       "name": "olybet",
@@ -306,7 +306,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.168
+      "elapsed_s": 0.152
     }
   ],
   "performance": {
