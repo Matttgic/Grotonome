@@ -620,3 +620,4 @@
 {"home": "Kauno Žalgiris", "away": "Riga FC", "kickoff": "2026-11-26T17:45:00+00:00", "observed_at": "2026-11-26T17:41:26.152700+00:00", "fair_p": [0.23107169866855098, 0.2643249502119263, 0.5046033511195228], "sources": ["pinnacle"]}
 {"home": "Pafos FC", "away": "Midtjylland", "kickoff": "2026-11-26T17:45:00+00:00", "observed_at": "2026-11-26T17:41:26.152700+00:00", "fair_p": [0.34896899705744244, 0.2551522152512198, 0.39587878769133783], "sources": ["matchbook"]}
 {"home": "Pachuca", "away": "Guadalajara", "kickoff": "2026-11-27T01:00:00+00:00", "observed_at": "2026-11-27T00:48:36.657070+00:00", "fair_p": [0.2899118452101652, 0.2985664478360512, 0.41152170695378365], "sources": ["matchbook", "smarkets"]}
+{"home": "Pachuca", "away": "Guadalajara", "kickoff": "2026-11-27T01:00:00+00:00", "observed_at": "2026-11-27T00:54:36.153214+00:00", "fair_p": [0.29142542860253584, 0.29793004065818307, 0.4106445307392812], "sources": ["matchbook", "smarkets"]}
