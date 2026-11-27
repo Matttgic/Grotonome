@@ -16720,3 +16720,4 @@
 {"at": "2026-11-27T00:54:36.153214+00:00", "kind": "book", "source": "netbet", "competition": "laliga", "home": "Real Sociedad", "away": "Séville", "kickoff": "2026-11-29T20:00:00+00:00", "odds": [2.0, 3.35, 3.1], "probs": null}
 {"at": "2026-11-27T00:54:36.153214+00:00", "kind": "book", "source": "netbet", "competition": "serie a", "home": "Sassuolo", "away": "Naples", "kickoff": "2026-11-29T14:00:00+00:00", "odds": [4.5, 4.0, 1.57], "probs": null}
 {"at": "2026-11-27T00:54:36.153214+00:00", "kind": "sharp", "source": "matchbook", "competition": "", "home": "Caykur Rizespor", "away": "Kasimpasa SK", "kickoff": "2026-11-27T17:00:00+00:00", "odds": null, "probs": [0.4831022631675312, 0.24724984473630177, 0.257086170233201]}
+{"at": "2026-11-27T01:00:36.794504+00:00", "kind": "book", "source": "winamax", "competition": "Liga MX", "home": "Pachuca", "away": "Guadalajara", "kickoff": "2026-11-27T01:00:00+00:00", "odds": [2.7, 2.75, 2.0], "probs": null}
