@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-27T13:14:25.482535+01:00",
+  "generated_at": "2026-11-27T13:20:25.771905+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
   "skipped": [],
-  "unmatched": 130,
-  "unpriced": 27,
+  "unmatched": 129,
+  "unpriced": 26,
   "shopping": [
     {
       "match": "AS Rome – Monza",
@@ -27,16 +27,6 @@
       "surebet": false
     },
     {
-      "match": "Brest – Paris FC",
-      "books": [
-        "winamax",
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.08697465892075362,
-      "surebet": false
-    },
-    {
       "match": "Real Madrid – Alaves",
       "books": [
         "winamax",
@@ -47,22 +37,22 @@
       "surebet": false
     },
     {
+      "match": "Brest – Paris FC",
+      "books": [
+        "winamax",
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.09163666358275835,
+      "surebet": false
+    },
+    {
       "match": "Inter Milan – Genoa",
       "books": [
         "winamax",
         "netbet"
       ],
       "margin": 0.09502928166766988,
-      "surebet": false
-    },
-    {
-      "match": "Levante – Racing Santander",
-      "books": [
-        "winamax",
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.09778482242732323,
       "surebet": false
     },
     {
@@ -124,6 +114,16 @@
       "surebet": false
     },
     {
+      "match": "Levante – Racing Santander",
+      "books": [
+        "winamax",
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.10307302972504928,
+      "surebet": false
+    },
+    {
       "match": "Leeds – Coventry City",
       "books": [
         "winamax",
@@ -181,22 +181,21 @@
       "surebet": false
     },
     {
-      "match": "Arsenal – Manchester City",
-      "books": [
-        "winamax",
-        "pmu",
-        "netbet"
-      ],
-      "margin": 0.10917962191098907,
-      "surebet": false
-    },
-    {
       "match": "Le Havre – Strasbourg",
       "books": [
         "pmu",
         "netbet"
       ],
       "margin": 0.10918862674157181,
+      "surebet": false
+    },
+    {
+      "match": "Sunderland – Tottenham",
+      "books": [
+        "pmu",
+        "netbet"
+      ],
+      "margin": 0.10957792207792205,
       "surebet": false
     }
   ],
@@ -205,9 +204,9 @@
       "name": "winamax",
       "kind": "book",
       "ok": true,
-      "detail": "32 matchs de football avant-match dans la page publique",
-      "events": 32,
-      "elapsed_s": 1.005
+      "detail": "30 matchs de football avant-match dans la page publique",
+      "events": 30,
+      "elapsed_s": 0.941
     },
     {
       "name": "unibet",
@@ -223,7 +222,7 @@
       "ok": true,
       "detail": "ligue 1: 18, ligue 2: 0, premier league: 20, laliga: 22, serie a: 20, bundesliga: 18, champions league: 18",
       "events": 116,
-      "elapsed_s": 3.35
+      "elapsed_s": 3.26
     },
     {
       "name": "netbet",
@@ -231,7 +230,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 9 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 38,
-      "elapsed_s": 4.289
+      "elapsed_s": 4.941
     },
     {
       "name": "smarkets",
@@ -239,7 +238,7 @@
       "ok": true,
       "detail": "600 matchs listés sur 12 page(s), prix chargés après appariement",
       "events": 600,
-      "elapsed_s": 6.538
+      "elapsed_s": 5.761
     },
     {
       "name": "matchbook",
@@ -247,15 +246,15 @@
       "ok": true,
       "detail": "4 matchs avec liquidité suffisante sur la page reçue",
       "events": 4,
-      "elapsed_s": 0.401
+      "elapsed_s": 0.4
     },
     {
       "name": "pinnacle",
       "kind": "sharp",
       "ok": true,
-      "detail": "877 matchs nommés sur 72 h, prix après appariement",
-      "events": 877,
-      "elapsed_s": 0.724
+      "detail": "871 matchs nommés sur 72 h, prix après appariement",
+      "events": 871,
+      "elapsed_s": 0.6
     },
     {
       "name": "the-odds-api",
@@ -269,9 +268,9 @@
       "name": "betclic",
       "kind": "book",
       "ok": false,
-      "detail": "0 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
+      "detail": "0 matchs via SportyTrader, horloge 8:00:00. betclic.fr lui-même reste en 403.",
       "events": 0,
-      "elapsed_s": 3.818
+      "elapsed_s": 3.937
     },
     {
       "name": "olybet",
@@ -303,7 +302,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.159
+      "elapsed_s": 0.4
     }
   ],
   "performance": {
