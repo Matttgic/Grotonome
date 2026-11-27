@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-27T03:06:36.895883+01:00",
+  "generated_at": "2026-11-27T03:12:37.058903+01:00",
   "devig": "power",
   "bankroll_eur": null,
   "bets": [],
   "skipped": [],
   "unmatched": 128,
-  "unpriced": 27,
+  "unpriced": 26,
   "shopping": [
     {
       "match": "Paris SG – Lorient",
@@ -212,7 +212,7 @@
       "ok": true,
       "detail": "32 matchs de football avant-match dans la page publique",
       "events": 32,
-      "elapsed_s": 0.587
+      "elapsed_s": 0.727
     },
     {
       "name": "unibet",
@@ -228,7 +228,7 @@
       "ok": true,
       "detail": "ligue 1: 18, ligue 2: 0, premier league: 20, laliga: 22, serie a: 20, bundesliga: 18, champions league: 18",
       "events": 116,
-      "elapsed_s": 3.264
+      "elapsed_s": 3.316
     },
     {
       "name": "netbet",
@@ -236,7 +236,7 @@
       "ok": true,
       "detail": "ligue 1: 9 (page partielle), premier league: 10 (page partielle), laliga: 10 (page partielle), serie a: 9 (page partielle). Couverture limitée aux matchs présents dans le HTML.",
       "events": 38,
-      "elapsed_s": 4.53
+      "elapsed_s": 4.581
     },
     {
       "name": "smarkets",
@@ -244,15 +244,15 @@
       "ok": true,
       "detail": "600 matchs listés sur 12 page(s), prix chargés après appariement",
       "events": 600,
-      "elapsed_s": 5.836
+      "elapsed_s": 5.93
     },
     {
       "name": "matchbook",
       "kind": "sharp",
       "ok": true,
-      "detail": "10 matchs avec liquidité suffisante sur la page reçue",
-      "events": 10,
-      "elapsed_s": 0.312
+      "detail": "11 matchs avec liquidité suffisante sur la page reçue",
+      "events": 11,
+      "elapsed_s": 0.399
     },
     {
       "name": "pinnacle",
@@ -260,7 +260,7 @@
       "ok": true,
       "detail": "822 matchs nommés sur 72 h, prix après appariement",
       "events": 822,
-      "elapsed_s": 0.682
+      "elapsed_s": 0.551
     },
     {
       "name": "the-odds-api",
@@ -276,7 +276,7 @@
       "ok": true,
       "detail": "5 matchs via SportyTrader, horloge 5:00:00. betclic.fr lui-même reste en 403.",
       "events": 5,
-      "elapsed_s": 4.235
+      "elapsed_s": 3.82
     },
     {
       "name": "olybet",
@@ -308,7 +308,7 @@
       "ok": false,
       "detail": "page ouverte mais aucune cote structurée branchée",
       "events": 0,
-      "elapsed_s": 0.17
+      "elapsed_s": 0.165
     }
   ],
   "performance": {
