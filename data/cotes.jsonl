@@ -17576,3 +17576,4 @@
 {"at": "2026-11-28T09:34:59.189274+00:00", "kind": "book", "source": "netbet", "competition": "ligue 1", "home": "Le Mans", "away": "Lille", "kickoff": "2026-11-28T19:45:00+00:00", "odds": [3.6, 3.2, 1.95], "probs": null}
 {"at": "2026-11-28T09:40:59.111025+00:00", "kind": "book", "source": "netbet", "competition": "laliga", "home": "Elche", "away": "Atlético Madrid", "kickoff": "2026-11-28T17:30:00+00:00", "odds": [6.2, 4.5, 1.4], "probs": null}
 {"at": "2026-11-28T09:40:59.111025+00:00", "kind": "book", "source": "netbet", "competition": "serie a", "home": "Frosinone", "away": "Parme", "kickoff": "2026-11-28T14:00:00+00:00", "odds": [1.33, 5.0, 6.0], "probs": null}
+{"at": "2026-11-28T09:46:59.741414+00:00", "kind": "sharp", "source": "matchbook", "competition": "", "home": "Bac Ninh FC", "away": "SHB Da Nang", "kickoff": "2026-11-28T11:00:00+00:00", "odds": null, "probs": [0.4313216804384206, 0.29468945377791406, 0.27825915844612104]}
